@@ -121,7 +121,7 @@ function Block:eliminate()
 	
 	self.currentPos.y = -100
 	self:updateScreenPos()
-	self.color = "gone"
+	self.color = "black" --hack but it kind of makes sense? and will hurt nothing, i think
 		--
 	-- blocksShifting = blocksShifting - 1
 	--

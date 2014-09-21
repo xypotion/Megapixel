@@ -238,11 +238,11 @@ function love.keypressed(key)
 			-- end
 	
 			--cycle through zoom settings TODO eventually make a player option of this, but this is fine for dev
-			-- if key == "z" and not controllingBlocks then
-			-- 	windowState = (windowState) % #windowStates + 1
-			-- 	updateWindowStateSettings()
-			-- 	updateZoomRelativeStuff()
-			-- end
+			if key == "z" and not controllingBlocks then
+				windowState = (windowState) % #windowStates + 1
+				updateWindowStateSettings()
+				updateZoomRelativeStuff()
+			end
 		
 			if key == " " and not controllingBlocks then 
 				-- print "--ping main"

@@ -1,9 +1,16 @@
+NOTES
+- save files are in ~/Library/Application Support/LOVE on OSX
+
 FIXME
-- commit music!!!
-- nw floor 1, remove plant or add shirt
-- se remove shirt
+- note pickup text is say instead of think...? maybe
+- don't save before getting the remote? :/
+- blow up block assets
 
 TODO in order of importance
+! change text on block inspection
+! rearrange puzzle rooms
+  - maybe gate the upper floors?
+	- label puzzle rooms?
 ! finish blowing up assets
 ! shirts + progress on pause menu
 ! final audio: stairs, doors (, item collection, bips for remote)

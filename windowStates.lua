@@ -57,6 +57,7 @@ function updateZoomRelativeStuff()
 	--this is safe, don't worry :)
 	initHero()
 	
+	--reinitialize blocks
 	for i = 1,#blocks do
 		blocks[i]:_init()
 	end

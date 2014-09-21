@@ -32,6 +32,10 @@ function class(base)
 	return cls
 end
 
+function round(num)
+	return math.floor(num + 0.5)
+end
+
 -- NEVER PASS _G TO THIS (or any table containing pointers to itself)
 function tablePrint(table, offset)
 	offset = offset or "  "
