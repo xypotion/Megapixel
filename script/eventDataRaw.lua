@@ -258,7 +258,7 @@ eventDataRaw = {
 		collide = true,
 		interactionBehavior = {
 			say, "Guess the rest of the project will have\nto wait....",
-			saveData, nil,
+			-- saveData, nil,
 			-- warp,{wid=1,mx=11,my=8,facing="n"}
 		}
 	},
@@ -270,7 +270,7 @@ eventDataRaw = {
 		collide = true,
 		interactionBehavior = {
 			say, {"You're so thorough! Thanks for playing!"},
-			saveData, nil,
+			-- saveData, nil,
 			-- warp,{wid=1,mx=11,my=8,facing="n"}
 		}
 	},
@@ -563,7 +563,8 @@ eventDataRaw[1004] = {
 	appearsUntilAllCollected = {"notes 4"},
 	interactionBehavior = {
 		collect_, "notes 4",
-		say, "Got Research Notes 4!",
+		say, "Got Research Notes 4! Let's take a look...",
+		think, "Try pressing Z to change the screen size."
 	}
 }
 eventDataRaw[2004] = {

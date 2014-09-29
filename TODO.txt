@@ -2,11 +2,12 @@ NOTES
 - save files are in ~/Library/Application Support/LOVE on OSX
 
 FIXME
-- note pickup text is say instead of think...? maybe
-- don't save before getting the remote? :/
 - blow up block assets
+- save player settings (zoom, music)
+- add 100* notes to 200* notes
 
 TODO in order of importance
+- better control hints, esp at startup
 ! change text on block inspection
 ! rearrange puzzle rooms
   - maybe gate the upper floors?

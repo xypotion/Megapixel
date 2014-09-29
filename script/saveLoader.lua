@@ -57,7 +57,7 @@ function newGame()
 	colorControlled = 1
 	controllableColors = {R,G,B,C,M,Y,W}
 	
-	saveData()
+	-- saveData()
 	
 	finishLoadingGame()
 	
