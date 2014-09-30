@@ -40,10 +40,9 @@ function setHeroGridTargetAndTileTypeIfDirectionKeyPressed()
 		globalActors.hero.targetPos = getGridPosInFrontOfActor(globalActors.hero)
 	end
 	
-	-- get & set destination tile type
 	if globalActors.hero.targetPos and globalActors.hero.targetPos ~= globalActors.hero.currentPos then
 		-- local targetTileType = tileType(globalActors.hero.targetPos)
-		if tileType(globalActors.hero.targetPos) == "collide" or
+		if not debugKeysHeld() and tileType(globalActors.hero.targetPos) == "collide" or
 			getBlock(globalActors.hero.targetPos)
 		then
 			globalActors.hero.targetPos = nil

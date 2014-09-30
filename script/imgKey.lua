@@ -57,14 +57,14 @@ images = {
 		},
 		shirts = {
 			love.graphics.newImage("img/char-shirt-grey.png"),
-			love.graphics.newImage("img/char-shirt-black.png"),
+			love.graphics.newImage("img/char-shirt-black.png"), --#2
 			love.graphics.newImage("img/char-shirt-red.png"),
 			love.graphics.newImage("img/char-shirt-green.png"),
 			love.graphics.newImage("img/char-shirt-blue.png"),
 			love.graphics.newImage("img/char-shirt-cyan.png"),
 			love.graphics.newImage("img/char-shirt-magenta.png"),
 			love.graphics.newImage("img/char-shirt-yellow.png"),
-			love.graphics.newImage("img/char-shirt-white.png"),
+			love.graphics.newImage("img/char-shirt-white.png"), --#9
 			love.graphics.newImage("img/char-shirt-clear.png"),
 		}	
 		-- elf = love.graphics.newImage("img/directional-elf-1.png"),

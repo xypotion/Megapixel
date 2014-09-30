@@ -7,7 +7,12 @@ FIXME
 - add 100* notes to 200* notes
 
 TODO in order of importance
+- change debug keys (123) to something else. maybe ,./
+  - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
+	- or just leave a note in the credits :)
+- giant cleanup of comments and stuff
 - better control hints, esp at startup
+- zoom that works with windows? :/
 ! change text on block inspection
 ! rearrange puzzle rooms
   - maybe gate the upper floors?
@@ -15,11 +20,7 @@ TODO in order of importance
 ! finish blowing up assets
 ! shirts + progress on pause menu
 ! final audio: stairs, doors (, item collection, bips for remote)
-  - maybe also a siren for cutscenes
-! little cleanups in menus
-  * remove debug stuff, obvs, including Q to quit
-	* maybe user needs to have 7,8,9 pressed to enable debuggery?
-	- maybe general code cleanup, too. still a lot of unused stuff & junk print lines
+  - maybe also a siren for cutscenes?
 ! ...credits somehow. heh
 ! more puzzles, obvs. would like ~15 total
   - 4~6 "baby" puzzles, the rest semi-hard
@@ -35,6 +36,7 @@ TODO in order of importance
 	- mention p for pause
 	- mention auto-save
 	- mention shift-tab
+- debug mode by holding down a key or three? walk through walls?
 > collectible shirts? change colors with tab when not controlling blocks? lol
   - clear shirt is reward for hardest puzzle? kinda ultimate reward?
 > postgame fun: all black backgrounds turn into twinkly stars

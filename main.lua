@@ -245,9 +245,7 @@ function love.keypressed(key)
 			end
 		
 			if key == " " and not controllingBlocks then 
-				-- print "--ping main"
 				startFacingInteraction()
-				-- print "--ping main; keypressed finished"
 			end	
 			
 			if key == "return" and progress["remote"] then
@@ -335,4 +333,8 @@ function tickAnimationKeys(dt)
 	for id,ak in pairs(anikeys) do
 		tickAniKey(ak,dt)
 	end
+end
+
+function debugKeysHeld()
+	return love.keyboard.isDown('1') and love.keyboard.isDown('2') and love.keyboard.isDown('3')
 end

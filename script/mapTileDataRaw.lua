@@ -176,7 +176,7 @@ mapDataRaw = {
 			{x=5,y=10,id=1002},
 		}
 	},
-	--7: white puzzle ** shirt candidate: white, hidden under a white block! maybe upper right corner. IF you put white shirt here, move to level 2 or 3
+	--7: white puzzle *** shirt candidate: white, hidden under a white block! maybe upper right corner. IF you put white shirt here, move to level 2 or 3
 	{
 		tileData = {
 			{3,3,3,3,3,3,3},
@@ -190,13 +190,13 @@ mapDataRaw = {
 		}, 
 		startAt = {x=4,y=3,default=1},
 		blocks = {
+			{X,X,C,W,W,W,W},
 			{X,C,W,W,W,W,W},
 			{C,W,W,W,W,W,W},
 			{W,W,W,W,W,W,W},
-			{W,W,W,W,W,W,W},
-			{W,W,W,W,W,W,W},
-			{W,W},
-			{X,X,X,X,X,R}
+			{W,W,W,W,W,W,C},
+			{W,W,X,W,W,C,R},
+			{X,X,X,X,C,R,R}
 		},
 		blocksAt = {x=4,y=4},
 		localActorPointers = {
@@ -204,7 +204,7 @@ mapDataRaw = {
 			{x=4,y=4,id=1003},
 		}
 	},
-	--8: black grate puzzle **** shirt candidate: black? hmm. also where
+	--8: black grate puzzle **** shirt candidate: black? hmm. kinda no place for it...
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,1},
@@ -233,7 +233,7 @@ mapDataRaw = {
 			{x=4,y=6,id=1004},
 		}
 	},
-	--9: CMY rows puzzle (needs plant + notes) **** shirt candidate: magenta (but where?)
+	--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta (but where?)
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3},
@@ -646,9 +646,11 @@ mapDataRaw = {
 	-- black, white, and blue locked in corners; 3x3 yin-yang of blue and black with notes in middle; 1 green and 1 red on sides
 	--13: a big mess that collapses nicely into a spiral for player to walk through :) white can actually become an obstruction? lone W locked up?
 	--13.5: spiral of white with B/Y obstructions; white is locked by plants and cannot move, so forming more white with B+Y is dangerous
-	--14: spiral of black; given just enough colors to make a white, which is needed since the path can never be cleared?
+	--14: * spiral of black; given just enough colors to make a white, which is needed to break a wall, since the spiral path can never be cleared & traversed?
 	--16: lone R/G/B blocks must pass through C/M/Y corridors to form a white; white is locked up, so you have to get RGB through safely by shifting CMY
-	--18: white is locked up by a lone block in a closet AND is blocking in notes; must use magenta to clear a path
+	--17: * something using tetris pieces! maybe hero is locked in top area by a "descending 1x4" of black blocks
+	--18: white is locked up by a lone block in a closet AND is blocking in notes; must use magenta to clear a path?
+	--don't forget to use desks and plants to give rooms more flavor and challenge!
 
 --[[names of rooms?:
 	cafeteria

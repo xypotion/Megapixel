@@ -669,6 +669,18 @@ eventDataRaw[902] = {
 		say, "\"Black does go with everything.\""
 	}
 }--black
+eventDataRaw[909] = {
+	name = "shirt 9",
+	sc = {category="stillActors",image=1,quadId=9},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 9"},
+	interactionBehavior = {
+		collect_, "shirt 2",
+		say, "Found a white shirt!",
+		say, "Press 9 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"Is this cotton?\""
+	}
+}--black
 eventDataRaw[903] = {
 	name = "shirt 3",
 	sc = {category="stillActors",image=1,quadId=10},
