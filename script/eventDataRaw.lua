@@ -171,7 +171,7 @@ eventDataRaw = {
 			say, "What is this? A remote control?",
 			think, "Instructions to Operator:",
 			think, "In the event of a digital matter containment breach,\ncollect vital research materials 1-16 and evacuate\nthe premises.",
-			say,"Huh. They want me to find stuff in here?",
+			say,"They want me to find their stuff?\nMust be pretty important.",
 			think,"You may need to manipulate digital matter to obtain\nall materials. This remote control will allow you to"
 			.."\nmove and fuse digital matter in your path.",
 			think, "Blocks of digital matter are known as \n\"Mega-pixels\".",
@@ -284,7 +284,7 @@ eventDataRaw[171] = {
 	interactionBehavior = {
 		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=1,mx=2,my=7,facing="n"},
+		warp,{wid=1,mx=2,my=8,facing="n"},
 		-- say,"Hm, what's that on the table?"
 	}
 }
@@ -307,8 +307,8 @@ eventDataRaw[221] = {
 	sc = {category="stillActors", image=1, quadId=3},
 	collide = true,
 	interactionBehavior = {
-		choose, {"Head downstairs?", {"No", 1}, {"Yes",0}},
-		warp,{wid=1,mx=2,my=7,facing="s"}
+		choose, {"Go downstairs to floor 1?", {"No", 1}, {"Yes",0}},
+		warp,{wid=1,mx=2,my=6,facing="s"}
 	}
 }
 eventDataRaw[212] = {
@@ -317,8 +317,27 @@ eventDataRaw[212] = {
 	sc = {category="stillActors", image=1, quadId=3},
 	collide = true,
 	interactionBehavior = {
-		choose, {"Head upstairs?", {"No", 1}, {"Yes",0}},
-		warp,{wid=2,mx=2,my=7,facing="e"}
+		choose, {"Go upstairs to floor 2?", {"No", 1}, {"Yes",0}},
+		warp,{wid=2,mx=2,my=6,facing="s"}
+	}
+}
+
+eventDataRaw[223] = {
+	name = "stairsTo3",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Go upstairs to floor 3?", {"No", 1}, {"Yes",0}},
+		warp,{wid=3,mx=2,my=8,facing="n"}
+	}
+}
+eventDataRaw[232] = {
+	name = "stairsTo2",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Go downstairs to floor 2?", {"No", 1}, {"Yes",0}},
+		warp,{wid=2,mx=2,my=8,facing="n"}
 	}
 }
 
@@ -341,7 +360,7 @@ eventDataRaw[355] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=1,mx=10,my=11,facing="n"}
+		warp,{wid=1,mx=11,my=11,facing="n"}
 	}
 }
 eventDataRaw[306] = {
@@ -401,7 +420,7 @@ eventDataRaw[358] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=1,mx=10,my=3,facing="s"}
+		warp,{wid=1,mx=11,my=3,facing="s"}
 	}
 }
 eventDataRaw[309] = {
@@ -441,7 +460,7 @@ eventDataRaw[360] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=10,my=3,facing="s"}
+		warp,{wid=2,mx=11,my=3,facing="s"}
 	}
 }
 eventDataRaw[311] = {
@@ -481,11 +500,161 @@ eventDataRaw[362] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=10,my=11,facing="n"}
+		warp,{wid=2,mx=11,my=11,facing="n"}
 	}
 }
-		-- warp,{wid=12,mx=2,my=5,facing="s"},
-		-- warp,{wid=9,mx=9,my=11,facing="n"},
+eventDataRaw[313] = {
+	name = "doorTo13",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=13,mx=5,my=8,facing="n"},
+	}
+}
+eventDataRaw[363] = {
+	name = "doorFrom5",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=11,my=11,facing="n"}
+	}
+}
+eventDataRaw[314] = {
+	name = "doorTo14",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=14,mx=6,my=5,facing="s"}
+	}
+}
+eventDataRaw[364] = {
+	name = "doorFrom14",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=6,my=11,facing="n"}
+	}
+}
+eventDataRaw[315] = {
+	name = "doorTo15",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=15,mx=6,my=13,facing="n"}
+	}
+}
+eventDataRaw[365] = {
+	name = "doorFrom15",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=6,my=3,facing="s"}
+	}
+}
+eventDataRaw[316] = {
+	name = "doorTo16",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=16,mx=7,my=12,facing="n"}
+	}
+}
+eventDataRaw[366] = {
+	name = "doorFrom16",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=11,my=3,facing="s"}
+	}
+}
+eventDataRaw[317] = {
+	name = "doorTo17",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=17,mx=9,my=11,facing="n"}
+	}
+}
+eventDataRaw[367] = {
+	name = "doorFrom17",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=4,mx=6,my=3,facing="s"}
+	}
+}
+eventDataRaw[318] = {
+	name = "doorTo18",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=18,mx=5,my=13,facing="n"},
+	}
+}
+eventDataRaw[368] = {
+	name = "doorFrom18",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=4,mx=11,my=3,facing="s"}
+	}
+}
+eventDataRaw[319] = {
+	name = "doorTo19",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=19,mx=3,my=20,facing="n"},
+	}
+}
+eventDataRaw[369] = {
+	name = "doorFrom19",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=4,mx=6,my=11,facing="n"}
+	}
+}
+eventDataRaw[320] = {
+	name = "doorTo20",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=20,mx=2,my=5,facing="s"},
+	}
+}
+eventDataRaw[370] = {
+	name = "doorFrom20",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=4,mx=11,my=11,facing="n"}
+	}
+}
 		-- warp,{wid=14,mx=6,my=5,facing="s"},
 		-- warp,{wid=15,mx=6,my=5,facing="s"},
 		-- warp,{wid=16,mx=7,my=12,facing="n"},
@@ -499,7 +668,7 @@ eventDataRaw[1001] = {
 	collide = true,
 	interactionBehavior = {
 		collect_, "notes 1",
-		say, "Got Research Notes 1! Let's take a look:...",
+		say, "Got Research Notes 1! Let's take a look...",
 		think, "Did you know you can pause the game with P?",
 		think, "The pause screen has some useful info on it!",
 	}
@@ -654,7 +823,168 @@ eventDataRaw[2008] = {
 		say, "Research Notes 8, got 'em.",
 	}
 }
-
+eventDataRaw[1009] = {
+	name = "notes 9",
+	sc = {category="stillActors", image=1, quadId=1},
+	appearsUntilAllCollected = {"notes 9"},
+	collide = true,
+	interactionBehavior = {
+		collect_, "notes 9",
+		say, "Got Research Notes 9!",
+		--think, "Did you know you can pause the game with P?",
+		--think, "The pause screen has some useful info on it!",
+	}
+} -- notes 9 pickup
+eventDataRaw[2009] = {
+	name = "notes 9",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 9"},
+	interactionBehavior = {
+		say, "Research Notes 9, got 'em.",
+	}
+} -- notes 9 displayed at base
+eventDataRaw[1010] = {
+	name = "notes 10",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsUntilAllCollected = {"notes 10"},
+	interactionBehavior = {
+		collect_, "notes 10",
+		say, "Got Research Notes 10!",
+		--think, "You can press R to reset any room."
+	}
+}
+eventDataRaw[2010] = {
+	name = "notes 10",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 10"},
+	interactionBehavior = {
+		say, "Research Notes 10, got 'em.",
+	}
+}
+eventDataRaw[1011] = {
+	name = "notes 11",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsUntilAllCollected = {"notes 11"},
+	interactionBehavior = {
+		collect_, "notes 11",
+		say, "Got Research Notes 11!",
+		--think, "Blue and yellow are opposites.",
+		--think, "Red and cyan are opposites.",
+		--think, "Green and magenta are opposites.",
+		--think, "White and black are opposites, but white also\nfuses with ANY color, while black only fuses\nwith white."
+	}
+}
+eventDataRaw[2011] = {
+	name = "notes 11",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 11"},
+	interactionBehavior = {
+		say, "Research Notes 11, got 'em.",
+	}
+}
+eventDataRaw[1012] = {
+	name = "notes 12",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsUntilAllCollected = {"notes 12"},
+	interactionBehavior = {
+		collect_, "notes 12",
+		say, "Got Research Notes 12!",
+		--think, "Try pressing Z to change the screen size."
+	}
+}
+eventDataRaw[2012] = {
+	name = "notes 12",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 12"},
+	interactionBehavior = {
+		say, "Research Notes 12, got 'em.",
+	}
+}
+eventDataRaw[1013] = {
+	name = "notes 13",
+	sc = {category="stillActors", image=1, quadId=1},
+	appearsUntilAllCollected = {"notes 13"},
+	collide = true,
+	interactionBehavior = {
+		collect_, "notes 13",
+		say, "Got Research Notes 13! Let's take a look:...",
+		--think,"Did you know that the game auto-saves\nevery time you collect an item?"
+	}
+}
+eventDataRaw[2013] = {
+	name = "notes 13",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 13"},
+	interactionBehavior = {
+		say, "Research Notes 13, got 'em.",
+	}
+}
+eventDataRaw[1014] = {
+	name = "notes 14",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsUntilAllCollected = {"notes 14"},
+	interactionBehavior = {
+		collect_, "notes 14",
+		say, "Got Research Notes 14! Let's take a look...",
+		--think,"You can mute the music with M."
+	}
+}
+eventDataRaw[2014] = {
+	name = "notes 14",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 14"},
+	interactionBehavior = {
+		say, "Research Notes 14, got 'em.",
+	}
+}
+eventDataRaw[1015] = {
+	name = "notes 15",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsUntilAllCollected = {"notes 15"},
+	interactionBehavior = {
+		collect_, "notes 15",
+		say, "Got Research Notes 15!",
+	}
+}
+eventDataRaw[2015] = {
+	name = "notes 15",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 15"},
+	interactionBehavior = {
+		say, "Research Notes 15, got 'em.",
+	}
+}
+eventDataRaw[1016] = {
+	name = "notes 16",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsUntilAllCollected = {"notes 16"},
+	interactionBehavior = {
+		collect_, "notes 16",
+		say, "Got Research Notes 16!"
+	}
+}
+eventDataRaw[2016] = {
+	name = "notes 16",
+	sc = {category="stillActors", image=1, quadId=1},
+	collide = true,
+	appearsIfAllCollected = {"notes 16"},
+	interactionBehavior = {
+		say, "Research Notes 16, got 'em.",
+	}
+}
 
 --shirts
 eventDataRaw[902] = {
@@ -669,18 +999,6 @@ eventDataRaw[902] = {
 		say, "\"Black does go with everything.\""
 	}
 }--black
-eventDataRaw[909] = {
-	name = "shirt 9",
-	sc = {category="stillActors",image=1,quadId=9},
-	collide = true,
-	appearsUntilAllCollected = {"shirt 9"},
-	interactionBehavior = {
-		collect_, "shirt 2",
-		say, "Found a white shirt!",
-		say, "Press 9 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"Is this cotton?\""
-	}
-}--black
 eventDataRaw[903] = {
 	name = "shirt 3",
 	sc = {category="stillActors",image=1,quadId=10},
@@ -693,6 +1011,18 @@ eventDataRaw[903] = {
 		say, "\"Red. Hot.\""
 	}
 }--red
+eventDataRaw[909] = {
+	name = "shirt 9",
+	sc = {category="stillActors",image=1,quadId=9},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 9"},
+	interactionBehavior = {
+		collect_, "shirt 9",
+		say, "Found a white shirt!",
+		say, "Press 9 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"Is this cotton?\""
+	}
+}--white?
 
 -- TODO other shirts, including clear from a computer PLUS its dead version?
 	

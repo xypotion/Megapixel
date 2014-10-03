@@ -32,7 +32,7 @@ function love.load()
 	yLen = 15
 	xLen = 15
 	windowState = 1
-	worldPos = 4
+	worldPos = 22
 	heroGridPos = {x=100,y=5}
 	facing = "s"
 
