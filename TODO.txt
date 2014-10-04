@@ -7,18 +7,19 @@ FIXME
 - add 100* notes to 200* notes
 
 TODO in order of importance
-- change debug keys (123) to something else. maybe ,./
+- evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
+- change debug keys (123) to something else. maybe: ,./
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
 	- or just leave a note in the credits :)
 - giant cleanup of comments and stuff
 - better control hints, esp at startup
 - zoom that works with windows? :/
+! shirts + progress on pause menu
 ! change text on block inspection
 ! rearrange puzzle rooms
-  - maybe gate the upper floors?
+  - maybe gate the upper floors? hm
 	- label puzzle rooms?
 ! finish blowing up assets
-! shirts + progress on pause menu
 ! final audio: stairs, doors (, item collection, bips for remote)
   - maybe also a siren for cutscenes?
 ! ...credits somehow. heh
@@ -60,6 +61,7 @@ TODO in order of importance
 
 
 credits:
+* post in Love forums (and others?) when game is complete :)
 - (song name & artist), jamendo.com
 - sfx actually: sfxr/cfxr http://thirdcog.eu/apps/cfxr
 

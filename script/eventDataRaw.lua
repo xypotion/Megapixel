@@ -998,7 +998,7 @@ eventDataRaw[902] = {
 		say, "Press 2 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Black does go with everything.\""
 	}
-}--black
+}--black, bound for room 12
 eventDataRaw[903] = {
 	name = "shirt 3",
 	sc = {category="stillActors",image=1,quadId=10},
@@ -1010,7 +1010,19 @@ eventDataRaw[903] = {
 		say, "Press 3 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Red. Hot.\""
 	}
-}--red
+}--red, bound for ...
+eventDataRaw[908] = {
+	name = "shirt 8",
+	sc = {category="stillActors",image=1,quadId=15},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 8"}, TODO
+	interactionBehavior = {
+		collect_, "shirt 8",
+		say, "Found a yellow shirt!",
+		say, "Press 8 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"So bright.\""
+	}
+}--yellow, in room 11
 eventDataRaw[909] = {
 	name = "shirt 9",
 	sc = {category="stillActors",image=1,quadId=9},
@@ -1022,7 +1034,7 @@ eventDataRaw[909] = {
 		say, "Press 9 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Is this cotton?\""
 	}
-}--white?
+}--white, bound for room 7?
 
 -- TODO other shirts, including clear from a computer PLUS its dead version?
 	

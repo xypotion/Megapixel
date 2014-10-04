@@ -308,7 +308,9 @@ mapDataRaw = {
 			-- {x=5,y=8,id=6},
 		}
 	},
-	--11: painting puzzle (needs notes, plant) *** shirt candidate: cyan? upper right?
+	--11: painting puzzle *** shirt candidate: yellow as sun! :D and WOW that shirt took me a long time to get. jesus. hardest puzzle yet?
+	-- steps for shirt: red right 1, magenta left 1, blue down 1 then up 1, green left 1, eliminate lower right redness with blue and green, 
+	--		take out 3rd red from top right, chunk red down onto cyan (gap must be where shirt sits). whew.
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3,3,3},
@@ -326,7 +328,7 @@ mapDataRaw = {
 		startAt = {x=3,y=3,default=1},
 		blocks = {
 			{R,R,R,R,R,R,R,R,R},
-			{R,C,C,C,C,Y,C,C,R},
+			{R,C,C,C,C,X,C,C,R},
 			{R,C,W,W,C,C,W,W,R},
 			{R,C,C,C,C,C,C,C,R},
 			{R,C,C,X,X,X,C,C,R},
@@ -338,7 +340,7 @@ mapDataRaw = {
 		localActorPointers = {
 			{x=3,y=13,id=361}, -- exit
 			{x=8,y=8,id=1007},
-			-- {x=5,y=8,id=6},
+			{x=9,y=5,id=908},
 		}
 	},
 	--12: white pawn vs black rook ** if no shirts, **** if shirts. black shirt here?
