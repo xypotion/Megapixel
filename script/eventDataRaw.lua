@@ -30,8 +30,8 @@ behaviorsRaw = {
 	resume = {
 		-- fadeOut, 0.5,
 		-- fadeIn, 0.5,
-		warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
-		-- warp, {wid=2,mx=10,my=5,facing="s"},
+		-- warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
+		warp, {wid=19,mx=11,my=3,facing="s"}, -- for testing
 		say, "I have to find the research materials and get\nout of here!",
 	},
 	start = {
@@ -1015,7 +1015,7 @@ eventDataRaw[908] = {
 	name = "shirt 8",
 	sc = {category="stillActors",image=1,quadId=15},
 	collide = true,
-	appearsUntilAllCollected = {"shirt 8"}, TODO
+	appearsUntilAllCollected = {"shirt 8"}, --TODO
 	interactionBehavior = {
 		collect_, "shirt 8",
 		say, "Found a yellow shirt!",

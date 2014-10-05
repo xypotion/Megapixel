@@ -44,6 +44,7 @@ TODO in order of importance
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
 > better story/cutscenes & effects (like a quake or a siren or a red flash)
 > ending
+- level editor? lol
 - fade music in/out a little more nicely? hmm
 - special endgame hacko to remove plants? F for fire? lol
 - better chipset?
@@ -62,6 +63,7 @@ TODO in order of importance
 
 credits:
 * post in Love forums (and others?) when game is complete :)
+  - and FB and twitter and maybe ello?
 - (song name & artist), jamendo.com
 - sfx actually: sfxr/cfxr http://thirdcog.eu/apps/cfxr
 

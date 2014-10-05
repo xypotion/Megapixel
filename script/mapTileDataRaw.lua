@@ -137,6 +137,12 @@ mapDataRaw = {
 	},
 	
 --puzzles:
+-- floor 1: 6,13,16,20?
+-- floor 2: 5,7,14,15?
+-- floor 3: 8,9,10,11? 18?
+-- floor 4: 11,12,17
+
+
 	--5: silly first puzzle (doors 305, 355, notes 1001) **
 	{
 		tileData = {
@@ -275,7 +281,7 @@ mapDataRaw = {
 			-- {x=9,y=5,id=6},
 		}
 	},
-	--10: plant rows puzzle (needs plants + notes) ***
+	--10: plant rows puzzle ***
 	{
 		tileData = {
 			{1,1,3,3,3,1,1},
@@ -401,7 +407,7 @@ mapDataRaw = {
 			{x=5,y=4,id=1009},
 		}
 	},
-	--14: stripes puzzle 1 (needs stuff) *** shirt candidate, place behind black blocks in a side corridor (red?)
+	--14: + stripes puzzle *** shirt candidate, place behind black blocks in a side corridor (red?)
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3},
@@ -487,7 +493,7 @@ mapDataRaw = {
 			-- {x=5,y=8,id=6},
 		}
 	},
-	--17: donut in the gas pump (needs stuff) *****
+	--17: donut in the gas pump (needs door) ***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
 	{
 		tileData = {
 			{1,1,3,3,3,3,3,3,3,3,3},
@@ -498,7 +504,7 @@ mapDataRaw = {
 			{1,1,2,2,2,2,2,2,2,2,2},
 			{3,3,2,2,2,2,2,2,2,2,2},
 			{6,2,2,2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,7,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,2},
 			{4,1,2,2,2,2,2,2,2,2,2},
 			{1,1,2,2,2,2,2,2,2,2,2},
@@ -506,15 +512,15 @@ mapDataRaw = {
 		}, 
 		startAt = {x=2,y=2,default=1},
 		blocks = {
-			{X,Y,X,M,X,Y,X,M},
+			{X,Y,X,M,C,Y,X,M},
 			{},
 			{},
 			{X,G,X,X,K,X,X,B},
 			{B,R,X,K,K,K,X,R,G},
 			{X,X,K,K,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{K,K,K,X,X,X,K,K,K},
-			{X,K,K,K,X,K,K,K},
+			{X,K,K,K,K,K,K,K},
+			{K,K,K,K,W,K,K,K,K},
+			{X,K,K,K,K,K,K,K},
 			{X,X,K,K,K,K,K},
 			{G,R,X,K,K,K,X,R,B},
 			{X,B,X,X,K,X,X,G},
@@ -522,7 +528,7 @@ mapDataRaw = {
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
 			-- {x=9,y=12,id=358}, -- exit
-			-- {x=4,y=6,id=1004},
+			{x=8,y=10,id=1013},
 			-- {x=5,y=8,id=6},
 		}
 	},
@@ -530,9 +536,6 @@ mapDataRaw = {
 		tileData = {
 			{1,1,3,3,3,3,3,3,3,3,3},
 			{1,1,2,2,2,2,2,2,2,2,2},
-			{},
-			{1,1,3,3,3,3,3,3,3,3,3},
-			{1,1,2,2,2,2,2,2,2,2,2},
 			{1,1,2,2,2,2,2,2,2,2,2},
 			{3,3,2,2,2,2,2,2,2,2,2},
 			{6,2,2,2,2,2,2,2,2,2,2},
@@ -544,18 +547,16 @@ mapDataRaw = {
 		}, 
 		startAt = {x=2,y=2,default=1},
 		blocks = {
-			{X,Y,X,M,X,Y,X,M},
-			{},
-			{},
-			{X,G,X,X,K,X,X,B},
-			{B,R,X,K,K,K,X,R,G},
-			{X,X,K,K,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{K,K,K,X,X,X,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{X,X,K,K,K,K,K},
-			{G,R,X,K,K,K,X,R,B},
-			{X,B,X,X,K,X,X,G},
+			{X,K,K,K,K,K,K,K},
+			{K,K,K,W,W,W,K,K,K},
+			{K,K,K,R,Y,G,K,K,K},
+			{K,W,M,W,W,W,C,W,K},
+			{K,W,B,W,X,W,B,W,K},
+			{K,W,C,W,W,W,M,W,K},
+			{K,K,K,G,Y,R,K,K,K},
+			{K,K,K,W,W,W,K,K,K},
+			{X,K,K,K,K,K,K,K},
+			
 		},
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
@@ -563,7 +564,59 @@ mapDataRaw = {
 			-- {x=4,y=6,id=1004},
 			-- {x=5,y=8,id=6},
 		}
-	},--18 ?
+	},--18 rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
+	{
+		tileData = {
+			{3,3,3,3,3,3,3,3,3,3,1,3,3},
+			{2,2,2,2,2,2,2,2,2,2,3,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,1,3,3},
+			{2,2,2,2,2,2,2,2,2,2,1,2,8},
+			{2,2,2,2,2,2,2,2,2,2,1,2,7},
+			{2,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,1,3,3},
+			{2,2,2,2,2,2,2,2,2,2,1,2,2},
+			{2,2,2,2,2,2,2,2,2,2,1,2,8},
+			{2,2,2,2,2,2,2,2,2,2,3,2,7},
+			{2,2,2,2,2,2,2,2,2,2,2,2,6},
+		}, 
+		startAt = {x=2,y=2,default=1},
+		blocks = {
+				-- {R,G,B}
+				-- {X,C},
+				-- {X,C},
+				-- {X,C},
+				-- {X,C},
+				{X,R,R},
+				{X,R,R},
+				{X},
+				-- {X,X,X,Y},
+	-- 			{X,X,X,Y,Y,X,X,X,C,C},
+	-- 			{X,X,X,M,Y,G,R,X,C,C},
+	-- 			{X,X,M,M,G,G,R,R,R,G},
+	-- 			{X,Y,M,C,C,G,M,M,G,G},
+	-- 			{X,Y,Y,C,C,B,B,M,M,G},
+	-- 			{X,B,Y,R,R,R,B,C,C,R,X,B},
+	-- 			{X,B,G,G,G,R,B,C,C,R,X,B},
+	-- 			{X,B,B,G,K,K,K,K,R,R,X,B,B},
+				{X,X,X,X},
+				{X,X,X,X,X,X,X,X,X,X},
+				{X,X,X,G,X,X,C,X,M},
+				{X,X,C,G,G,G,C,C,M,M},
+				{X,C,C,M,B,B,C,Y,Y,M},
+				{X,K,C,M,M,B,B,B,Y,Y,X,K},
+				{X,K,G,G,M,B,Y,B,R,R,X,K},--,R},
+				{X,K,G,R,R,Y,Y,B,R,R,X,K},--,R},
+				{X,K,G,R,R,Y,K,K,K,K,X,K}--R,R},
+		},
+		blocksAt = {x=2,y=3},
+		localActorPointers = {
+			-- {x=9,y=12,id=358}, -- exit
+			-- {x=4,y=6,id=1004},
+			-- {x=5,y=8,id=6},
+		}
+	},--19 tetris blocks
 	{
 		tileData = {
 			{1,1,3,3,3,3,3,3,3,3,3},
@@ -601,45 +654,9 @@ mapDataRaw = {
 			-- {x=4,y=6,id=1004},
 			-- {x=5,y=8,id=6},
 		}
-	},--19 ?
-	{
-		tileData = {
-			{1,1,3,3,3,3,3,3,3,3,3},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{},
-			{1,1,3,3,3,3,3,3,3,3,3},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{3,3,2,2,2,2,2,2,2,2,2},
-			{6,2,2,2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,7,2,2,2,2},
-			{2,2,2,2,2,2,2,2,2,2,2},
-			{4,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-		}, 
-		startAt = {x=2,y=2,default=1},
-		blocks = {
-			{X,Y,X,M,X,Y,X,M},
-			{},
-			{},
-			{X,G,X,X,K,X,X,B},
-			{B,R,X,K,K,K,X,R,G},
-			{X,X,K,K,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{K,K,K,X,X,X,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{X,X,K,K,K,K,K},
-			{G,R,X,K,K,K,X,R,B},
-			{X,B,X,X,K,X,X,G},
-		},
-		blocksAt = {x=4,y=3},
-		localActorPointers = {
-			-- {x=9,y=12,id=358}, -- exit
-			-- {x=4,y=6,id=1004},
-			-- {x=5,y=8,id=6},
-		}
-	},--20 ?
+	},--20 ? last baby puzzle
+	
+	--other rooms:
 	{
 		tileData = {
 			{3,3,3,3},
