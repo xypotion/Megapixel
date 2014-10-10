@@ -6,7 +6,63 @@ FIXME
 - save player settings (zoom, music)
 - add 100* notes to 200* notes
 
+
+late-night notes:
+* all of these should probably come after you get the normal puzzle rooms finalized. all fine-tuning and gravy, in other words
+Fashion Lab is a real company, but something like that sounds good for the company name
+blocks in hub rooms! if you want. could make a good tutorial, kinda? basic moving of blocks?
+move office to right side of F1, exit just north of it
+add new door tiles to actor chipset (stairs, "LAB")
+basement w/ computer, takes shirts, gives final shirt
+- or takes "materials", maybe all 26 things required
+- ...A...(missing)...C
+  ...D...E...(missing)
+	...G...H...I
+	...(missing)...(missing)...(missing)
+	etc
+final shirt is what allows you to walk through walls?
+normal ending and good ending?
+- own computer has a hidden message that gets decoded as you find materials with matching letters: FIND THE DEAD PIXEL
+  - one dead pixel somewhere in building; finding it = good ending?
+  * or dead pixel is in your office, but that message is somewhere else in the building. maybe computers in other floors' lobbies w/ messages?
+    - hints about hard-to-get shirts, like white which is semi-hidden
+4x 2x2 notes on floor, maybe remote table in middle
+- argh, move doors again for nice squareness? :/
+final task at top floor (5th), but then traps on the way back down? final trial, kinda
+16 notes + 9 shirts + ? = 26 research materials. can give each a letter of the alphabet?
+- maybe even name them all interestingly/humorously
+- shirts = BCGMRWY + "D"ark? "V"oid? "N"ull? "U"ncolored?
+GO TO SLEEP
+
+other letters because i can't sleep:
+- make text arrays that can be referenced from multiple places. noteA = {"foo","bar"}, noteB = ..., etc
+* don't forget: reset reminder ("Room stability"?), pause reminder ("Knowledge panel"?), mute reminder ("Noise reduction"?)
+  - and these should not give the player the choice. just "let's take a look", while the others offer the choice to read the text or not
+A animal test results? acceleration due to gravity
+D domesticated animal warning? durability testing?
+E embroidery?
+F funding? fiber something? friction
+H hats? hallucinogenic effects (programmable?)?
+I 
+J jewelry?
+K? kinetic something? "vs potential energy conservation"?
+L light reflection? "glowing, indeed, even in the dark"
+N? *
+O organic matter interaction?
+P pants "subjects' legs were foreverially dressed up digitized against their will and loving it"? haha. "...the hell? did a child write this?"
+Q quilting patterns "test subjects liked _ and _, and christine agrees that the _ looks quite nice as a throw."
+R *
+S sewing patterns? soil removal? stain removal? sex appeal?
+T textile something? tensile strength
+U? uncolored?
+V? vegetable fiber adhesion or interaction
+X xxx fashion applications?
+Z zoological interaction survey? zipping/zippers?
+
+
 TODO in order of importance
+- animated fusion key that can be pulled up again :/ on K?
+  - maybe nix simple side key, then? but argh, how to animate... global actors? or a different, global blocks array? fuuck.
 - evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
 - change debug keys (123) to something else. maybe: ,./
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
@@ -14,6 +70,7 @@ TODO in order of importance
 - giant cleanup of comments and stuff
 - better control hints, esp at startup
 - zoom that works with windows? :/
+- can do prettier fading trick when blocks fuse, i think... maybe try #2 will go better
 ! shirts + progress on pause menu
 ! change text on block inspection
 ! rearrange puzzle rooms

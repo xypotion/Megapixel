@@ -30,8 +30,8 @@ behaviorsRaw = {
 	resume = {
 		-- fadeOut, 0.5,
 		-- fadeIn, 0.5,
-		-- warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
-		warp, {wid=19,mx=11,my=3,facing="s"}, -- for testing
+		warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
+		-- warp, {wid=20,mx=11,my=8,facing="s"}, -- for testing
 		say, "I have to find the research materials and get\nout of here!",
 	},
 	start = {
@@ -276,6 +276,7 @@ eventDataRaw = {
 	},
 }
 
+--special doors
 eventDataRaw[171] = {
 	name = "door from room 21",
 	sc = {category="stillActors", image=1, quadId=3},
@@ -302,17 +303,8 @@ eventDataRaw[121] = {
 }
 
 --stairs
-eventDataRaw[221] = {
-	name = "stairsTo1",
-	sc = {category="stillActors", image=1, quadId=3},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Go downstairs to floor 1?", {"No", 1}, {"Yes",0}},
-		warp,{wid=1,mx=2,my=6,facing="s"}
-	}
-}
 eventDataRaw[212] = {
-	name = "stairsTo2",
+	name = "1 to 2",
 	-- appearsIfAllCollected = {"notes 1", "notes 2", "notes 3"}, TODO
 	sc = {category="stillActors", image=1, quadId=3},
 	collide = true,
@@ -322,8 +314,17 @@ eventDataRaw[212] = {
 	}
 }
 
+eventDataRaw[221] = {
+	name = "2 to 1",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Go downstairs to floor 1?", {"No", 1}, {"Yes",0}},
+		warp,{wid=1,mx=2,my=6,facing="s"}
+	}
+}
 eventDataRaw[223] = {
-	name = "stairsTo3",
+	name = "2 to 3",
 	sc = {category="stillActors", image=1, quadId=4},
 	collide = true,
 	interactionBehavior = {
@@ -331,13 +332,33 @@ eventDataRaw[223] = {
 		warp,{wid=3,mx=2,my=8,facing="n"}
 	}
 }
+
 eventDataRaw[232] = {
-	name = "stairsTo2",
+	name = "3 to 2",
 	sc = {category="stillActors", image=1, quadId=4},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Go downstairs to floor 2?", {"No", 1}, {"Yes",0}},
 		warp,{wid=2,mx=2,my=8,facing="n"}
+	}
+}
+eventDataRaw[234] = {
+	name = "3 to 4",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Go upstairs to floor 4?", {"No", 1}, {"Yes",0}},
+		warp,{wid=4,mx=2,my=6,facing="s"}
+	}
+}
+
+eventDataRaw[243] = {
+	name = "4 to 3",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Go downstairs to floor 3?", {"No", 1}, {"Yes",0}},
+		warp,{wid=3,mx=2,my=6,facing="s"}
 	}
 }
 
@@ -604,7 +625,7 @@ eventDataRaw[318] = {
 	collide = true,
 	interactionBehavior = {
 		playSFX, "door",
-		warp,{wid=18,mx=5,my=13,facing="n"},
+		warp,{wid=18,mx=14,my=3,facing="s"},
 	}
 }
 eventDataRaw[368] = {
@@ -623,7 +644,7 @@ eventDataRaw[319] = {
 	collide = true,
 	interactionBehavior = {
 		playSFX, "door",
-		warp,{wid=19,mx=3,my=20,facing="n"},
+		warp,{wid=19,mx=14,my=3,facing="s"},
 	}
 }
 eventDataRaw[369] = {
@@ -642,7 +663,7 @@ eventDataRaw[320] = {
 	collide = true,
 	interactionBehavior = {
 		playSFX, "door",
-		warp,{wid=20,mx=2,my=5,facing="s"},
+		warp,{wid=20,mx=11,my=8,facing="s"},
 	}
 }
 eventDataRaw[370] = {

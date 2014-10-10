@@ -123,7 +123,7 @@ mapDataRaw = {
 			
 			-- {x=2,y=8,id=121},			--
 			{x=2,y=9,id=232}, -- to floor 2
-			-- {x=2,y=5,id=223}, -- to floor 4
+			{x=2,y=5,id=234}, -- to floor 4
 
 			-- {x=10,y=5,id=5},
 		},
@@ -131,9 +131,34 @@ mapDataRaw = {
 	},
 	--4: FOURTH FLOOR
 	{
-		tileData = {{1,2,3}}, 
-		startAt = {x=1,y=1,default=1},
-		localActorPointers = {}
+		tileData = {
+			{1,1,1,3,3,3,3,3,3,3,3,1},
+			{1,1,3,2,2,2,2,2,2,2,2,3},
+			{1,1,2,2,2,2,2,2,2,2,2,2},
+			{3,3,2,2,2,7,7,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2,2},
+			{4,1,2,2,2,2,2,2,2,2,2,2},
+			{1,1,2,2,2,2,2,2,2,2,2,2},
+			{1,1,1,2,2,2,2,2,2,2,2,1},
+			{1,1,1,1,4,1,1,1,1,4},
+		},
+		startAt = {x=2,y=2,default=1},
+		localActorPointers = {
+			--doors
+			{x=6,y=2,id=317},
+			{x=11,y=2,id=318},
+			{x=6,y=12,id=319},
+			{x=11,y=12,id=320},
+			
+			-- {x=2,y=8,id=121},			--
+			{x=2,y=5,id=243}, -- to floor 1
+			-- {x=2,y=9,id=223}, -- to floor 3
+
+			-- {x=10,y=5,id=5},
+		},
+		warpDrop = {wid=1,mx=10,my=5,facing="s"} --TODO wait, this is where reset drops you? hmm
 	},
 	
 --puzzles:
@@ -142,6 +167,8 @@ mapDataRaw = {
 -- floor 3: 8,9,10,11? 18?
 -- floor 4: 11,12,17
 
+-- or:
+-- redshift _, checker N, narrow S, ... hm
 
 	--5: silly first puzzle (doors 305, 355, notes 1001) **
 	{
@@ -167,7 +194,7 @@ mapDataRaw = {
 			-- {x=2,y=9,id=903}
 		}
 	},
-	--6: narrow puzzle, pretty easy *
+	--6: narrow puzzle, pretty easy * oldest baby puzzle, kinda
 	{
 		tileData = {
 			{3,3,3,3},
@@ -539,7 +566,7 @@ mapDataRaw = {
 			{1,1,2,2,2,2,2,2,2,2,2},
 			{3,3,2,2,2,2,2,2,2,2,2},
 			{6,2,2,2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,7,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,2},
 			{4,1,2,2,2,2,2,2,2,2,2},
 			{1,1,2,2,2,2,2,2,2,2,2},
@@ -560,8 +587,8 @@ mapDataRaw = {
 		},
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
-			-- {x=9,y=12,id=358}, -- exit
-			-- {x=4,y=6,id=1004},
+			{x=9,y=12,id=358}, -- exit
+			{x=8,y=7,id=1014},
 			-- {x=5,y=8,id=6},
 		}
 	},--18 rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
@@ -577,84 +604,54 @@ mapDataRaw = {
 			{2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,1,3,3},
 			{2,2,2,2,2,2,2,2,2,2,1,2,2},
-			{2,2,2,2,2,2,2,2,2,2,1,2,8},
-			{2,2,2,2,2,2,2,2,2,2,3,2,7},
-			{2,2,2,2,2,2,2,2,2,2,2,2,6},
+			{2,2,2,2,2,2,2,2,2,2,1,2,2},
+			{2,2,2,2,2,2,2,2,2,2,3,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2,2,2},
 		}, 
 		startAt = {x=2,y=2,default=1},
 		blocks = {
-				-- {R,G,B}
-				-- {X,C},
-				-- {X,C},
-				-- {X,C},
-				-- {X,C},
-				{X,R,R},
-				{X,R,R},
-				{X},
-				-- {X,X,X,Y},
-	-- 			{X,X,X,Y,Y,X,X,X,C,C},
-	-- 			{X,X,X,M,Y,G,R,X,C,C},
-	-- 			{X,X,M,M,G,G,R,R,R,G},
-	-- 			{X,Y,M,C,C,G,M,M,G,G},
-	-- 			{X,Y,Y,C,C,B,B,M,M,G},
-	-- 			{X,B,Y,R,R,R,B,C,C,R,X,B},
-	-- 			{X,B,G,G,G,R,B,C,C,R,X,B},
-	-- 			{X,B,B,G,K,K,K,K,R,R,X,B,B},
-				{X,X,X,X},
-				{X,X,X,X,X,X,X,X,X,X},
-				{X,X,X,G,X,X,C,X,M},
-				{X,X,C,G,G,G,C,C,M,M},
-				{X,C,C,M,B,B,C,Y,Y,M},
-				{X,K,C,M,M,B,B,B,Y,Y,X,K},
-				{X,K,G,G,M,B,Y,B,R,R,X,K},--,R},
-				{X,K,G,R,R,Y,Y,B,R,R,X,K},--,R},
-				{X,K,G,R,R,Y,K,K,K,K,X,K}--R,R},
+			{X,R,R},
+			{X,R,R},
+			{X},
+			{X},
+			{X},
+			{X,X,X,G,X,X,C,X,M},
+			{X,X,C,G,G,G,C,C,M,M},
+			{X,C,C,M,B,B,C,Y,Y,M},
+			{X,K,C,M,M,B,B,B,Y,Y,X,X,Y},
+			{X,K,G,G,M,B,Y,B,R,R,X,Y,Y},
+			{X,K,G,R,R,Y,Y,B,R,R,X,Y},
+			{X,K,G,R,R,Y,K,K,K,K}
 		},
 		blocksAt = {x=2,y=3},
 		localActorPointers = {
-			-- {x=9,y=12,id=358}, -- exit
-			-- {x=4,y=6,id=1004},
+			{x=14,y=2,id=369}, -- exit
+			{x=13,y=11,id=1015},
 			-- {x=5,y=8,id=6},
 		}
-	},--19 tetris blocks
+	},--19 tetris blocks (needs door) **** shirt candidate where notes are, move notes down? may need to cycle colors to get cyan in there :/
 	{
 		tileData = {
-			{1,1,3,3,3,3,3,3,3,3,3},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{},
-			{1,1,3,3,3,3,3,3,3,3,3},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{3,3,2,2,2,2,2,2,2,2,2},
-			{6,2,2,2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,7,2,2,2,2},
-			{2,2,2,2,2,2,2,2,2,2,2},
-			{4,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
+			{3,3,3,3,3},
+			{7,7,2,7,7},
+			{8,2,2,2,2},
+			{2,2,2,2,8},
+			{8,2,2,2,2},
+			{7,7,6,7,7},
 		}, 
-		startAt = {x=2,y=2,default=1},
+		startAt = {x=9,y=5,default=1},
 		blocks = {
-			{X,Y,X,M,X,Y,X,M},
-			{},
-			{},
-			{X,G,X,X,K,X,X,B},
-			{B,R,X,K,K,K,X,R,G},
-			{X,X,K,K,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{K,K,K,X,X,X,K,K,K},
-			{X,K,K,K,X,K,K,K},
-			{X,X,K,K,K,K,K},
-			{G,R,X,K,K,K,X,R,B},
-			{X,B,X,X,K,X,X,G},
+			{C,C},
+			{X,M,M},
+			{Y,Y},
 		},
-		blocksAt = {x=4,y=3},
+		blocksAt = {x=10,y=7},
 		localActorPointers = {
-			-- {x=9,y=12,id=358}, -- exit
-			-- {x=4,y=6,id=1004},
+			{x=11,y=7,id=370}, -- exit
+			{x=4,y=6,id=1016},
 			-- {x=5,y=8,id=6},
 		}
-	},--20 ? last baby puzzle
+	},--20 last baby puzzle, CMY simple
 	
 	--other rooms:
 	{
