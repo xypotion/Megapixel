@@ -17,7 +17,7 @@ K = "black"
 X = nil
 
 mapDataRaw = {
-	--1: first floor, hub of operations
+	--1: FIRST FLOOR, hub of operations
 	{
 		tileData = {
 			{1,1,1,3,3,3,3,3,3,3,3,1},
@@ -47,7 +47,7 @@ mapDataRaw = {
 			{x=8,y=8,id=2010},
 			{x=9,y=8,id=2011},
 			{x=10,y=8,id=2012},
-			{x=7,y=9,id=20013},
+			{x=7,y=9,id=2013},
 			{x=8,y=9,id=2014},
 			{x=9,y=9,id=2015},
 			{x=10,y=9,id=2016},
@@ -162,30 +162,37 @@ mapDataRaw = {
 	},
 	
 --puzzles:
--- floor 1: 6,13,16,20?
--- floor 2: 5,7,14,15?
--- floor 3: 8,9,10,11? 18?
--- floor 4: 11,12,17
+-- floor 1: 6,13,16,20
+-- floor 2: 5,7,14,15
+-- floor 3: 8,9,10,18
+-- floor 4: 11,12,17,19
 
--- or:
--- redshift _, checker N, narrow S, ... hm
+-- TODO
+-- o maybe rearrange #5
+-- o put white shirt in #7
+-- o magenta shirt in #9?
+-- o update #13 with colored blocks
+-- - red/green shirt in #14?
+-- - green shirt in #15?
+-- - doors & notes: #16, #17
+-- - reverse #18, add door & notes
+-- - door & notes & cyan shirt: #19
+-- - shift and finalize #20, door, notes, blue or red shirt
 
-	--5: silly first puzzle (doors 305, 355, notes 1001) **
 	{
 		tileData = {
 			{3,3,3,1,1,1,1,1,1,3,3,3},
-			{2,2,2,3,3,3,3,3,3,2,2,2},
+			{6,2,6,3,3,3,3,3,3,6,2,6},
 			{2,2,2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,2,2,2,2,2}
+			{2,2,2,1,1,1,1,1,1,2,2,2}
 		}, 
 		startAt = {x=2,y=6,default=1},
 		blocks = {
-			{R,R,R,K,K,C},
-			{G,G,G,K,K,M},
-			{B,B,B,K,K,Y},
-			{X,X,X,K,K,K},
+			{R,K,C,C,K,R},
+			{G,K,M,M,K,G},
+			{B,K,Y,Y,K,B},
 		},
 		blocksAt = {x=5,y=8},
 		localActorPointers = {
@@ -193,37 +200,35 @@ mapDataRaw = {
 			{x=12,y=7,id=1001},
 			-- {x=2,y=9,id=903}
 		}
-	},
-	--6: narrow puzzle, pretty easy * oldest baby puzzle, kinda
+	},--5: silly first puzzle (doors 305, 355, notes 1001) **
 	{
 		tileData = {
 			{3,3,3,3},
 			{2,2,2,2},
-			{2,2},
-			{2},
-			{2},
-			{2},
-			{2},
-			{2,1,1,3},
-			{2,3,3,2},
+			{2,8,2,8},
+			{2,7,7,7},
+			{2,2,8,2},
+			{2,7,7,7},
+			{2,8,2,8},
+			{2,7,7,7},
+			-- {2,3,3,2},
 			{2,2,2,2}
 		}, 
 		startAt = {x=2,y=2,default=1},
 		blocks = {
+			{G},
 			{B},
-			{Y},
-			{B},
-			{Y},
 			{R},
+			{G},
+			{B},
 			{K}
 		},
-		blocksAt = {x=2,y=5},
+		blocksAt = {x=2,y=4},
 		localActorPointers = {
 			{x=5,y=2,id=356}, -- exit
 			{x=5,y=10,id=1002},
 		}
-	},
-	--7: white puzzle *** shirt candidate: white, hidden under a white block! maybe upper right corner. IF you put white shirt here, move to level 2 or 3
+	},--6: narrow puzzle, pretty easy * oldest baby puzzle, kinda
 	{
 		tileData = {
 			{3,3,3,3,3,3,3},
@@ -249,9 +254,9 @@ mapDataRaw = {
 		localActorPointers = {
 			{x=6,y=10,id=357}, -- exit
 			{x=4,y=4,id=1003},
+			{x=10,y=4,id=909}
 		}
-	},
-	--8: black grate puzzle **** shirt candidate: black? hmm. kinda no place for it...
+	},--7: white puzzle *** shirt candidate: white, hidden under a white block! maybe upper right corner. IF you put white shirt here, move to level 2 or 3
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,1},
@@ -279,8 +284,7 @@ mapDataRaw = {
 			{x=9,y=12,id=358}, -- exit
 			{x=4,y=6,id=1004},
 		}
-	},
-	--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta (but where?)
+	},--8: black grate puzzle **** shirt candidate: black? hmm. kinda no place for it...
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3},
@@ -304,11 +308,10 @@ mapDataRaw = {
 		blocksAt = {x=2,y=6},
 		localActorPointers = {
 			{x=9,y=12,id=359}, -- exit
-			{x=9,y=5,id=1005},
-			-- {x=9,y=5,id=6},
+			{x=9,y=5,id=907},
+			{x=2,y=10,id=1005},
 		}
-	},
-	--10: plant rows puzzle ***
+	},--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta (but where?)
 	{
 		tileData = {
 			{1,1,3,3,3,1,1},
@@ -340,10 +343,7 @@ mapDataRaw = {
 			{x=5,y=4,id=1006},
 			-- {x=5,y=8,id=6},
 		}
-	},
-	--11: painting puzzle *** shirt candidate: yellow as sun! :D and WOW that shirt took me a long time to get. jesus. hardest puzzle yet?
-	-- steps for shirt: red right 1, magenta left 1, blue down 1 then up 1, green left 1, eliminate lower right redness with blue and green, 
-	--		take out 3rd red from top right, chunk red down onto cyan (gap must be where shirt sits). whew.
+	},--10: plant rows puzzle ***
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3,3,3},
@@ -375,8 +375,10 @@ mapDataRaw = {
 			{x=8,y=8,id=1007},
 			{x=9,y=5,id=908},
 		}
-	},
-	--12: white pawn vs black rook ** if no shirts, **** if shirts. black shirt here?
+	},--11: painting puzzle *** shirt candidate: yellow = sun! :D and WOW that shirt took me a long time to get. jesus. hardest puzzle yet? *****
+	-- steps for shirt: red right 1, magenta left 1, blue down 1, up 1, green left 1, down 1, all the way right, yellow out of the way
+	-- blue down 1, right all the way, down 1 again, red left 2, right 2, yellow to top right, green to top and 3 from right (making a second yellow),
+	-- move character into middle left area, move yellow down and left, finally chunk red left 2 and down 1 onto cyan (gap must be where shirt sits). whew.
 	{
 		tileData = {
 			{3,1,1,1,1,1,1,1,1,1,1,1,3},
@@ -406,35 +408,32 @@ mapDataRaw = {
 			{x=14,y=5,id=902},
 			-- {x=5,y=8,id=6},
 		}
-	},
-	--13: baby puzzle "red shift" (needs stuff) * great place to offer R-for-reset hint!
+	},--12: white pawn vs black rook ** if no shirts, **** if shirts. black shirt here?
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3,3},
 			{2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,1,1,1,1,2,2,2},
 			{2,2,2,1,1,1,1,2,2,2},
-			{1,1,1,1,1,1,1,2,2,2},
-			{3,3,3,3,3,3,3,2,2,2},
+			{2,2,2,1,1,1,1,2,2,2},
+			{6,6,6,3,3,3,3,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2},
 			{1,4}
 		}, 
 		startAt = {x=4,y=2,default=1},
 		blocks = {
 			{R,X,X,R},
-			{X,X,X,X,X,K},
-			{},
-			{X,X,X,X,K,X,K},
-			{},
-			{X,X,X,X,X,K}
+			{X,X,X,X,Y,M,Y},
+			{X},
+			{X},
+			{X,X,X,X,M,Y,M},
 		},
 		blocksAt = {x=7,y=3},
 		localActorPointers = {
 			{x=5,y=9,id=363},
 			{x=5,y=4,id=1009},
 		}
-	},
-	--14: + stripes puzzle *** shirt candidate, place behind black blocks in a side corridor (red?)
+	},--13: baby puzzle "red shift" (needs stuff) * great place to offer R-for-reset hint!
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3},
@@ -466,8 +465,7 @@ mapDataRaw = {
 			{x=6,y=9,id=1010},
 			-- {x=5,y=8,id=6},
 		}
-	},
-	--15: green X (needs stuff) ***, shirt candidate (green), maybe a blacked-in side corridor
+	},--14: + stripes puzzle *** shirt candidate, place behind black blocks in a side corridor (red?)
 	{
 		tileData = {
 			{1,1,1,1,3},
@@ -494,33 +492,31 @@ mapDataRaw = {
 			{x=6,y=5,id=1011},
 			-- {x=5,y=8,id=6},
 		}
-	},
-	--16: baby puzzle "+ vs X" (NEEDS STUFF) *
+	},--15: green X (needs stuff) **, shirt candidate (green), maybe a blacked-in side corridor
 	{
 		tileData = {
-			{3,3,3,3,3,3,3},
-			{2,2,2,2,2,2,2},
-			{6,2,6,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{6,2,6,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{1,1,1,4}
+			{3,3,3,3,3},
+			{2,2,2,2,2},
+			{2,2,2,2,2},
+			{2,2,2,2,2},
+			{2,2,2,2,2},
+			{2,2,2,2,2},
 		}, 
-		startAt = {x=4,y=6,default=1},
+		startAt = {x=2,y=2,default=1},
 		blocks = {
-			{X,K,X,X,W,X,W},
-			{K,X,K},
-			{X,K,X,X,W,X,W},
+			{X,X,K},
+			{X,K,W,K},
+			{K,W,X,W,K},
+			{X,K,W,K},
+			{X,X,K},
 		},
-		blocksAt = {x=4,y=8},
+		blocksAt = {x=2,y=3},
 		localActorPointers = {
 			{x=7,y=13,id=366}, -- exit
 			{x=5,y=9,id=1012},
 			-- {x=5,y=8,id=6},
 		}
-	},
-	--17: donut in the gas pump (needs door) ***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
+	},--16: baby white-vs-black (NEEDS STUFF) *
 	{
 		tileData = {
 			{1,1,3,3,3,3,3,3,3,3,3},
@@ -558,7 +554,7 @@ mapDataRaw = {
 			{x=8,y=10,id=1013},
 			-- {x=5,y=8,id=6},
 		}
-	},
+	},--17: donut in the gas pump (needs door) ***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
 	{
 		tileData = {
 			{1,1,3,3,3,3,3,3,3,3,3},
@@ -591,7 +587,7 @@ mapDataRaw = {
 			{x=8,y=7,id=1014},
 			-- {x=5,y=8,id=6},
 		}
-	},--18 rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
+	},--18: rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3,3,1,3,3},
@@ -629,29 +625,39 @@ mapDataRaw = {
 			{x=13,y=11,id=1015},
 			-- {x=5,y=8,id=6},
 		}
-	},--19 tetris blocks (needs door) **** shirt candidate where notes are, move notes down? may need to cycle colors to get cyan in there :/
+	},--19: tetris blocks (needs door) **** cyan shirt where notes are, move notes down, may need to cycle colors to get cyan in there nicely :/
 	{
 		tileData = {
-			{3,3,3,3,3},
-			{7,7,2,7,7},
-			{8,2,2,2,2},
-			{2,2,2,2,8},
-			{8,2,2,2,2},
-			{7,7,6,7,7},
-		}, 
-		startAt = {x=9,y=5,default=1},
-		blocks = {
-			{C,C},
-			{X,M,M},
-			{Y,Y},
+			{3,3,3,3,3,3,3},
+			{2,2,7,7,7,2,2},
+			{2,7,7,2,7,7,2},
+			{2,7,2,2,2,7,2},
+			{2,2,2,6,2,2,2},
+			{2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2},
 		},
-		blocksAt = {x=10,y=7},
+		startAt = {x=2,y=2,default=1},
+		blocks = {
+			{K,X,X,X,X,X,G},
+			{K,X,X,X,X,X,G},
+			{K,X,X,X,X,X,G},
+			{X},
+			{B,B,B,B,B,B,B},
+			{Y,Y,Y,Y,Y,Y,Y},
+			{K,K,K,K,K,K,K}
+		},
+		blocksAt = {x=2,y=5},
+		
 		localActorPointers = {
 			{x=11,y=7,id=370}, -- exit
-			{x=4,y=6,id=1016},
+			{x=5,y=6,id=1016},
 			-- {x=5,y=8,id=6},
 		}
-	},--20 last baby puzzle, CMY simple
+	},--20: baby puzzle: line collapse * shirt in corner (cyan? green?)
 	
 	--other rooms:
 	{

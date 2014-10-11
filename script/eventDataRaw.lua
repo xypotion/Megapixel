@@ -30,8 +30,8 @@ behaviorsRaw = {
 	resume = {
 		-- fadeOut, 0.5,
 		-- fadeIn, 0.5,
-		warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
-		-- warp, {wid=20,mx=11,my=8,facing="s"}, -- for testing
+		-- warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
+		warp, {wid=5,mx=11,my=8,facing="s"}, -- for testing
 		say, "I have to find the research materials and get\nout of here!",
 	},
 	start = {
@@ -1031,7 +1031,55 @@ eventDataRaw[903] = {
 		say, "Press 3 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Red. Hot.\""
 	}
-}--red, bound for ...
+}--red
+eventDataRaw[904] = {
+	name = "shirt 4",
+	sc = {category="stillActors",image=1,quadId=11},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 4"},
+	interactionBehavior = {
+		collect_, "shirt 4",
+		say, "Found a green shirt!",
+		say, "Press 4 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"Huh, it feels kinda springy.\""
+	}
+}--green
+eventDataRaw[905] = {
+	name = "shirt 5",
+	sc = {category="stillActors",image=1,quadId=12},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 5"},
+	interactionBehavior = {
+		collect_, "shirt 5",
+		say, "Found a blue shirt!",
+		say, "Press 5 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"Hm, cool.\""
+	}
+}--blue
+eventDataRaw[906] = {
+	name = "shirt 6",
+	sc = {category="stillActors",image=1,quadId=13},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 6"},
+	interactionBehavior = {
+		collect_, "shirt 6",
+		say, "Found a cyan shirt!",
+		say, "Press 6 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"<tetris joke here>\"" --TODO
+	}
+}--cyan
+eventDataRaw[907] = {
+	name = "shirt 7",
+	sc = {category="stillActors",image=1,quadId=14},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 7"},
+	interactionBehavior = {
+		collect_, "shirt 7",
+		say, "Found a red shirt!",
+		say, "Press 7 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"Cute.\""
+	}
+}--magenta
 eventDataRaw[908] = {
 	name = "shirt 8",
 	sc = {category="stillActors",image=1,quadId=15},
@@ -1041,12 +1089,13 @@ eventDataRaw[908] = {
 		collect_, "shirt 8",
 		say, "Found a yellow shirt!",
 		say, "Press 8 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"So bright.\""
+		say, "\"Wow, so bright.\"",
+		say, "I'm honestly impressed."
 	}
 }--yellow, in room 11
 eventDataRaw[909] = {
 	name = "shirt 9",
-	sc = {category="stillActors",image=1,quadId=9},
+	sc = {category="stillActors",image=1,quadId=16},
 	collide = true,
 	appearsUntilAllCollected = {"shirt 9"},
 	interactionBehavior = {
