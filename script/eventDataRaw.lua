@@ -30,8 +30,8 @@ behaviorsRaw = {
 	resume = {
 		-- fadeOut, 0.5,
 		-- fadeIn, 0.5,
-		-- warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
-		warp, {wid=20,mx=1,my=8,facing="s"}, -- for testing
+		warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
+		-- warp, {wid=20,mx=1,my=8,facing="s"}, -- for testing
 		say, "I have to find the research materials and get\nout of here!",
 	},
 	start = {
@@ -399,7 +399,7 @@ eventDataRaw[363] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=3,mx=11,my=11,facing="n"}
+		warp,{wid=1,mx=11,my=11,facing="n"}
 	}
 }
 eventDataRaw[316] = {
@@ -418,7 +418,7 @@ eventDataRaw[366] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=3,mx=11,my=3,facing="s"}
+		warp,{wid=1,mx=11,my=3,facing="s"}
 	}
 }
 eventDataRaw[320] = {
@@ -437,7 +437,7 @@ eventDataRaw[370] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=4,mx=11,my=11,facing="n"}
+		warp,{wid=1,mx=11,my=11,facing="n"}
 	}
 }
 
@@ -460,7 +460,7 @@ eventDataRaw[355] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=1,mx=11,my=11,facing="n"}
+		warp,{wid=2,mx=11,my=11,facing="n"}
 	}
 }
 eventDataRaw[307] = {
@@ -480,7 +480,7 @@ eventDataRaw[357] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=1,mx=6,my=3,facing="s"}
+		warp,{wid=2,mx=6,my=3,facing="s"}
 	}
 }
 eventDataRaw[314] = {
@@ -499,7 +499,7 @@ eventDataRaw[364] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=3,mx=6,my=11,facing="n"}
+		warp,{wid=2,mx=6,my=11,facing="n"}
 	}
 }
 eventDataRaw[315] = {
@@ -518,7 +518,7 @@ eventDataRaw[365] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=3,mx=6,my=3,facing="s"}
+		warp,{wid=2,mx=6,my=3,facing="s"}
 	}
 }
 
@@ -540,7 +540,7 @@ eventDataRaw[358] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=1,mx=11,my=3,facing="s"}
+		warp,{wid=3,mx=11,my=3,facing="s"}
 	}
 }
 eventDataRaw[309] = {
@@ -560,7 +560,7 @@ eventDataRaw[359] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=6,my=3,facing="s"}
+		warp,{wid=3,mx=6,my=3,facing="s"}
 	}
 }
 eventDataRaw[310] = {
@@ -580,7 +580,7 @@ eventDataRaw[360] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=11,my=3,facing="s"}
+		warp,{wid=3,mx=11,my=3,facing="s"}
 	}
 }
 eventDataRaw[318] = {
@@ -599,7 +599,7 @@ eventDataRaw[368] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=4,mx=11,my=3,facing="s"}
+		warp,{wid=3,mx=11,my=3,facing="s"}
 	}
 }
 
@@ -621,7 +621,7 @@ eventDataRaw[361] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=6,my=11,facing="n"}
+		warp,{wid=4,mx=6,my=11,facing="n"}
 	}
 }
 eventDataRaw[312] = {
@@ -641,7 +641,7 @@ eventDataRaw[362] = {
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=11,my=11,facing="n"}
+		warp,{wid=4,mx=11,my=11,facing="n"}
 	}
 }
 eventDataRaw[317] = {
@@ -650,7 +650,7 @@ eventDataRaw[317] = {
 	collide = true,
 	interactionBehavior = {
 		playSFX, "door",
-		warp,{wid=17,mx=9,my=11,facing="n"}
+		warp,{wid=17,mx=2,my=9,facing="n"}
 	}
 }
 eventDataRaw[367] = {
