@@ -36,6 +36,7 @@ function setHeroGridTargetAndTileTypeIfDirectionKeyPressed()
 	
 	if not love.keyboard.isDown('d','a','w','s','right','left','up','down') then
 		globalActors.hero.targetPos = nil
+		collideSoundTimer = 0 --hacky but it mostly works
 	else
 		globalActors.hero.targetPos = getGridPosInFrontOfActor(globalActors.hero)
 	end

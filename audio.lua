@@ -69,8 +69,10 @@ end
 
 function thudSFX()
 	if collideSoundTimer == 0 then
-		love.audio.play(sources.collide)
-		collideSoundTimer = 0.5
+			collideSoundTimer = 0.7
+	elseif collideSoundTimer < .5 and collideSoundTimer > 0.45 then
+		playSFX("collide")
+		collideSoundTimer = .45
 	end
 end
 

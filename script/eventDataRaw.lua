@@ -31,7 +31,7 @@ behaviorsRaw = {
 		-- fadeOut, 0.5,
 		-- fadeIn, 0.5,
 		-- warp, {wid=1,mx=9,my=5,facing="s"}, --the real one
-		warp, {wid=5,mx=11,my=8,facing="s"}, -- for testing
+		warp, {wid=20,mx=1,my=8,facing="s"}, -- for testing
 		say, "I have to find the research materials and get\nout of here!",
 	},
 	start = {
@@ -362,7 +362,86 @@ eventDataRaw[243] = {
 	}
 }
 
---doors
+--doors floor 1
+eventDataRaw[306] = {
+	name = "doorTo6",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=6,mx=5,my=3,facing="s"}
+	}
+}
+eventDataRaw[356] = {
+	name = "doorFrom6",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=1,mx=6,my=11,facing="n"}
+	}
+}
+eventDataRaw[313] = {
+	name = "doorTo13",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=13,mx=5,my=8,facing="n"},
+	}
+}
+eventDataRaw[363] = {
+	name = "doorFrom5",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=11,my=11,facing="n"}
+	}
+}
+eventDataRaw[316] = {
+	name = "doorTo16",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=16,mx=7,my=12,facing="n"}
+	}
+}
+eventDataRaw[366] = {
+	name = "doorFrom16",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=11,my=3,facing="s"}
+	}
+}
+eventDataRaw[320] = {
+	name = "doorTo20",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=20,mx=11,my=8,facing="s"},
+	}
+}
+eventDataRaw[370] = {
+	name = "doorFrom20",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=4,mx=11,my=11,facing="n"}
+	}
+}
+
+--doors floor 2
 eventDataRaw[305] = {
 	name = "doorTo5",
 	sc = {category="stillActors", image=1, quadId=4},
@@ -382,26 +461,6 @@ eventDataRaw[355] = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
 		warp,{wid=1,mx=11,my=11,facing="n"}
-	}
-}
-eventDataRaw[306] = {
-	name = "doorTo6",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=6,mx=5,my=3,facing="s"}
-	}
-}
-eventDataRaw[356] = {
-	name = "doorFrom6",
-	sc = {category="stillActors", image=1, quadId=3},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=1,mx=6,my=11,facing="n"}
 	}
 }
 eventDataRaw[307] = {
@@ -424,6 +483,46 @@ eventDataRaw[357] = {
 		warp,{wid=1,mx=6,my=3,facing="s"}
 	}
 }
+eventDataRaw[314] = {
+	name = "doorTo14",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=14,mx=6,my=5,facing="s"}
+	}
+}
+eventDataRaw[364] = {
+	name = "doorFrom14",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=6,my=11,facing="n"}
+	}
+}
+eventDataRaw[315] = {
+	name = "doorTo15",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=15,mx=6,my=13,facing="n"}
+	}
+}
+eventDataRaw[365] = {
+	name = "doorFrom15",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=3,mx=6,my=3,facing="s"}
+	}
+}
+
+--doors floor 3
 eventDataRaw[308] = {
 	name = "doorTo8",
 	sc = {category="stillActors", image=1, quadId=3},
@@ -436,7 +535,7 @@ eventDataRaw[308] = {
 }
 eventDataRaw[358] = {
 	name = "doorFrom8",
-	sc = {category="stillActors", image=1, quadId=4},
+	sc = {category="stillActors", image=1, quadId=3},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -484,6 +583,27 @@ eventDataRaw[360] = {
 		warp,{wid=2,mx=11,my=3,facing="s"}
 	}
 }
+eventDataRaw[318] = {
+	name = "doorTo18",
+	sc = {category="stillActors", image=1, quadId=3},
+	collide = true,
+	interactionBehavior = {
+		playSFX, "door",
+		warp,{wid=18,mx=14,my=3,facing="s"},
+	}
+}
+eventDataRaw[368] = {
+	name = "doorFrom18",
+	sc = {category="stillActors", image=1, quadId=4},
+	collide = true,
+	interactionBehavior = {
+		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		playSFX, "door",
+		warp,{wid=4,mx=11,my=3,facing="s"}
+	}
+}
+
+--doors floor 4
 eventDataRaw[311] = {
 	name = "doorTo11",
 	sc = {category="stillActors", image=1, quadId=4},
@@ -524,82 +644,6 @@ eventDataRaw[362] = {
 		warp,{wid=2,mx=11,my=11,facing="n"}
 	}
 }
-eventDataRaw[313] = {
-	name = "doorTo13",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		playSFX, "door",
-		warp,{wid=13,mx=5,my=8,facing="n"},
-	}
-}
-eventDataRaw[363] = {
-	name = "doorFrom5",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=3,mx=11,my=11,facing="n"}
-	}
-}
-eventDataRaw[314] = {
-	name = "doorTo14",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		playSFX, "door",
-		warp,{wid=14,mx=6,my=5,facing="s"}
-	}
-}
-eventDataRaw[364] = {
-	name = "doorFrom14",
-	sc = {category="stillActors", image=1, quadId=3},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=3,mx=6,my=11,facing="n"}
-	}
-}
-eventDataRaw[315] = {
-	name = "doorTo15",
-	sc = {category="stillActors", image=1, quadId=3},
-	collide = true,
-	interactionBehavior = {
-		playSFX, "door",
-		warp,{wid=15,mx=6,my=13,facing="n"}
-	}
-}
-eventDataRaw[365] = {
-	name = "doorFrom15",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=3,mx=6,my=3,facing="s"}
-	}
-}
-eventDataRaw[316] = {
-	name = "doorTo16",
-	sc = {category="stillActors", image=1, quadId=3},
-	collide = true,
-	interactionBehavior = {
-		playSFX, "door",
-		warp,{wid=16,mx=7,my=12,facing="n"}
-	}
-}
-eventDataRaw[366] = {
-	name = "doorFrom16",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=3,mx=11,my=3,facing="s"}
-	}
-}
 eventDataRaw[317] = {
 	name = "doorTo17",
 	sc = {category="stillActors", image=1, quadId=3},
@@ -619,25 +663,6 @@ eventDataRaw[367] = {
 		warp,{wid=4,mx=6,my=3,facing="s"}
 	}
 }
-eventDataRaw[318] = {
-	name = "doorTo18",
-	sc = {category="stillActors", image=1, quadId=3},
-	collide = true,
-	interactionBehavior = {
-		playSFX, "door",
-		warp,{wid=18,mx=14,my=3,facing="s"},
-	}
-}
-eventDataRaw[368] = {
-	name = "doorFrom18",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=4,mx=11,my=3,facing="s"}
-	}
-}
 eventDataRaw[319] = {
 	name = "doorTo19",
 	sc = {category="stillActors", image=1, quadId=4},
@@ -649,31 +674,12 @@ eventDataRaw[319] = {
 }
 eventDataRaw[369] = {
 	name = "doorFrom19",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
-		playSFX, "door",
-		warp,{wid=4,mx=6,my=11,facing="n"}
-	}
-}
-eventDataRaw[320] = {
-	name = "doorTo20",
-	sc = {category="stillActors", image=1, quadId=4},
-	collide = true,
-	interactionBehavior = {
-		playSFX, "door",
-		warp,{wid=20,mx=11,my=8,facing="s"},
-	}
-}
-eventDataRaw[370] = {
-	name = "doorFrom20",
 	sc = {category="stillActors", image=1, quadId=3},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=4,mx=11,my=11,facing="n"}
+		warp,{wid=4,mx=6,my=11,facing="n"}
 	}
 }
 		-- warp,{wid=14,mx=6,my=5,facing="s"},
@@ -1107,4 +1113,3 @@ eventDataRaw[909] = {
 }--white, bound for room 7?
 
 -- TODO other shirts, including clear from a computer PLUS its dead version?
-	

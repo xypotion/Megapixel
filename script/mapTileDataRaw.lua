@@ -162,22 +162,23 @@ mapDataRaw = {
 	},
 	
 --puzzles:
--- floor 1: 6,13,16,20
--- floor 2: 5,7,14,15
--- floor 3: 8,9,10,18
--- floor 4: 11,12,17,19
+-- floor 1: 6,13,16,20(R)
+-- floor 2: 5,7(W),14(G),15
+-- floor 3: 8,9(M),10,18(B)
+-- floor 4: 11(Y),12(K),17,19(C)
 
--- TODO
+-- TODO for content
 -- o maybe rearrange #5
 -- o put white shirt in #7
 -- o magenta shirt in #9?
 -- o update #13 with colored blocks
--- - red/green shirt in #14?
--- - green shirt in #15?
--- - doors & notes: #16, #17
--- - reverse #18, add door & notes
--- - door & notes & cyan shirt: #19
--- - shift and finalize #20, door, notes, blue or red shirt
+-- o green shirt in #15
+-- o shift #16
+-- o stuff for #17
+-- o mirror #18, add door & notes
+-- o flip 8 or 10 upside-down
+-- o door & notes & cyan shirt: #19
+-- o shift and finalize #20, door, notes, red shirt
 
 	{
 		tileData = {
@@ -259,15 +260,14 @@ mapDataRaw = {
 	},--7: white puzzle *** shirt candidate: white, hidden under a white block! maybe upper right corner. IF you put white shirt here, move to level 2 or 3
 	{
 		tileData = {
-			{3,3,3,3,3,3,3,1},
-			{2,2,2,2,2,2,2,3},
-			{2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2,4},
+			{1,3,3,3,3,3,3,3,1},
+			{3,2,2,2,2,2,2,2,3},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,8,2,2,2,2},
+			{1,2,2,2,2,2,2,2},
 		}, 
 		startAt = {x=2,y=4,default=1},
 		blocks = {
@@ -281,7 +281,7 @@ mapDataRaw = {
 		},
 		blocksAt = {x=2,y=5},
 		localActorPointers = {
-			{x=9,y=12,id=358}, -- exit
+			{x=10,y=5,id=358}, -- exit
 			{x=4,y=6,id=1004},
 		}
 	},--8: black grate puzzle **** shirt candidate: black? hmm. kinda no place for it...
@@ -311,7 +311,7 @@ mapDataRaw = {
 			{x=9,y=5,id=907},
 			{x=2,y=10,id=1005},
 		}
-	},--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta (but where?)
+	},--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta
 	{
 		tileData = {
 			{1,1,3,3,3,1,1},
@@ -471,10 +471,10 @@ mapDataRaw = {
 			{1,1,1,1,3},
 			{1,1,1,3,2,3},
 			{1,1,3,2,2,2,3},
-			{1,3,6,2,2,2,6,3},
-			{3,2,2,6,2,6,2,2,3},
-			{2,2,2,2,2,2,2,2,2},
-			{1,2,2,6,2,6,2,2},
+			{1,3,6,2,2,2,6,3,1,1,1,3},
+			{3,2,2,6,2,6,2,2,3,3,3,2,3},
+			{2,2,2,2,2,2,2,2,2,2,2,2,2},
+			{1,2,2,6,2,6,2,2,1,1,1,2},
 			{1,1,6,2,2,2,6},
 			{1,1,1,2,2,2},
 			{1,1,1,1,2,},
@@ -482,15 +482,15 @@ mapDataRaw = {
 		}, 
 		startAt = {x=2,y=4,default=1},
 		blocks = {
-			{X,X,X,X,G},
-			{R,R,X,G,G,G,X,B,B},
-			{X,X,X,X,G},
+			{X,X,X,X,G,X,X,X,X,X,X,M},
+			{R,R,X,G,G,G,X,B,B,X,M,X,M},
+			{X,X,X,X,G,X,X,X,X,X,X,M},
 		},
 		blocksAt = {x=2,y=8},
 		localActorPointers = {
 			{x=6,y=14,id=365}, -- exit
 			{x=6,y=5,id=1011},
-			-- {x=5,y=8,id=6},
+			{x=13,y=9,id=904},
 		}
 	},--15: green X (needs stuff) **, shirt candidate (green), maybe a blacked-in side corridor
 	{
@@ -502,7 +502,7 @@ mapDataRaw = {
 			{2,2,2,2,2},
 			{2,2,2,2,2},
 		}, 
-		startAt = {x=2,y=2,default=1},
+		startAt = {x=6,y=5,default=1},
 		blocks = {
 			{X,X,K},
 			{X,K,W,K},
@@ -510,10 +510,10 @@ mapDataRaw = {
 			{X,K,W,K},
 			{X,X,K},
 		},
-		blocksAt = {x=2,y=3},
+		blocksAt = {x=6,y=6},
 		localActorPointers = {
-			{x=7,y=13,id=366}, -- exit
-			{x=5,y=9,id=1012},
+			{x=6,y=5,id=366}, -- exit
+			{x=10,y=10,id=1012},
 			-- {x=5,y=8,id=6},
 		}
 	},--16: baby white-vs-black (NEEDS STUFF) *
@@ -550,25 +550,25 @@ mapDataRaw = {
 		},
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
-			-- {x=9,y=12,id=358}, -- exit
+			{x=2,y=12,id=367}, -- exit
 			{x=8,y=10,id=1013},
 			-- {x=5,y=8,id=6},
 		}
 	},--17: donut in the gas pump (needs door) ***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
 	{
 		tileData = {
-			{1,1,3,3,3,3,3,3,3,3,3},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{3,3,2,2,2,2,2,2,2,2,2},
-			{6,2,2,2,2,2,2,2,2,2,2},
+			{3,3,3,3,3,3,3,3,3},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,3,3},
 			{2,2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,2},
-			{4,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
-			{1,1,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
 		}, 
-		startAt = {x=2,y=2,default=1},
+		startAt = {x=4,y=2,default=1},
 		blocks = {
 			{X,K,K,K,K,K,K,K},
 			{K,K,K,W,W,W,K,K,K},
@@ -583,9 +583,9 @@ mapDataRaw = {
 		},
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
-			{x=9,y=12,id=358}, -- exit
+			{x=14,y=5,id=358}, -- exit
 			{x=8,y=7,id=1014},
-			-- {x=5,y=8,id=6},
+			{x=4,y=11,id=905},
 		}
 	},--18: rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
 	{
@@ -596,7 +596,7 @@ mapDataRaw = {
 			{2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,1,3,3},
 			{2,2,2,2,2,2,2,2,2,2,1,2,8},
-			{2,2,2,2,2,2,2,2,2,2,1,2,7},
+			{2,2,2,2,2,2,2,2,2,2,1,7,7},
 			{2,2,2,2,2,2,2,2,2,2},
 			{2,2,2,2,2,2,2,2,2,2,1,3,3},
 			{2,2,2,2,2,2,2,2,2,2,1,2,2},
@@ -622,40 +622,42 @@ mapDataRaw = {
 		blocksAt = {x=2,y=3},
 		localActorPointers = {
 			{x=14,y=2,id=369}, -- exit
-			{x=13,y=11,id=1015},
-			-- {x=5,y=8,id=6},
+			{x=14,y=13,id=1015},
+			{x=13,y=11,id=906},
 		}
 	},--19: tetris blocks (needs door) **** cyan shirt where notes are, move notes down, may need to cycle colors to get cyan in there nicely :/
 	{
 		tileData = {
-			{3,3,3,3,3,3,3},
-			{2,2,7,7,7,2,2},
-			{2,7,7,2,7,7,2},
-			{2,7,2,2,2,7,2},
-			{2,2,2,6,2,2,2},
-			{2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2},
-			{2,2,2,2,2,2,2},
+			{1,1,3,3,3,3,3},
+			{1,3,8,2,2,2,8,3},
+			{1,7,7,2,2,2,7,7},
+			{3,2,2,2,2,2,2,2,3},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{2,2,2,2,2,2,2,2,2},
+			{1,1,1,1,4,1,1,1,1},
 		},
 		startAt = {x=2,y=2,default=1},
 		blocks = {
-			{K,X,X,X,X,X,G},
-			{K,X,X,X,X,X,G},
-			{K,X,X,X,X,X,G},
-			{X},
-			{B,B,B,B,B,B,B},
-			{Y,Y,Y,Y,Y,Y,Y},
-			{K,K,K,K,K,K,K}
+			{X,X,R},
+			{X,R,X,R},
+			{R,X,X,X,R},
+			{R,X,X,X,R},
+			{B,B,B,B,B},
+			{Y,Y,Y,Y,Y},
+			{K,K,K,K,K},
+			{R,X,X,X,R},
+			{R,X,X,X,R}
 		},
-		blocksAt = {x=2,y=5},
+		blocksAt = {x=4,y=3},
 		
 		localActorPointers = {
-			{x=11,y=7,id=370}, -- exit
-			{x=5,y=6,id=1016},
-			-- {x=5,y=8,id=6},
+			-- {x=11,y=7,id=370}, -- exit
+			{x=6,y=5,id=1010},
+			{x=6,y=3,id=903},
 		}
 	},--20: baby puzzle: line collapse * shirt in corner (cyan? green?)
 	
