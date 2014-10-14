@@ -148,7 +148,11 @@ function getGlobalActorByPos(pos)
 end
 
 function interactWith(actor)
-	print "--ping interaction func"
-			
+	if actor.name then 
+		print("--interaction: "..actor.name)
+	else
+		print "--anonymous event interaction"
+	end
+	
 	startScript(actor.interactionBehavior)
 end

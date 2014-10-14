@@ -19,10 +19,14 @@ function drawPauseOverlay()
 	love.graphics.setColor(255,255,255,255)
 	love.graphics.print("PAUSED", screenWidth/3, screenHeight/6, 0, zoom*2, zoom*2)
 
-	love.graphics.print("Controls:", screenWidth/6, screenHeight/3, 0, zoom, zoom)
-	love.graphics.print("\nWASD/Arrow Keys: walk, move pixels\nSpace: interact\nReturn: activate pixel control"
+	love.graphics.setColor(207,207,207,255)
+	love.graphics.print("ABCDEFGHIJKLMNOPQRSTUVWXYZ\n\n\n\n\n\n\nControls:", screenWidth/6, 10--[[screenHeight/3]], 0, zoom, zoom)
+	--TODO un-hack (separate alphabet, actually derive letters from progress table, darken further). kinda just testing placement of alphabet
+	
+	love.graphics.setColor(255,255,255,255)
+	love.graphics.print("\nWASD/Arrow Keys: walk, move blocks\nSpace: inspect/interact\n\nReturn: activate pixel control"
 		-- .."\n[Shift]-Tab: cycle through colors\nR: reset room\nM: mute background music\nZ: toggle zoom\nEsc: exit game",
-		.."\n[Shift]-Tab: cycle through colors\nR: reset room\nM: mute background music\nEsc: exit game",
+		.."\nTab[+Shift]: cycle through colors\n\nR: reset room\nM: mute background music\nZ: change window size\n\nEsc: exit game",
 		screenWidth/5, screenHeight/3, 0, zoom, zoom)
 		
 		--TODO shirt controls

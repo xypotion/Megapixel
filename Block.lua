@@ -12,6 +12,7 @@ function Block:_init(color, pos)
 
 	-- self.targetColor = "cyan"
 	-- self.targetImageOpacity = 0
+	self.currentImageOpacity = 255
 
 	self.currentPos = self.currentPos or pos or {x=12,y=4}
 	self.targetPos = nil--{x=self.currentPos.x,y=self.currentPos.y}
@@ -33,6 +34,8 @@ function Block:draw()
 	if self.targetColor then
 		love.graphics.setColor(255,255,255,self.targetImageOpacity)
 		love.graphics.draw(images.blocks[self.targetColor], s.quadSet[s.anikey.frame], self.screenPos.x, self.screenPos.y)
+		
+		love.graphics.setColor(255,255,255,self.currentImageOpacity)
 	end
 end
 

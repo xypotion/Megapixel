@@ -181,7 +181,6 @@ function makeQuads()
 		{quadAt(1,3,qs)}, --14:magenta
 		{quadAt(2,3,qs)}, --15:yellow
 		{quadAt(0,2,qs)}, --16:white
-		
 	}
 	qs = {1,1,2,1}
 	quadSets.block = {quadAt(0,0,qs),quadAt(1,0,qs)}
