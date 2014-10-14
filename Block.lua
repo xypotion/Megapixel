@@ -13,6 +13,7 @@ function Block:_init(color, pos)
 	-- self.targetColor = "cyan"
 	-- self.targetImageOpacity = 0
 	self.currentImageOpacity = 255
+	self.targetImageOpacity = 255
 
 	self.currentPos = self.currentPos or pos or {x=12,y=4}
 	self.targetPos = nil--{x=self.currentPos.x,y=self.currentPos.y}
@@ -27,15 +28,20 @@ end
 
 function Block:draw()
 	local s = self.sprite
-	
-	love.graphics.setColor(255,255,255,255)
-	love.graphics.draw(s.image, s.quadSet[s.anikey.frame], self.screenPos.x --[[+ currentMap.offset.x]], self.screenPos.y --[[+ currentMap.offset.y]])
+	-- local ts = self.targetSprite
 	
 	if self.targetColor then
 		love.graphics.setColor(255,255,255,self.targetImageOpacity)
 		love.graphics.draw(images.blocks[self.targetColor], s.quadSet[s.anikey.frame], self.screenPos.x, self.screenPos.y)
 		
 		love.graphics.setColor(255,255,255,self.currentImageOpacity)
+		love.graphics.draw(images.blocks[self.color], s.quadSet[s.anikey.frame], self.screenPos.x, self.screenPos.y)
+		-- ping("found target color: "..self.targetColor)
+	else
+	
+		love.graphics.setColor(255,255,255,255)
+		love.graphics.draw(s.image, s.quadSet[s.anikey.frame], self.screenPos.x --[[+ currentMap.offset.x]], self.screenPos.y --[[+ currentMap.offset.y]])
+		
 	end
 end
 
@@ -52,6 +58,12 @@ function Block:setColorSpecificStuff()
 		anikey = anikeys.map,
 		quadSet = quadSets.block,
 	}
+	
+	-- self.targetSprite = {
+	-- 	image = images.blocks[self.targetColor],
+	-- 	anikey = anikeys.map,
+	-- 	quadSet = quadSets.block,
+	-- }
 	
 	self.interactionBehavior = behaviorsRaw.blocks[self.color]
 end
@@ -73,6 +85,8 @@ function Block:go()
 		
 		-- if getBlock()
 		-- self:setTargetColor(getBlock(self.targetPos))
+		
+		-- ping("go")
 	end
 end
 
@@ -80,8 +94,8 @@ function Block:shift(dt)
 		-- print(" HELLO "..colorControlled)
 		-- --tablePrint(self)
 	if self.targetPos and self.color == controllableColors[colorControlled] then
-		local xDelta = (self.targetPos.x - self.currentPos.x) * self.speed * dt
-		local yDelta = (self.targetPos.y - self.currentPos.y) * self.speed * dt
+		local xDelta = (self.targetPos.x - self.currentPos.x) * self.speed * dt / 1
+		local yDelta = (self.targetPos.y - self.currentPos.y) * self.speed * dt / 1
 
 		self.distanceFromTarget = self.distanceFromTarget - (math.abs(xDelta) + math.abs(yDelta))
 		
@@ -92,6 +106,16 @@ function Block:shift(dt)
 		
 		if self.distanceFromTarget <= 0 then
 			blocksArrived = true
+		end
+	end
+	
+	--shift color TODO maybe a bottleneck?
+	if self.targetColor or self.clearMe then
+		local o = self.currentImageOpacity - 20
+		if 0 > o then
+			self.currentImageOpacity = 0
+		else
+			self.currentImageOpacity = o
 		end
 	end
 end
@@ -112,7 +136,10 @@ function Block:stop()
 		self.color = self.targetColor
 		self.targetColor = nil
 		self:setColorSpecificStuff()
+		ping('kill a color')
 	end
+	
+	ping("stop "..self.color)
 	
 	-- print("stop at", self.currentPos.x, self.currentPos.y)
 end
@@ -156,14 +183,18 @@ function Block:setupColorCombination(addend)
 		
 		if newColor == "clear" then
 			--soooOOOoo hacky
-			self.targetColor = W
-			addend.targetColor = K
+			-- self.targetColor = W
+-- 			addend.targetColor = K
+			self.targetColor = newColor
+			addend.targetColor = newColor
 			self.clearMe = true
 			addend.clearMe = true
 		else
 			self.targetColor = newColor
 			addend.targetColor = newColor
 		end
+			ping(self.color)
+			ping(self.targetColor)
 		
 		playSFX("phase")
 	end
@@ -299,6 +330,7 @@ function shiftBlockColors(dt)
 		if blocks[i].targetColor then
 			-- blocks[i].targetImageOpacity = 255 - (opacity * 8)
 			blocks[i].shiftTargetColorOpacity(dt)
+			ping("shift opacity?")
 		end
 	end
 end
