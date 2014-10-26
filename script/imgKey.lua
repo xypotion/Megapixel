@@ -10,7 +10,7 @@ images = {
 		love.graphics.newImage("img/chipset.png"),
 		-- love.graphics.newImage("img/chipset2castles??.png"),
 	},
-	stillActors = {love.graphics.newImage("img/sprites1.png")},
+	stillActors = {love.graphics.newImage("img/sprites2.png")},
 	blocks = {
 		green = love.graphics.newImage("img/blockG.png"),
 		blue = love.graphics.newImage("img/blockB.png"),
@@ -27,7 +27,9 @@ images = {
 	},
 	title = love.graphics.newImage("img/title2.png"),
 	remote = love.graphics.newImage("img/remote.png"),
-	colorKey = love.graphics.newImage("img/colorKey.png"),
+	-- colorKey = love.graphics.newImage("img/colorKey.png"),
+	colorKey2 = love.graphics.newImage("img/key2.png"),
+	colorKey2off = love.graphics.newImage("img/key2off.png"),
 	-- marble = {
 	-- 	love.graphics.newImage("img/marble1.png"),
 	-- 	love.graphics.newImage("img/marble2.png"),
@@ -162,7 +164,7 @@ function makeQuads()
 	}
 	--TODO also emotion/casting/hit/down/whatever quads used by all characters in cutscenes? anikeys may change in those cases, is the problem
 	
-	qs = {1,1,4,4}
+	qs = {1,1,4,8}
 	quadSets.stillActors = {
 		{quadAt(0,0,qs)}, --quad=1:notes
 		{quadAt(1,0,qs)}, --2:door
@@ -181,6 +183,8 @@ function makeQuads()
 		{quadAt(1,3,qs)}, --14:magenta
 		{quadAt(2,3,qs)}, --15:yellow
 		{quadAt(0,2,qs)}, --16:white
+		--other:
+		{quadAt(1,4,qs)}, --17:elevator
 	}
 	qs = {1,1,2,1}
 	quadSets.block = {quadAt(0,0,qs),quadAt(1,0,qs)}
@@ -200,7 +204,9 @@ function makeQuads()
 	
 	quadSets.title = quadAt(0,0,{15,15,15,15})
 	quadSets.remote = quadAt(0,0,{2,4,2,4})
-	quadSets.colorKey = quadAt(0,0,{2,4,2,4})
+	-- quadSets.colorKey = quadAt(0,0,{2,4,2,4})
+	quadSets.colorKey2 = quadAt(0,0,{4,3,4,3})
+	quadSets.colorKey0 = quadAt(0,0,{4,3,4,3})
 end
 
 -- makes a quad with provided args. just saves space above ~

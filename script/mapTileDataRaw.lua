@@ -59,7 +59,8 @@ mapDataRaw = {
 			{x=11,y=12,id=316},
 			
 			{x=2,y=9,id=121}, --to office
-			{x=2,y=5,id=212}, --to floor 2
+			-- {x=2,y=5,id=212}, --to floor 2
+			{x=2,y=5,id=2}, --to floor 2
 			
 			--other
 			{x=7,y=5,id=1},
@@ -166,19 +167,6 @@ mapDataRaw = {
 -- floor 2: 5,7(W),14(G),15
 -- floor 3: 8,9(M),10,18(B)
 -- floor 4: 11(Y),12(K),17,19(C)
-
--- TODO for content
--- o maybe rearrange #5
--- o put white shirt in #7
--- o magenta shirt in #9?
--- o update #13 with colored blocks
--- o green shirt in #15
--- o shift #16
--- o stuff for #17
--- o mirror #18, add door & notes
--- o flip 8 or 10 upside-down
--- o door & notes & cyan shirt: #19
--- o shift and finalize #20, door, notes, red shirt
 
 	{
 		tileData = {

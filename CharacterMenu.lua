@@ -46,7 +46,7 @@ function CharacterMenu:keyPressed(key)
 		self.previewFacing = "e"
 	elseif key == "tab" then
 		hp = { --"hero parts"
-			skin = math.random(1,2),
+			skin = (hp.skin % 2) + 1, --math.random(1,2),
 			hair = math.random(1,5),
 			gender = math.random(1,3),
 			shirt = 1

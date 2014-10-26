@@ -1,28 +1,23 @@
 NOTES
 - save files are in ~/Library/Application Support/LOVE on OSX
 
-FIXME
-- blow up block assets
-- save player settings (zoom, music)
-- add 100* notes to 200* notes
-
-
 late-night notes:
 * all of these should probably come after you get the normal puzzle rooms finalized. all fine-tuning and gravy, in other words
-Fashion Lab is a real company, but something like that sounds good for the company name
-blocks in hub rooms! if you want. could make a good tutorial, kinda? basic moving of blocks?
-move office to right side of F1, exit just north of it
-add new door tiles to actor chipset (stairs, "LAB")
-basement w/ computer, takes shirts, gives final shirt
-- or takes "materials", maybe all 26 things required
-- ...A...(missing)...C
-  ...D...E...(missing)
-	...G...H...I
-	...(missing)...(missing)...(missing)
-	etc
-final shirt is what allows you to walk through walls?
-normal ending and good ending?
-- own computer has a hidden message that gets decoded as you find materials with matching letters: FIND THE DEAD PIXEL
+x rearrange shirts a little numerically. move black to near end, shift colors down
+- Fashion Lab is a real company, but something like that sounds good for the company name
+- blocks in hub rooms! if you want. could make a good tutorial, kinda? basic moving of blocks?
+- move office to right side of F1, exit just north of it
+- add new door tiles to actor chipset (stairs, "LAB")
+- basement w/ computer, takes shirts, gives final shirt
+  - or takes "materials", maybe all 26 things required
+  - ...A...(missing)...C
+    ...D...E...(missing)
+  	...G...H...I
+  	...(missing)...(missing)...(missing)
+  	etc
+- final shirt is what allows you to walk through walls?
+- normal ending and good ending?
+  - own computer has a hidden message that gets decoded as you find materials with matching letters: FIND THE DEAD PIXEL
   - one dead pixel somewhere in building; finding it = good ending?
   * or dead pixel is in your office, but that message is somewhere else in the building. maybe computers in other floors' lobbies w/ messages?
     - hints about hard-to-get shirts, like white which is semi-hidden
@@ -59,9 +54,28 @@ V? vegetable fiber adhesion or interaction
 X xxx fashion applications? x-ray vision susceptibility? "officially, no difference from other materials, however FBI very interested"
 Z zoological interaction survey? zipping/zippers?
 
+--TODO shifting rooms (maybe later... this is polish)
+-- 20 right 3
+-- 13 left 1
+-- 6 down 3, right 2
+-- 16 right 1
+-- 5 right 1
+-- 14 right 1
+-- 18 down 1
+-- 10 right 5
+-- 9 right 1, up 1
+
+------------------------------------------------------------------------------------------------------------
+FIXME
+- blow up block assets
+- save player settings (zoom, music)
+- add 100* notes to 200* notes
+
+revised endgame plan because you got too ambitious
+- 
 
 TODO in order of importance
-- animated fusion key that can be pulled up again :/ on K?
+- animated (?) fusion key that can be pulled up again :/ on K?
   - maybe nix simple side key, then? but argh, how to animate... global actors? or a different, global blocks array? fuuck.
 - evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
 - change debug keys (123) to something else. maybe: ,./
@@ -73,16 +87,10 @@ TODO in order of importance
 - can do prettier fading trick when blocks fuse, i think... maybe try #2 will go better
 ! shirts + progress on pause menu
 ! change text on block inspection
-! rearrange puzzle rooms
-  - maybe gate the upper floors? hm
-	- label puzzle rooms?
 ! finish blowing up assets
 ! final audio: stairs, doors (, item collection, bips for remote)
   - maybe also a siren for cutscenes?
 ! ...credits somehow. heh
-! more puzzles, obvs. would like ~15 total
-  - 4~6 "baby" puzzles, the rest semi-hard
-! arrange loot nicely
 ! actually label rooms/doors...? OR remove the prompt, it's kind of unneeded
   * actually just remove the prompt from puzzle room ENTRY, leave on exit
 ! maybe control tweaks? Q -> remote?
@@ -94,9 +102,6 @@ TODO in order of importance
 	- mention p for pause
 	- mention auto-save
 	- mention shift-tab
-- debug mode by holding down a key or three? walk through walls?
-> collectible shirts? change colors with tab when not controlling blocks? lol
-  - clear shirt is reward for hardest puzzle? kinda ultimate reward?
 > postgame fun: all black backgrounds turn into twinkly stars
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
 > better story/cutscenes & effects (like a quake or a siren or a red flash)
@@ -126,6 +131,15 @@ credits:
 
 
 done TODOs
+- debug mode by holding down a key or three? walk through walls?
+> collectible shirts? change colors with tab when not controlling blocks? lol
+  - clear shirt is reward for hardest puzzle? kinda ultimate reward?
+! more puzzles, obvs. would like ~15 total
+  - 4~6 "baby" puzzles, the rest semi-hard
+! arrange loot nicely
+! rearrange puzzle rooms
+  - maybe gate the upper floors? hm
+	- label puzzle rooms?
 - change all instances of "gigapixel" to "megapixel"
 ! SAVE player's body parts
 ! shirt controls 

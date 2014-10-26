@@ -192,18 +192,18 @@ eventDataRaw = {
 		}
 	},
 	{
-		name = "doorTo3",
-		sc = {category="stillActors", image=1, quadId=3},
+		name = "elevator",
+		sc = {category="stillActors", image=1, quadId=17},
 		collide = true,
 		interactionBehavior = {
-			choose, {"Leave room?", {"No", 1}, {"Yes",0}},
+			choose, {"You are on the ground floor. Go up?", {"Floor 2",0}, {"Floor 3",3}, {"Floor 4",4}},
 			warp,{wid=3,mx=5,my=7,facing="n"}
 		}
 	},
 	--3
 	{
 		name = "doorTo5",
-		sc = {category="stillActors", image=1, quadId=4},
+		sc = {category="stillActors", image=1, quadId=2},
 		collide = true,
 		interactionBehavior = {
 			choose, {"Leave room?", {"No", 1}, {"Yes",0}},

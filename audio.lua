@@ -18,7 +18,8 @@ function loadAudio()
 	sources.highblip = love.audio.newSource("sound/high blip.wav", static)
 	sources.highblip:setVolume(0.2)
 	
-	sources.stairs = love.audio.newSource("sound/stairs down.wav", static)
+	-- sources.stairs = love.audio.newSource("sound/stairs down.wav", static)
+	sources.bell = love.audio.newSource("sound/bell.wav", static)
 	
 	sources.door = love.audio.newSource("sound/door.wav", static)
 	sources.door:setVolume(0.2)

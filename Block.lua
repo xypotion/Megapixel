@@ -26,21 +26,22 @@ function Block:_init(color, pos)
 	-- --ping(color.." block made")
 end
 
-function Block:draw()
+function Block:draw(offset)
+	offset = offset or 0
+	
 	local s = self.sprite
-	-- local ts = self.targetSprite
 	
 	if self.targetColor then
 		love.graphics.setColor(255,255,255,self.targetImageOpacity)
-		love.graphics.draw(images.blocks[self.targetColor], s.quadSet[s.anikey.frame], self.screenPos.x, self.screenPos.y)
+		love.graphics.draw(images.blocks[self.targetColor], s.quadSet[s.anikey.frame], self.screenPos.x + offset, self.screenPos.y + offset)
 		
 		love.graphics.setColor(255,255,255,self.currentImageOpacity)
-		love.graphics.draw(images.blocks[self.color], s.quadSet[s.anikey.frame], self.screenPos.x, self.screenPos.y)
+		love.graphics.draw(images.blocks[self.color], s.quadSet[s.anikey.frame], self.screenPos.x + offset, self.screenPos.y + offset)
 		-- ping("found target color: "..self.targetColor)
 	else
 	
 		love.graphics.setColor(255,255,255,255)
-		love.graphics.draw(s.image, s.quadSet[s.anikey.frame], self.screenPos.x --[[+ currentMap.offset.x]], self.screenPos.y --[[+ currentMap.offset.y]])
+		love.graphics.draw(s.image, s.quadSet[s.anikey.frame], self.screenPos.x + offset --[[+ currentMap.offset.x]], self.screenPos.y + offset --[[+ currentMap.offset.y]])
 		
 	end
 end
@@ -136,10 +137,10 @@ function Block:stop()
 		self.color = self.targetColor
 		self.targetColor = nil
 		self:setColorSpecificStuff()
-		ping('kill a color')
+		-- ping('kill a color')
 	end
 	
-	ping("stop "..self.color)
+	-- ping("stop "..self.color)
 	
 	-- print("stop at", self.currentPos.x, self.currentPos.y)
 end

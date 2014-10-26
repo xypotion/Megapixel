@@ -57,6 +57,9 @@ function updateZoomRelativeStuff()
 	--this is safe, don't worry :)
 	initHero()
 	
+	-- --for block resizing? yuck. not worth re-doing block initialization/positioning, but yuck.
+	-- initPauseMenuSystem()
+	
 	--reinitialize blocks
 	for i = 1,#blocks do
 		blocks[i]:_init()

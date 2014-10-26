@@ -179,16 +179,23 @@ function love.draw()
 		drawMenuStack()
 	end
 
-	love.graphics.setColor(255, 255, 255, HUDOpacity)
 	if controllingBlocks then
+		love.graphics.setColor(255, 255, 255, HUDOpacity)
 		love.graphics.draw(images.blocks[controllableColors[colorControlled]], quadSets.block[1], screenWidth - tileSize * 2, screenHeight - tileSize * 3)
-		love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
+		-- love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
+		if showKey then
+			love.graphics.setColor(255, 255, 255, 255)
+			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3.5)
+		else
+			love.graphics.draw(images.colorKey2off, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3.5)
+		end
 		-- --ping("remote")
 	-- else
 	-- 	love.graphics.setColor(255, 255, 255, HUDOpacity)
 	-- 	love.graphics.draw(images.remote, quadSets.remote, screenWidth - tileSize * 2.5, screenHeight - tileSize * 4)
 	-- 	love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
 	end 
+	love.graphics.setColor(255, 255, 255, HUDOpacity)
 	love.graphics.draw(images.remote, quadSets.remote, screenWidth - tileSize * 2.5, screenHeight - tileSize * 4)
 	
 	--debug junk
@@ -220,7 +227,7 @@ function love.keypressed(key)
 	if key == "escape" then
 		love.quit()
 	elseif key == "p" then
-		togglePause()
+		togglePause(key)
 	elseif key == "m" then
 		toggleBGM()
 	elseif not paused then
@@ -274,6 +281,10 @@ function love.keypressed(key)
 					HUDOpacity = 191 
 					playSFX("highblip")
 				end
+			end
+			
+			if key == "k" and controllingBlocks then
+				showKey = not showKey
 			end
 			
 			if key == "r" and not controllingBlocks then
