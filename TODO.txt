@@ -75,16 +75,16 @@ revised endgame plan because you got too ambitious
 - 
 
 TODO in order of importance
-- animated (?) fusion key that can be pulled up again :/ on K?
-  - maybe nix simple side key, then? but argh, how to animate... global actors? or a different, global blocks array? fuuck.
+- make basement with final cutscenes
+- top floor with endgame cutscenes, also
 - evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
+  * call it "branch"? i still think this will be a valuable script tool!
 - change debug keys (123) to something else. maybe: ,./
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
 	- or just leave a note in the credits :)
 - giant cleanup of comments and stuff
 - better control hints, esp at startup
-- zoom that works with windows? :/
-- can do prettier fading trick when blocks fuse, i think... maybe try #2 will go better
+- zoom that works with Windows? :/
 ! shirts + progress on pause menu
 ! change text on block inspection
 ! finish blowing up assets
@@ -131,6 +131,9 @@ credits:
 
 
 done TODOs
+- finish making elevator
+- animated (?) fusion key that can be pulled up again :/ on K? [did not animate, but it looks better and can be toggled]
+- can do prettier fading trick when blocks fuse, i think... maybe try #2 will go better
 - debug mode by holding down a key or three? walk through walls?
 > collectible shirts? change colors with tab when not controlling blocks? lol
   - clear shirt is reward for hardest puzzle? kinda ultimate reward?

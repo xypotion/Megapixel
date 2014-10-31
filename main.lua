@@ -17,6 +17,7 @@ require "Menu1D"
 require "TitleMenu"
 require "CharacterMenu"
 require "ResetMenu"
+require "TextMenu"
 
 require "script/saveLoader"
 require "script/mapLoader"
@@ -183,6 +184,7 @@ function love.draw()
 		love.graphics.setColor(255, 255, 255, HUDOpacity)
 		love.graphics.draw(images.blocks[controllableColors[colorControlled]], quadSets.block[1], screenWidth - tileSize * 2, screenHeight - tileSize * 3)
 		-- love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
+		
 		if showKey then
 			love.graphics.setColor(255, 255, 255, 255)
 			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3.5)
@@ -224,7 +226,7 @@ function love.draw()
 end
 
 function love.keypressed(key)
-	if key == "escape" then
+	if key == "escape" then --TODO stop from exiting if currently in a textmenu. maybe even make a quit prompt? heh
 		love.quit()
 	elseif key == "p" then
 		togglePause(key)

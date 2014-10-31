@@ -196,8 +196,33 @@ eventDataRaw = {
 		sc = {category="stillActors", image=1, quadId=17},
 		collide = true,
 		interactionBehavior = {
-			choose, {"You are on the ground floor. Go up?", {"Floor 2",0}, {"Floor 3",3}, {"Floor 4",4}},
-			warp,{wid=3,mx=5,my=7,facing="n"}
+				textMenu, {
+				prompt = "Select floor (press X to cancel):",
+				options = {
+					{label=" 2F",skip=1},
+					{label=" 3F",skip=4},
+					{label=" 4F",skip=7},
+				}
+			},
+			skip, 99,
+			playSFX, "bell",
+			warp,{wid=2,mx=2,my=6,facing="s"},
+			skip, 99,
+			playSFX, "bell",
+			warp,{wid=3,mx=2,my=6,facing="s"},
+			skip, 99,
+			playSFX, "bell",
+			warp,{wid=4,mx=2,my=6,facing="s"}
+
+			-- -- OR make choose() support up to 6 options. that actually doesn't sound that bad.
+			-- -- - ...never mind, it's actualy hard. goddammit. way to make text menus as inelegant as possible.
+			-- choose, {"Select floor.", {"1st",1},{"2nd",2},{"3rd",3},{"4th",4}},
+			-- wait,0.5,
+			-- warp,{wid=1,mx=5,my=7,facing="s-- "}
+-- 			warp,{wid=1,mx=5,my=7,facing="s"}
+-- 			warp,{wid=1,mx=5,my=7,facing="s"}
+			
+			-- it's all a horrible hack either way! definitely rewrite menu/text stuff when you get back to chroma crisis!
 		}
 	},
 	--3
@@ -288,7 +313,7 @@ eventDataRaw[171] = {
 		warp,{wid=1,mx=2,my=8,facing="n"},
 		-- say,"Hm, what's that on the table?"
 	}
-}
+	}--from office
 eventDataRaw[121] = {
 	name = "door to room 21",
 	sc = {category="stillActors", image=1, quadId=4},
@@ -300,9 +325,10 @@ eventDataRaw[121] = {
 		warp,{wid=21,mx=10,my=7,facing="s"},
 		-- say,"Hm, what's that on the table?"
 	}
-}
+	}--to office
 
 --stairs
+--[[
 eventDataRaw[212] = {
 	name = "1 to 2",
 	-- appearsIfAllCollected = {"notes 1", "notes 2", "notes 3"}, TODO
@@ -313,7 +339,6 @@ eventDataRaw[212] = {
 		warp,{wid=2,mx=2,my=6,facing="s"}
 	}
 }
-
 eventDataRaw[221] = {
 	name = "2 to 1",
 	sc = {category="stillActors", image=1, quadId=3},
@@ -332,7 +357,6 @@ eventDataRaw[223] = {
 		warp,{wid=3,mx=2,my=8,facing="n"}
 	}
 }
-
 eventDataRaw[232] = {
 	name = "3 to 2",
 	sc = {category="stillActors", image=1, quadId=4},
@@ -351,7 +375,6 @@ eventDataRaw[234] = {
 		warp,{wid=4,mx=2,my=6,facing="s"}
 	}
 }
-
 eventDataRaw[243] = {
 	name = "4 to 3",
 	sc = {category="stillActors", image=1, quadId=3},
@@ -361,8 +384,105 @@ eventDataRaw[243] = {
 		warp,{wid=3,mx=2,my=6,facing="s"}
 	}
 }
+]]
 
-
+--elevators
+eventDataRaw[201] = {
+	name = "elevator",
+	sc = {category="stillActors", image=1, quadId=17},
+	collide = true,
+	interactionBehavior = {
+		textMenu, {
+			prompt = "Select floor (press X to cancel):",
+			options = {
+				{label=" 2F",skip=1},
+				{label=" 3F",skip=4},
+				{label=" 4F",skip=7},
+			}
+		},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=2,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=3,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=4,mx=2,my=6,facing="s"}
+	}
+}
+eventDataRaw[202] = {
+	name = "elevator",
+	sc = {category="stillActors", image=1, quadId=17},
+	collide = true,
+	interactionBehavior = {
+		textMenu, {
+			prompt = "Select floor (press X to cancel):",
+			options = {
+				{label=" 1F",skip=1},
+				{label=" 3F",skip=4},
+				{label=" 4F",skip=7},
+			}
+		},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=1,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=3,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=4,mx=2,my=6,facing="s"}
+	}
+}
+eventDataRaw[203] = {
+	name = "elevator",
+	sc = {category="stillActors", image=1, quadId=17},
+	collide = true,
+	interactionBehavior = {
+		textMenu, {
+			prompt = "Select floor (press X to cancel):",
+			options = {
+				{label=" 1F",skip=1},
+				{label=" 2F",skip=4},
+				{label=" 4F",skip=7},
+			}
+		},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=1,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=2,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=4,mx=2,my=6,facing="s"}
+	}
+}
+eventDataRaw[204] = {
+	name = "elevator",
+	sc = {category="stillActors", image=1, quadId=17},
+	collide = true,
+	interactionBehavior = {
+		textMenu, {
+			prompt = "Select floor (press X to cancel):",
+			options = {
+				{label=" 1F",skip=1},
+				{label=" 2F",skip=4},
+				{label=" 3F",skip=7},
+			}
+		},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=1,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=2,mx=2,my=6,facing="s"},
+		skip, 99,
+		playSFX, "bell",
+		warp,{wid=3,mx=2,my=6,facing="s"},
+	}
+}
 
 --doors floor 1
 eventDataRaw[306] = {

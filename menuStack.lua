@@ -33,7 +33,7 @@ function takeMenuStackInput(key)
 end
 
 -- only here to give a hook in behavior scripts!
-function addMenu(arg, ...)
+function addMenu(arg, params)
 	-- arg(...):add()
-	Menu.add(arg)
+	Menu.add(arg, params)
 end

@@ -137,6 +137,7 @@ function takeMenuInput(key)
 	elseif key == " " or key == "return" then
 		finishTextScroll()
 		
+		--TODO actually so hacky. ouch. please be a little more elegant in your next project...
 		skip(wholeMenu[menuCursor + 1][2])
 		
 		menuWaiting = false

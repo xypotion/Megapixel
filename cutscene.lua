@@ -65,6 +65,12 @@ function choose(menu)
 	
 	return false
 end
+
+function textMenu(params)
+	print("textMenu")
+	
+	addMenu(TextMenu, params)
+end
 	
 -- slightly hacky, but it works!
 function wait(sec)

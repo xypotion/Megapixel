@@ -60,7 +60,7 @@ mapDataRaw = {
 			
 			{x=2,y=9,id=121}, --to office
 			-- {x=2,y=5,id=212}, --to floor 2
-			{x=2,y=5,id=2}, --to floor 2
+			{x=2,y=5,id=201}, --to floor 2
 			
 			--other
 			{x=7,y=5,id=1},
@@ -92,8 +92,8 @@ mapDataRaw = {
 			{x=11,y=12,id=305},
 			
 			-- {x=2,y=8,id=121},			--
-			{x=2,y=5,id=221}, -- to floor 1
-			{x=2,y=9,id=223}, -- to floor 3
+			{x=2,y=5,id=202}, -- to floor 1
+			-- {x=2,y=9,id=223}, -- to floor 3
 
 			-- {x=10,y=5,id=5},
 		},
@@ -123,8 +123,8 @@ mapDataRaw = {
 			{x=11,y=12,id=318},
 			
 			-- {x=2,y=8,id=121},			--
-			{x=2,y=9,id=232}, -- to floor 2
-			{x=2,y=5,id=234}, -- to floor 4
+			-- {x=2,y=9,id=232}, -- to floor 2
+			{x=2,y=5,id=203}, -- to floor 4
 
 			-- {x=10,y=5,id=5},
 		},
@@ -154,7 +154,7 @@ mapDataRaw = {
 			{x=11,y=12,id=312},
 			
 			-- {x=2,y=8,id=121},			--
-			{x=2,y=5,id=243}, -- to floor 1
+			{x=2,y=5,id=204}, -- to floor 1
 			-- {x=2,y=9,id=223}, -- to floor 3
 
 			-- {x=10,y=5,id=5},

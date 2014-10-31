@@ -77,8 +77,8 @@ function Menu:top()
 	return menuStack[#menuStack]
 end
 
-function Menu.add(m) --TODO make all static functions use . instead of : (i guess)
-	menuStack[#menuStack + 1] = m()
+function Menu.add(m, params) --TODO make all static functions use . instead of : (i guess)
+	menuStack[#menuStack + 1] = m(params)
 end
 
 function Menu:remove()

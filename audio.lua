@@ -20,6 +20,7 @@ function loadAudio()
 	
 	-- sources.stairs = love.audio.newSource("sound/stairs down.wav", static)
 	sources.bell = love.audio.newSource("sound/bell.wav", static)
+	sources.bell:setVolume(0.2)
 	
 	sources.door = love.audio.newSource("sound/door.wav", static)
 	sources.door:setVolume(0.2)
