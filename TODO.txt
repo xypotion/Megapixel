@@ -72,53 +72,47 @@ FIXME
 - add 100* notes to 200* notes
 
 revised endgame plan because you got too ambitious
-- 
+- exit door has 3 possible behaviors:
+  1. need more notes: "i can't leave yet! gotta collect the stuff!"
+	2. got notes, missing shirts: "did i get everything? whatever, i guess i should get out of here. (player confirms)" -> credits
+	3. got everything: "whew, that was a mental workout. time to finally go home!" -> credits with permanent starry background!
 
 TODO in order of importance
-- make basement with final cutscenes
+! a row of computers in the lobby that each give a different control hint. screw the notes thing.
+  - "There's a document open on this computer. It says..."
+  * one comp standing apart that tracks your progress. "floor 1... all notes collected" "floor 2... 2/4 notes collected" "special material Y... missing"
+	  - wait, is this hard? lol. #lazy
+- make basement with final cutscenes? ...nope, make a copy of your office (with blocks!), that's where final shirt is given if you have all the stuff
+  - or not? just computer bank in lobby, instead?
 - top floor with endgame cutscenes, also
-- evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
-  * call it "branch"? i still think this will be a valuable script tool!
+  - maybe a person in a locked room? need final shirt to reach him?
+- clean up elevator UI
+- giant cleanup of comments and stuff
+- shirts + progress on pause menu
+  * or just mention shirt controls at progress-tracking comp in lobby
+! change text on block inspection
+! finish blowing up assets
+- swap out all those EXIT doors for regular doors
+- ...and put in an actual exit door, lol
+! credits/ending somehow. heh :/
 - change debug keys (123) to something else. maybe: ,./
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
 	- or just leave a note in the credits :)
-- giant cleanup of comments and stuff
-- better control hints, esp at startup
 - zoom that works with Windows? :/
-! shirts + progress on pause menu
-! change text on block inspection
-! finish blowing up assets
-! final audio: stairs, doors (, item collection, bips for remote)
-  - maybe also a siren for cutscenes?
-! ...credits somehow. heh
-! actually label rooms/doors...? OR remove the prompt, it's kind of unneeded
-  * actually just remove the prompt from puzzle room ENTRY, leave on exit
-! maybe control tweaks? Q -> remote?
-  - tap to turn on remote when not using :)
-	- Q to turn off remote
-! helpful notes when collecting research?
-  - and some before, just lying around. OR basic but nonessential ones (pause, reset, etc) come from beginner puzzles
-	- mention z for zoom
-	- mention p for pause
-	- mention auto-save
-	- mention shift-tab
+- evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
+  * call it "branch"? i still think this will be a valuable script tool!
 > postgame fun: all black backgrounds turn into twinkly stars
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
+? "white warp" for room resets?
+	
+at this point, no:
 > better story/cutscenes & effects (like a quake or a siren or a red flash)
-> ending
 - level editor? lol
 - fade music in/out a little more nicely? hmm
-- special endgame hacko to remove plants? F for fire? lol
-- better chipset?
-- and more still actors for decoration?
-  ! potted plants!
+- more still actors for decoration?
 	- wall paintings
-	- desks & computers?
 	- garbage cans
-- AND more animated actors/people if you're gonna go all the way with that.
-- let player choose hero? lol
 ? collectible color controls? start with only RGB? hmmm. kind of a distant stretch goal at this point...
-? "white warp" for room resets?
 > colorblind mode?
 ? powerups that clear all of one color? heh, not this time. oh, well
 
@@ -131,6 +125,14 @@ credits:
 
 
 done TODOs
+! actually label rooms/doors...? OR remove the prompt, it's kind of unneeded
+  * actually just remove the prompt from puzzle room ENTRY, leave on exit
+- better control hints, esp at startup + remote
+! maybe control tweaks? Q -> remote?
+  - tap to turn on remote when not using :)
+	- Q to turn off remote
+! final audio: stairs, doors (, item collection, bips for remote)
+  - maybe also a siren for cutscenes?
 - finish making elevator
 - animated (?) fusion key that can be pulled up again :/ on K? [did not animate, but it looks better and can be toggled]
 - can do prettier fading trick when blocks fuse, i think... maybe try #2 will go better
@@ -145,6 +147,7 @@ done TODOs
 	- label puzzle rooms?
 - change all instances of "gigapixel" to "megapixel"
 ! SAVE player's body parts
+- let player choose hero? lol
 ! shirt controls 
 - text box icon? x_x
 ! place reminders for controls on pause screen

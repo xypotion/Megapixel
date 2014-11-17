@@ -187,9 +187,9 @@ function love.draw()
 		
 		if showKey then
 			love.graphics.setColor(255, 255, 255, 255)
-			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3.5)
+			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
 		else
-			love.graphics.draw(images.colorKey2off, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3.5)
+			love.graphics.draw(images.colorKey2off, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
 		end
 		-- --ping("remote")
 	-- else

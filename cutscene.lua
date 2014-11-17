@@ -180,6 +180,11 @@ function collect_(name)
 	progress[name] = true
 	saveData()
 	playSFX("item")
+	
+	if name == "remote" then 
+		HUDOpacity = 63 
+	end --you are terrible.
+
 	return vanish_(name)
 end
 

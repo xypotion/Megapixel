@@ -32,7 +32,8 @@ behaviorsRaw = {
 		-- fadeIn, 0.5,
 		warp, {wid=1,mx=5,my=7,facing="s"}, --the real one
 		-- warp, {wid=20,mx=1,my=8,facing="s"}, -- for testing
-		say, "I have to find the research materials and get\nout of here!",
+		say, "It's so late!",
+		say, "I have to find the research materials and get\nout of here.",
 	},
 	start = {
 		-- fadeOut, 0.5,
@@ -58,15 +59,15 @@ behaviorsRaw = {
 		-- 	},
 		think, {"Working late one night at your new job..."},
 		wait, 0.5,
-		think, {"You are almost finished with this project,"
-			.."\na new logo design for one of the company's clients,"
-			.."\nwhen you remember the last strange requirement."
+		think, {"You are almost finished with the day's project,"
+			.."\na mockup for one of the company's internal tools,"
+			.."\nwhen you remember a last strange requirement."
 		},
 		say,"...it has to have \"extra-large pixels\"?",
-		say,"What does that even mean?",
+		say,"What do they even mean by that?",
 		say,"Do they just want me to blow up the image? They\nnever even said how \"extra-large\" they want it.",
 		wait,0.5,
-		say,"Fine, let's see how they like this.\nScale up x9999!",
+		say,"Fine, let's see how those jokers like this.\nScale x 999!",
 		wait, 0.25,
 		playSFX, "highblip",
 		wait, 0.25,
@@ -75,17 +76,17 @@ behaviorsRaw = {
 		playSFX, "highblip",
 		wait,1,
 		playSFX,"zoop",
-		wait,1,
+		wait,0.2,
 		darken,128,
-		wait,0.15,
+		wait,0.05,
 		darken,0,
-		wait,0.15,
+		wait,0.05,
 		darken,128,
-		wait,0.15,
+		wait,0.05,
 		darken,0,
-		wait,0.15,
+		wait,0.05,
 		darken,128,
-		wait,0.15,
+		wait,0.05,
 		darken,0,
 		wait,1,
 		makeBlock1_, "greenStart",
@@ -100,19 +101,23 @@ behaviorsRaw = {
 		wait,0.5,
 		faceHero, "n",
 		wait,0.25,
-		say, "AAAHH!",
-		say, "Giant pixels!!",
+		say, "Aw, no!!",
+		faceHero,"w",
+		say, "Giant pixels again!",
+		faceHero,"e",
+		say, "I regret this immediately.",
 		wait,0.25,
 		think,"Warning...",
 		wait,0.25,
 		faceHero,"s",
-		say,"Huh?",
+		say,"No, I already know...",
 		think,"Warning: digital matter containment breached.",
-		think,"Operator is to proceed to entry hall for further\ninstructions.",
-		think,"Use extreme caution, direct contact with digital\nmatter has unpredictable and possibly fatal\nresults.",
-		say,"\"Digital matter\"? \"Fatal results\"?",
-		say,"What the heck did I do??",
-		say,"I'd better get out of here!\n",		
+		think,"All staff must proceed to entry hall for further\ninstructions.",
+		think,"Use extreme caution. Direct contact with digital\nmatter has unpredictable and possibly fatal\nresults.",
+		say, "Great. Looks like I did it again, and now I'm\nthe only one in the office who can fix it.",
+		say,"They trained me a little, but digital matter is \nweird. Better go see if I can figure this out.",
+		-- say,"What the heck did I do??",
+		-- say,"I'd better get out of here!\n",		
 		-- say, "START\nI have to collect my notes and get out of here!",
 		playBGM, 0,
 		-- collect_, "remote"
@@ -149,13 +154,14 @@ behaviorsRaw = {
 			say, "This anomaly will require more research."
 		},
 		greenStart = {
-			say,"A giant green pixel!"
+			say,"Greenest pixel I ever saw."
 		},
 		blueStart = {
-			say,"How can a pixel come out of a monitor??"
+			say,"A gelatinous cube! I cast Magic Missile!",
+			say,"...just kidding."
 		},
 		redStart = {
-			say,"Definitely not gonna touch it!"
+			say,"Dunno why, but this just one seems more dangerous."
 		},
 	},
 }
@@ -170,25 +176,33 @@ eventDataRaw = {
 		interactionBehavior = {
 			say, "What is this? A remote control?",
 			think, "Instructions to Operator:",
-			think, "In the event of a digital matter containment breach,\ncollect vital research materials 1-16 and evacuate\nthe premises.",
-			say,"They want me to find their stuff?\nMust be pretty important.",
-			think,"You may need to manipulate digital matter to obtain\nall materials. This remote control will allow you to"
-			.."\nmove and fuse digital matter in your path.",
-			think, "Blocks of digital matter are known as \n\"Mega-pixels\".",
+			think, "In the event of a digital matter containment breach,\ncollect vital research materials from all rooms\nand evacuate the premises.",
+			say,"They need me to find their notes?\nMust be pretty important stuff.",
+			say,"Is the building going to self-destruct or something?"
+			think,"In case you need to manipulate digital matter to\nobtain materials, this remote control will allow you"
+			.."\nto move and fuse digital matter in your path.",
+			think, "Blocks of digital matter are known as \n\"mega-pixels\".",
+			say,"Why name them? Does this happen often?",
 			think, "The RETURN key will activate this remote control,\nand the TAB key will let you select the color you\nwish to control.",
 			think,"Mega-pixels of the same color move as one.\n",
-			say,"Weird. Okay. RETURN and TAB.",
-			say,"And stuff that's the same color moves as one.",
-			say,"Whatever that means.",
-			think, "Digital matter is still not fully understood, but\nwe know that certain colors can be fused with\nothers.",
-			think,"For example: a red mega-pixel will fuse with a green\nmega-pixel to create a yellow mega-pixel.",
-			think,"That yellow mega-pixel can then be fused with a\nblue mega-pixel to create a white mega-pixel.\nYellow and blue are opposing colors.",
-			think,"Different colors of digital matter behave in\ndifferent ways. Experiment as needed and refer to\nthe key provided.",
+			say,"Oh, right. You can only control one color at\na time. Control with use RETURN and TAB.",
+			-- say,"And stuff that's the same color moves as one.",
+			-- say,"Whatever that means.",
+			think, "Digital matter is a well-understood phenomenon;\ncertain colors can and cannot be manipulated,\nand certain colors fuse with others.",
+			think,"For example, as any schoolchild knows, red digital\nmatter fuses with green digital matter to create\nyellow.",
+			-- think,"That yellow mega-pixel can then be fused with a\nblue mega-pixel to create a white mega-pixel.\nYellow and blue are opposing colors.",
+			-- think,"Different colors of digital matter behave in\ndifferent ways. Experiment as needed and refer to\nthe key provided.",
+			say, "Yeah, we didn't have this stuff when I was a kid.",
+			say, "Cheeky manual.",
+			think,"In case the operator in unfamiliar with the basic\nprinciples, a color key is provided.",
 			think,"As always, use extreme caution.",
-			say, "Yikes. Not sure if I get this.",
+			say, "All right, then. Not sure if I get this.",
 			say,"But I'm definitely fired if I don't collect their\nresearch materials before... the office blows up?",
 			say,"I actually have no idea what will happen. Better get\ncracking, though.",
-			collect_, "remote"
+			collect_, "remote",
+			wait, 1,
+			warp, {wid=1,mx=5,my=7,facing="s"},
+			say, "I have to find those research materials and get\nout of here.",
 		}
 	},
 	{
@@ -282,7 +296,7 @@ eventDataRaw = {
 		appearsUntilAllCollected = {"notes 1","notes 2","notes 3","notes 4","notes 5","notes 6","notes 7","notes 8"},
 		collide = true,
 		interactionBehavior = {
-			say, "Guess the rest of the project will have\nto wait....",
+			say, "\"Fatal results\". Yikes."
 			-- saveData, nil,
 			-- warp,{wid=1,mx=11,my=8,facing="n"}
 		}
@@ -809,6 +823,30 @@ eventDataRaw[369] = {
 		-- warp,{wid=16,mx=7,my=12,facing="n"},
 		-- warp,{wid=17,mx=2,my=11,facing="n"},
 
+--lobby computers
+eventDataRaw[400] = {
+	-- name = "pre-remote"
+	sc = {category="stillActors", image=1, quadId=6},
+	collide = true,
+	appearsUntilAllCollected = {"remote"},
+	interactionBehavior = {
+		say, "It just says, \"Remote required for access.\"",
+	}
+}
+eventDataRaw[401] = {
+	name = "basic controls",
+	sc = {category="stillActors", image=1, quadId=6},
+	collide = true,
+	appearsIfAllCollected = {"remote"},
+	interactionBehavior = {
+		say, "There's a message on the screen. It says...",
+		think, "here are the basic controls! Z/M/P/Esc/X?"
+	}
+}
+-- one for progress
+-- one for pixel controls
+-- one discussing pixel fusion
+
 --notes
 eventDataRaw[1001] = {
 	name = "notes 1",
@@ -848,7 +886,9 @@ eventDataRaw[2002] = {
 	collide = true,
 	appearsIfAllCollected = {"notes 2"},
 	interactionBehavior = {
-		say, "Research Notes 2, got 'em.",
+		-- say, "Research Notes 2, got 'em.",
+		choose, {"Research Notes #2, got 'em.", {"Don't read.", 1}, {"Read", 0}},
+		say, "You can press R to reset any room."
 	}
 }
 eventDataRaw[1003] = {
@@ -979,7 +1019,9 @@ eventDataRaw[1009] = {
 	collide = true,
 	interactionBehavior = {
 		collect_, "notes 9",
-		say, "Got Research Notes 9!",
+		say, "Got Research Notes 9! Let's take a look...",
+		think, "You can press P to go to the Pause screen."
+		-- say, "Did you know you can pause the game with P?\nThe pause screen has some useful info on it!",
 		--think, "Did you know you can pause the game with P?",
 		--think, "The pause screen has some useful info on it!",
 	}
@@ -990,7 +1032,8 @@ eventDataRaw[2009] = {
 	collide = true,
 	appearsIfAllCollected = {"notes 9"},
 	interactionBehavior = {
-		say, "Research Notes 9, got 'em.",
+		choose, {"Research Notes #9, got 'em.", {"Don't read.", 1}, {"Read", 0}},
+		think, "You can press P to go to the Pause screen."
 	}
 } -- notes 9 displayed at base
 eventDataRaw[1010] = {

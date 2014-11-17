@@ -3,6 +3,8 @@
 -- * all classes and subclasses must have _init() defined
 -- * class instances are constructed simply as var = NewClass(stuff)
 -- * if calling superclass methods, there is a difference between self.super:foo(bar) and self.super.foo(self,bar)! they look similar but behave differently!
+math.randomseed(os.time())
+
 function class(base)
 	local cls = {}
 	cls.__index = cls
@@ -43,7 +45,7 @@ function tablePrint(table, offset)
 	for k,v in pairs(table) do
 		if type(v) == "table" then
 			print(offset.."sub-table ["..k.."]:")
-			--tablePrint(v, offset.."  ")
+			tablePrint(v, offset.."  ")
 		else
 			print(offset.."["..k.."] = "..tostring(v))
 		end
@@ -69,7 +71,6 @@ function showGlobals(str)
 	end
 end
 
----------------------------------------------------------------------------------------------------------------------
 --so this works...
 -- function stuff(arg, ...)
 -- 	arr = {...}
@@ -79,3 +80,87 @@ end
 -- 	end
 -- end
 -- stuff(1,2,3,4)
+
+---------------------------------------------------------------------------------------------------------------------
+
+function sample(t)
+	-- math.randomseed(os.time())
+	return t[math.random(1, #t)]
+end
+
+-- sampleMe = {11,22,33,44,55,66,77,88,99}
+-- for i = 1, 20 do
+-- 	print(sample(sampleMe))
+-- end
+--
+-- tablePrint({44,2,4})
+
+
+function shuffle(t)
+	-- ping()
+	local input = clone(t)
+	-- print( input)
+	local out = {}
+	
+	for i = 1, #input do
+		out[i] = table.remove(input, math.random(1, #input))
+	end
+	
+	return out
+	-- t = out
+end
+
+-- foo = {2,3,4,5,6}
+--
+-- tablePrint(foo)
+-- bar = shuffle(foo)
+-- tablePrint(bar)
+-- ping()
+-- tablePrint(foo)
+
+
+--clones a given object shallowly, i.e. table references stored as values in original object (not keys) will point to the SAME table in both the original and the clone.
+function clone(original)
+	local new = {}
+	
+	if type(original) == "table" then
+		for key,value in pairs(original) do
+			new[key] = value
+		end
+	else
+		new = original
+	end
+	
+	return new
+end
+
+--clones a given object deeply, i.e. all values in original's sub-tables are cloned to an entirely new but, identical table.
+--...the question is whether or not this will work with classes. :S TODO figure it out! luckily you probably won't need to for Megapixel.
+function deepclone(original)
+	local new = {}
+	
+	if type(original) == "table" then
+		for key,value in pairs(original) do
+			new[key] = deepclone(value)--value
+		end
+	else
+		new = original
+	end
+	
+	return new
+end
+
+
+-- cloneme = {11,22,33,a=44,b=55,c={6,7},d={x=8,y=9,z=0}}
+-- copy = clone(cloneme)
+-- copy2 = deepclone(cloneme)
+--
+-- cloneme[1] = -999
+-- cloneme.d.x = -999
+--
+-- ping("cloneme")
+-- tablePrint(cloneme)
+-- ping("copy")
+-- tablePrint(copy)
+-- ping("copy2")
+-- tablePrint(copy2)
