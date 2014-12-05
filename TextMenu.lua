@@ -30,7 +30,7 @@ function TextMenu:draw()
 	love.graphics.print(self.prompt, self.pos.x * zoom, self.pos.y * zoom, 0, zoom, zoom)
 	
 	for i=1, #(self.options) do
-		love.graphics.print(self.options[i].label, self.pos.x + 20, self.pos.y + i*20*zoom, 0, zoom, zoom)
+		love.graphics.print(self.options[i].label, (self.pos.x + 20) * zoom, (self.pos.y + i*20) * zoom, 0, zoom, zoom)
 	end
 end
 
@@ -38,9 +38,9 @@ function TextMenu:updateCursorScreenPos()
 	-- m = menuStack[#menuStack]
 	self.cursor.screenPos = self.cursor.screenPos or {} --in case it's unset
 	
-	self.cursor.screenPos.x = self.pos.x + self.cursor.pos.x * self.cursor.screenPosDelta.x * zoom
-	self.cursor.screenPos.y = self.pos.y + ((self.cursor.pos.y - 1) * (self.cursor.screenPosDelta.y - 0) - 14) * zoom
-	ping(self.cursor.screenPosDelta.y)
+	self.cursor.screenPos.x = (self.pos.x + self.cursor.pos.x * self.cursor.screenPosDelta.x) * zoom
+	self.cursor.screenPos.y = (self.pos.y + (self.cursor.pos.y - 1) * self.cursor.screenPosDelta.y - 5) * zoom
+	-- ping(self.cursor.screenPosDelta.y)
 end
 
 function TextMenu:confirm()

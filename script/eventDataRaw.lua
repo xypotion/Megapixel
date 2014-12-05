@@ -178,7 +178,7 @@ eventDataRaw = {
 			think, "Instructions to Operator:",
 			think, "In the event of a digital matter containment breach,\ncollect vital research materials from all rooms\nand evacuate the premises.",
 			say,"They need me to find their notes?\nMust be pretty important stuff.",
-			say,"Is the building going to self-destruct or something?"
+			say,"Is the building going to self-destruct or something?",
 			think,"In case you need to manipulate digital matter to\nobtain materials, this remote control will allow you"
 			.."\nto move and fuse digital matter in your path.",
 			think, "Blocks of digital matter are known as \n\"mega-pixels\".",

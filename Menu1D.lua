@@ -12,7 +12,7 @@ end
 
 function Menu1D:drawCursor()
 	love.graphics.setColor(255,255,255,255)
-	love.graphics.draw(arrowImage, self.cursor.screenPos.x, self.cursor.screenPos.y + (self.cursor.pos.y + 0) * 21 * zoom, 0, zoom/12, zoom/12)
+	love.graphics.draw(arrowImage, self.cursor.screenPos.x, self.cursor.screenPos.y + (self.cursor.pos.y + 0) * 20 * zoom, 0, zoom/12, zoom/12)
 end
 
 function Menu1D:keyPressed(key)
