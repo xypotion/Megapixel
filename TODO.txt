@@ -64,6 +64,7 @@ Z zoological interaction survey? zipping/zippers?
 -- 18 down 1
 -- 10 right 5
 -- 9 right 1, up 1
+- did i already do this? ugh, can't remember. haha
 
 ------------------------------------------------------------------------------------------------------------
 FIXME
@@ -71,7 +72,7 @@ FIXME
 - save player settings (zoom, music)
 - add 100* notes to 200* notes
 
-revised endgame plan because you got too ambitious
+revised endgame plan because you got too ambitious ~
 - exit door has 3 possible behaviors:
   1. need more notes: "i can't leave yet! gotta collect the stuff!"
 	2. got notes, missing shirts: "did i get everything? whatever, i guess i should get out of here. (player confirms)" -> credits

@@ -173,7 +173,7 @@ function makeQuads()
 		{quadAt(1,1,qs)}, --5:grey shirt, only used in pause menu
 		{quadAt(3,0,qs)}, --6:key
 		{quadAt(0,1,qs)}, --7:remote
-		{quadAt(2,1,qs)}, --8:computah
+		{quadAt(2,1,qs)}, --8:computer back
 		--shirts:
 		{quadAt(3,3,qs)}, --9:black
 		{quadAt(1,2,qs)}, --10:red
@@ -185,6 +185,8 @@ function makeQuads()
 		{quadAt(0,2,qs)}, --16:white
 		--other:
 		{quadAt(1,4,qs)}, --17:elevator
+		{quadAt(0,5,qs)}, --18:computer front
+		
 	}
 	qs = {1,1,2,1}
 	quadSets.block = {quadAt(0,0,qs),quadAt(1,0,qs)}

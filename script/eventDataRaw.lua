@@ -30,10 +30,10 @@ behaviorsRaw = {
 	resume = {
 		-- fadeOut, 0.5,
 		-- fadeIn, 0.5,
-		warp, {wid=1,mx=5,my=7,facing="s"}, --the real one
+		warp, {wid=1,mx=6,my=7,facing="s"}, --the real one
 		-- warp, {wid=20,mx=1,my=8,facing="s"}, -- for testing
-		say, "It's so late!",
-		say, "I have to find the research materials and get\nout of here.",
+		say, "*yawn* It's so late...",
+		say, "I have to find the research materials and get\nout of here!",
 	},
 	start = {
 		-- fadeOut, 0.5,
@@ -101,7 +101,7 @@ behaviorsRaw = {
 		wait,0.5,
 		faceHero, "n",
 		wait,0.25,
-		say, "Aw, no!!",
+		say, "Aw, crap!",
 		faceHero,"w",
 		say, "Giant pixels again!",
 		faceHero,"e",
@@ -115,7 +115,7 @@ behaviorsRaw = {
 		think,"All staff must proceed to entry hall for further\ninstructions.",
 		think,"Use extreme caution. Direct contact with digital\nmatter has unpredictable and possibly fatal\nresults.",
 		say, "Great. Looks like I did it again, and now I'm\nthe only one in the office who can fix it.",
-		say,"They trained me a little, but digital matter is \nweird. Better go see if I can figure this out.",
+		say,"They trained me a little last time, but digital matter\nis weird. Better go see if I can figure this out.",
 		-- say,"What the heck did I do??",
 		-- say,"I'd better get out of here!\n",		
 		-- say, "START\nI have to collect my notes and get out of here!",
@@ -123,9 +123,9 @@ behaviorsRaw = {
 		-- collect_, "remote"
 	},
 	blocks = {
-		green = {
+		green = {--TODO update these a little
 			say, "A green megapixel. I think this can be fused with\nblue or red digital matter to make cyan or yellow."
-			.."\nIt also fuses with magenta, resulting in white\ndigital matter."
+			.."\nIt also mixes with magenta, resulting in white\ndigital matter."
 		},
 		blue = {
 			say, "A blue megapixel. I think this can be fused with\ngreen or red matter to make cyan or magenta."
@@ -154,14 +154,14 @@ behaviorsRaw = {
 			say, "This anomaly will require more research."
 		},
 		greenStart = {
-			say,"Greenest pixel I ever saw."
+			say,"An especially deadly shade of green. Yuck."
 		},
 		blueStart = {
 			say,"A gelatinous cube! I cast Magic Missile!",
-			say,"...just kidding."
+			say,"...if only."
 		},
 		redStart = {
-			say,"Dunno why, but this just one seems more dangerous."
+			say,"Not sure why, but this one seems the most\ndangerous."
 		},
 	},
 }
@@ -201,7 +201,7 @@ eventDataRaw = {
 			say,"I actually have no idea what will happen. Better get\ncracking, though.",
 			collect_, "remote",
 			wait, 1,
-			warp, {wid=1,mx=5,my=7,facing="s"},
+			warp, {wid=1,mx=6,my=7,facing="s"},
 			say, "I have to find those research materials and get\nout of here.",
 		}
 	},
@@ -291,7 +291,7 @@ eventDataRaw = {
 	},
 	--6: comp at start
 	{
-		name = "computer at start",
+		name = "office PC at start",
 		sc = {category="stillActors", image=1, quadId=8},
 		appearsUntilAllCollected = {"notes 1","notes 2","notes 3","notes 4","notes 5","notes 6","notes 7","notes 8"},
 		collide = true,
@@ -303,14 +303,90 @@ eventDataRaw = {
 	},
 	--7: comp at end
 	{
-		name = "computer at end",
+		name = "office PC at end",
 		sc = {category="stillActors", image=1, quadId=8},
-		appearsIfAllCollected = {"notes 1","notes 2","notes 3","notes 4","notes 5","notes 6","notes 7","notes 8"},
+		appearsIfAllCollected = {"notes 1","notes 2","notes 3","notes 4","notes 5","notes 6","notes 7","notes 8"}, --TODO change these?
 		collide = true,
 		interactionBehavior = {
 			say, {"You're so thorough! Thanks for playing!"},
 			-- saveData, nil,
+			-- TODO give last shirt? eh
 			-- warp,{wid=1,mx=11,my=8,facing="n"}
+		}
+	},
+	--8: lobby comp without remote front
+	{
+		name = "lobby PC w/o remote",
+		sc = {category="stillActors", image=1, quadId=18},
+		appearsUntilAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			say, "It says:\n\"Access denied. Remote control required.\""
+			-- saveData, nil,
+			-- warp,{wid=1,mx=11,my=8,facing="n"}
+		}
+	},
+	--9: lobby comp without remote back
+	{
+		name = "lobby PC w/o remote",
+		sc = {category="stillActors", image=1, quadId=8},
+		appearsUntilAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			say, "It says:\n\"Access denied. Remote control required.\""
+			-- saveData, nil,
+			-- warp,{wid=1,mx=11,my=8,facing="n"}
+		}
+	},
+	--10-12: back-facing lobby comps with control hints
+	{
+		name = "lobby PC 1",
+		sc = {category="stillActors", image=1, quadId=8},
+		appearsIfAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			say, "It says:\n\"Press R to reset any room.\"",
+		}
+	},
+	{
+		name = "lobby PC 2",
+		sc = {category="stillActors", image=1, quadId=8},
+		appearsIfAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			say, "It says:\n\"Press P to pause and view controls.\"",
+		}
+	},
+	{
+		name = "lobby PC 3",
+		sc = {category="stillActors", image=1, quadId=8},
+		appearsIfAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			say, "It says:\n\"The game automatically saves whenever an item\nis collected. The game can be exited at any time\nwith the Esc key.\"",
+		}
+	},
+	--13: instructions comp
+	{
+		name = "lobby PC 4",
+		sc = {category="stillActors", image=1, quadId=18},
+		appearsIfAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			choose, {"Select manual page (X to cancel):", {"Basic puzzle controls", 0}, {"Color mixing guide", 2}},
+			say, "controls!!",
+			skip, 1,
+			say, "colors!!"
+		}
+	},
+	--14: progress comp
+	{
+		name = "lobby PC 5",
+		sc = {category="stillActors", image=1, quadId=18},
+		appearsIfAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			say, "Progress!",
 		}
 	},
 }
@@ -336,7 +412,7 @@ eventDataRaw[121] = {
 	interactionBehavior = {
 		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=21,mx=10,my=7,facing="s"},
+		warp,{wid=2,mx=10,my=7,facing="s"},
 		-- say,"Hm, what's that on the table?"
 	}
 	}--to office
@@ -860,6 +936,7 @@ eventDataRaw[1001] = {
 		think, "The pause screen has some useful info on it!",
 	}
 } -- notes 1 pickup
+
 eventDataRaw[2001] = {
 	name = "notes 1",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -869,6 +946,7 @@ eventDataRaw[2001] = {
 		say, "Research Notes 1, got 'em.",
 	}
 } -- notes 1 displayed at base
+
 eventDataRaw[1002] = {
 	name = "notes 2",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -905,6 +983,7 @@ eventDataRaw[1003] = {
 		think, "White and black are opposites, but white also\nfuses with ANY color, while black only fuses\nwith white."
 	}
 }
+
 eventDataRaw[2003] = {
 	name = "notes 3",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -914,6 +993,7 @@ eventDataRaw[2003] = {
 		say, "Research Notes 3, got 'em.",
 	}
 }
+
 eventDataRaw[1004] = {
 	name = "notes 4",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -934,6 +1014,7 @@ eventDataRaw[2004] = {
 		say, "Research Notes 4, got 'em.",
 	}
 }
+
 eventDataRaw[1005] = {
 	name = "notes 5",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -954,6 +1035,7 @@ eventDataRaw[2005] = {
 		say, "Research Notes 5, got 'em.",
 	}
 }
+
 eventDataRaw[1006] = {
 	name = "notes 6",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -974,6 +1056,7 @@ eventDataRaw[2006] = {
 		say, "Research Notes 6, got 'em.",
 	}
 }
+
 eventDataRaw[1007] = {
 	name = "notes 7",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -993,6 +1076,7 @@ eventDataRaw[2007] = {
 		say, "Research Notes 7, got 'em.",
 	}
 }
+
 eventDataRaw[1008] = {
 	name = "notes 8",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1012,6 +1096,7 @@ eventDataRaw[2008] = {
 		say, "Research Notes 8, got 'em.",
 	}
 }
+
 eventDataRaw[1009] = {
 	name = "notes 9",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1047,6 +1132,7 @@ eventDataRaw[1010] = {
 		--think, "You can press R to reset any room."
 	}
 }
+
 eventDataRaw[2010] = {
 	name = "notes 10",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1056,6 +1142,7 @@ eventDataRaw[2010] = {
 		say, "Research Notes 10, got 'em.",
 	}
 }
+
 eventDataRaw[1011] = {
 	name = "notes 11",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1079,6 +1166,7 @@ eventDataRaw[2011] = {
 		say, "Research Notes 11, got 'em.",
 	}
 }
+
 eventDataRaw[1012] = {
 	name = "notes 12",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1110,6 +1198,7 @@ eventDataRaw[1013] = {
 		--think,"Did you know that the game auto-saves\nevery time you collect an item?"
 	}
 }
+
 eventDataRaw[2013] = {
 	name = "notes 13",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1119,6 +1208,7 @@ eventDataRaw[2013] = {
 		say, "Research Notes 13, got 'em.",
 	}
 }
+
 eventDataRaw[1014] = {
 	name = "notes 14",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1139,6 +1229,7 @@ eventDataRaw[2014] = {
 		say, "Research Notes 14, got 'em.",
 	}
 }
+
 eventDataRaw[1015] = {
 	name = "notes 15",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1158,6 +1249,7 @@ eventDataRaw[2015] = {
 		say, "Research Notes 15, got 'em.",
 	}
 }
+
 eventDataRaw[1016] = {
 	name = "notes 16",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1178,6 +1270,7 @@ eventDataRaw[2016] = {
 	}
 }
 
+
 --shirts
 eventDataRaw[902] = {
 	name = "shirt 2",
@@ -1190,7 +1283,7 @@ eventDataRaw[902] = {
 		say, "Press 2 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Black does go with everything.\""
 	}
-}--black, bound for room 12
+	}--black, bound for room 12
 eventDataRaw[903] = {
 	name = "shirt 3",
 	sc = {category="stillActors",image=1,quadId=10},
@@ -1263,7 +1356,7 @@ eventDataRaw[908] = {
 		say, "\"Wow, so bright.\"",
 		say, "I'm honestly impressed."
 	}
-}--yellow, in room 11
+	}--yellow, in room 11
 eventDataRaw[909] = {
 	name = "shirt 9",
 	sc = {category="stillActors",image=1,quadId=16},
