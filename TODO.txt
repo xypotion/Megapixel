@@ -79,6 +79,8 @@ revised endgame plan because you got too ambitious ~
 	3. got everything: "whew, that was a mental workout. time to finally go home!" -> credits with permanent starry background!
 
 TODO in order of importance
+- it's probably easy, so: save player's zoom level, music muteness, and selected shirt. just do it.
+! redo pause screen: - alphabet + shirt controls + new PAUSED graphic?
 ! a row of computers in the lobby that each give a different control hint. screw the notes thing.
   - "There's a document open on this computer. It says..."
   * one comp standing apart that tracks your progress. "floor 1... all notes collected" "floor 2... 2/4 notes collected" "special material Y... missing"
@@ -86,11 +88,8 @@ TODO in order of importance
 - make basement with final cutscenes? ...nope, make a copy of your office (with blocks!), that's where final shirt is given if you have all the stuff
   - or not? just computer bank in lobby, instead?
 - top floor with endgame cutscenes, also
-  - maybe a person in a locked room? need final shirt to reach him?
-- clean up elevator UI
+  - maybe a person in a locked room? need final shirt to reach him? bleh
 - giant cleanup of comments and stuff
-- shirts + progress on pause menu
-  * or just mention shirt controls at progress-tracking comp in lobby
 ! change text on block inspection
 ! finish blowing up assets
 - swap out all those EXIT doors for regular doors
@@ -126,6 +125,8 @@ credits:
 
 
 done TODOs
+- clean up elevator UI
+- find a higher-res version of default font
 ! actually label rooms/doors...? OR remove the prompt, it's kind of unneeded
   * actually just remove the prompt from puzzle room ENTRY, leave on exit
 - better control hints, esp at startup + remote

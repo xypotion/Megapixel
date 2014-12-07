@@ -20,7 +20,7 @@ function TitleMenu:draw()
 	love.graphics.setColor(255,255,255,255)
 	love.graphics.draw(images.title, quadSets.title[1])
 	--hackity hack	
-	love.graphics.print("\n     Continue from last autosave\n\n     New game (progress will be lost)", self.pos.x * zoom, self.pos.y * zoom, 0, zoom, zoom)
+	love.graphics.print("\n     Continue from last autosave\n\n     New game (progress will be lost)", self.pos.x * zoom, self.pos.y * zoom)
 end
 
 function TitleMenu:confirm()

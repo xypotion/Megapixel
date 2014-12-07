@@ -27,10 +27,10 @@ function TextMenu:draw()
 	love.graphics.setColor(255,255,255,255)
 	-- love.graphics.draw(images.title, quadSets.title[1])
 	--hackity hack
-	love.graphics.print(self.prompt, self.pos.x * zoom, self.pos.y * zoom, 0, zoom, zoom)
+	love.graphics.print(self.prompt, self.pos.x * zoom, self.pos.y * zoom)
 	
 	for i=1, #(self.options) do
-		love.graphics.print(self.options[i].label, (self.pos.x + 20) * zoom, (self.pos.y + i*20) * zoom, 0, zoom, zoom)
+		love.graphics.print(self.options[i].label, (self.pos.x + 20) * zoom, (self.pos.y + i*20) * zoom)
 	end
 end
 

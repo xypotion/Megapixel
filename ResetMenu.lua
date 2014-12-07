@@ -28,7 +28,7 @@ end
 function ResetMenu:draw()
 	-- print("drawing!")	
 	love.graphics.setColor(255,255,255,255)
-	love.graphics.print("Reset room?\n     No\n     Yes", self.pos.x * zoom, self.pos.y * zoom, 0, zoom, zoom)
+	love.graphics.print("Reset room?\n     No\n     Yes", self.pos.x * zoom, self.pos.y * zoom)
 end
 
 function ResetMenu:confirm()

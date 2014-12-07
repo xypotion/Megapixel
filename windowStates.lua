@@ -21,6 +21,8 @@ function initWindowStates()
 		}	
 	}
 	
+	fonts = {love.graphics.newFont(18), love.graphics.newFont(36)}
+	
 	updateWindowStateSettings()
 	
   love.window.setTitle('Mega-pixel Meltdown')
@@ -56,6 +58,8 @@ function updateZoomRelativeStuff()
 
 	--this is safe, don't worry :)
 	initHero()
+	
+	love.graphics.setFont(fonts[zoom])
 	
 	-- --for block resizing? yuck. not worth re-doing block initialization/positioning, but yuck.
 	-- initPauseMenuSystem()

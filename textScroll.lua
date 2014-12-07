@@ -5,7 +5,8 @@ function initTextEngine()
 	--TODO i guess load font and stuff here?
 	
 	textBoxPos = {}
-	love.graphics.setFont(love.graphics.newFont(18))
+	love.graphics.setFont(love.graphics.newFont(18)); textShrink = 1
+	-- love.graphics.setFont(love.graphics.newFont(36)); textShrink = 0.5
 	
 	textColor = colors.white
 	textBoxColor = colors.blue
@@ -44,7 +45,7 @@ function drawScrollingText()
 	end
 
 	love.graphics.setColor(textColor.r,textColor.g,textColor.b,255)
-	love.graphics.print(displayText, textBoxPos.x + textOffset, textBoxPos.y + textOffset, 0, zoom, zoom)
+	love.graphics.print(displayText, textBoxPos.x + textOffset, textBoxPos.y + textOffset)
 	
 	--TODO don't like any of this being here, really. IF this block doesn't get scrapped and lumped into menuStack, remember to refine graphical stuff here
 	if menuWaiting then
@@ -52,15 +53,15 @@ function drawScrollingText()
 
 		if wholeMenu.hint then
 			if showHint then
-				love.graphics.print("* "..wholeMenu.hint, textBoxPos.x + textOffset, textBoxPos.y - 21 * zoom, 0, zoom, zoom)
+				love.graphics.print("* "..wholeMenu.hint, textBoxPos.x + textOffset, textBoxPos.y - 21 * zoom)
 			else
-				love.graphics.print("* ", textBoxPos.x + textOffset, textBoxPos.y - 21 * zoom, 0, zoom, zoom)
+				love.graphics.print("* ", textBoxPos.x + textOffset, textBoxPos.y - 21 * zoom)
 			end
 		end
 	elseif not lineScrolling then
 		if anikeys.map.frame == 1 then
 		-- blink little icon TODO use a graphic! ., .., ..., ART NEEDED
-			love.graphics.print("...", screenWidth - 25 * zoom, textBoxPos.y + 3*tileSize - 25*zoom, 0, zoom, zoom)
+			love.graphics.print("...", screenWidth - 25 * zoom, textBoxPos.y + 3*tileSize - 25*zoom)
 		end
 	end
 end

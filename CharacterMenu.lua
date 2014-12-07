@@ -22,7 +22,7 @@ function CharacterMenu:draw()
 	love.graphics.setColor(255,255,255,255)
 	--hackity hack	
 	love.graphics.print("      What do you look like?\n\n      Press TAB to generate.\nTurn with WASD or arrow keys.\n Confirm with SPACE or ENTER.", 
-		self.pos.x * zoom, self.pos.y * zoom, 0, zoom, zoom)
+		self.pos.x * zoom, self.pos.y * zoom)
 		
 	love.graphics.draw(images.characters.base, quadSets.hero[hp.gender][self.previewFacing][anikeys.characters.frame], 208, 176, 0, 2, 2) -- base
 	love.graphics.draw(images.characters.skin[hp.skin], quadSets.hero[hp.gender][self.previewFacing][anikeys.characters.frame], 208, 176, 0, 2, 2)
