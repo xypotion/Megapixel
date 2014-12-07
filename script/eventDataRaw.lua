@@ -20,6 +20,8 @@ math.randomseed(os.time())
 	--that's it!
 ]] --TODO update this? lol
 
+progressMsg = "bar"
+
 behaviorsRaw = {
 	title = {
 		addMenu, TitleMenu
@@ -386,7 +388,7 @@ eventDataRaw = {
 		appearsIfAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
-			say, "Progress!",
+			sayProgressMessage, 0,
 		}
 	},
 }
@@ -403,7 +405,7 @@ eventDataRaw[171] = {
 		warp,{wid=1,mx=2,my=8,facing="n"},
 		-- say,"Hm, what's that on the table?"
 	}
-	}--from office
+}--from office
 eventDataRaw[121] = {
 	name = "door to room 21",
 	sc = {category="stillActors", image=1, quadId=4},
@@ -412,10 +414,10 @@ eventDataRaw[121] = {
 	interactionBehavior = {
 		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		playSFX, "door",
-		warp,{wid=2,mx=10,my=7,facing="s"},
+		warp,{wid=24,mx=10,my=7,facing="s"},
 		-- say,"Hm, what's that on the table?"
 	}
-	}--to office
+}--to office
 
 --stairs
 --[[
@@ -1329,7 +1331,7 @@ eventDataRaw[906] = {
 		collect_, "shirt 6",
 		say, "Found a cyan shirt!",
 		say, "Press 6 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"<tetris joke here>\"" --TODO
+		say, "\"Whew. I feel like I'm stuck in a puzzle\ngame or something.\"" --TODO
 	}
 }--cyan
 eventDataRaw[907] = {
@@ -1354,7 +1356,7 @@ eventDataRaw[908] = {
 		say, "Found a yellow shirt!",
 		say, "Press 8 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Wow, so bright.\"",
-		say, "I'm honestly impressed."
+		say, "\"I'm honestly impressed.\""
 	}
 	}--yellow, in room 11
 eventDataRaw[909] = {

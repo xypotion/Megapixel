@@ -188,6 +188,33 @@ function collect_(name)
 	return vanish_(name)
 end
 
+function sayProgressMessage(z)
+	msg = {
+		"Floor 1 Progress:"..
+			"\nNotes 1..."..gotEmOrMissing("notes 1")..". Notes 2..."..gotEmOrMissing("notes 2").."."..
+			"\nNotes 3..."..gotEmOrMissing("notes 3")..". Notes 4..."..gotEmOrMissing("notes 4")..".",
+		"Floor 2 Progress:"..
+			"\nNotes 5..."..gotEmOrMissing("notes 5")..". Notes 6..."..gotEmOrMissing("notes 6").."."..
+			"\nNotes 7..."..gotEmOrMissing("notes 7")..". Notes 8..."..gotEmOrMissing("notes 8")..".",
+		"Floor 3 Progress:"..
+			"\nNotes 9..."..gotEmOrMissing("notes 9")..". Notes 10..."..gotEmOrMissing("notes 10").."."..
+			"\nNotes 11..."..gotEmOrMissing("notes 11")..". Notes 12..."..gotEmOrMissing("notes 12")..".",
+		"Floor 4 Progress:"..
+			"\nNotes 13..."..gotEmOrMissing("notes 13")..". Notes 14..."..gotEmOrMissing("notes 14").."."..
+			"\nNotes 15..."..gotEmOrMissing("notes 15")..". Notes 16..."..gotEmOrMissing("notes 16")..".",
+	}
+	
+	say(msg)
+end
+
+function gotEmOrMissing(item)
+	if progress[item] then
+		return "got 'em"
+	else
+		return "MISSING"
+	end
+end
+
 -- obvs for testing, but who knows? might morph into incrementProgress() or something in final game. :)
 function scorePlus_(amt)
 	score = score + amt
