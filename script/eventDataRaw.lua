@@ -401,6 +401,16 @@ eventDataRaw = {
 			sayProgressMessage, 0,
 		}
 	},
+	--15: shirt progress comp
+	{
+		name = "shirt PC",
+		sc = {category="stillActors", image=1, quadId=20},
+		-- appearsIfAllCollected = {"remote"},
+		collide = true,
+		interactionBehavior = {
+			sayShirtProgressMessage, 0,
+		}
+	},
 }
 
 --special doors
@@ -1362,7 +1372,7 @@ eventDataRaw[908] = {
 		say, "\"Wow, so bright.\"",
 		say, "\"I'm honestly impressed.\""
 	}
-	}--yellow, in room 11
+}--yellow, in room 11
 eventDataRaw[909] = {
 	name = "shirt 8",
 	sc = {category="stillActors",image=1,quadId=16},

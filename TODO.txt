@@ -71,6 +71,7 @@ FIXME
 - save player settings (zoom, music, shirt)
 - remote should show on continue
 - pressing number keys or P or M crashes title screen, lol
+- mouse cord to back of pc
 
 revised endgame plan because you got too ambitious ~
 - exit door has 3 possible behaviors:
@@ -79,21 +80,21 @@ revised endgame plan because you got too ambitious ~
 	3. got everything: "whew, that was a mental workout. time to finally go home!" -> credits with permanent starry background!
 - final shirt is invisible and sitting next to own computer. 
   - "what did i pick up? it feels like a shirt, but how am i supposed to put it on? if only there were a way to check..."
+	- emails from boss "why are you taking so long? i left the prototype material on your desk"
 
 TODO in order of importance
+- evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
+  * call it "branch"? i still think this will be a valuable script tool!
+- rearrange notes to group by floor
+- actual instructions @ lobby pc
 - it's probably easy, so: save player's zoom level, music muteness, and selected shirt. just do it.
+  * wait, zoom level would affect the title screen. might be harder.
 - if final shirt lets you walk through walls, adjust collision with actors
-! a row of computers in the lobby that each give a different control hint. screw the notes thing.
-  - "There's a document open on this computer. It says..."
-  * one comp standing apart that tracks your progress. "floor 1... all notes collected" "floor 2... 2/4 notes collected" "special material Y... missing"
-	  - wait, is this hard? lol. #lazy
-- make basement with final cutscenes? ...nope, make a copy of your office (with blocks!), that's where final shirt is given if you have all the stuff
-  - or not? just computer bank in lobby, instead?
-- top floor with endgame cutscenes, also
-  - maybe a person in a locked room? need final shirt to reach him? bleh
 - giant cleanup of comments and stuff
-  - all TODO, anything i myself called a "hack", comments
-	- maybe some refactoring
+  - all TODO, anything i myself called a "hack", comments, print statements (maybe keep some but comment out)
+	- maybe some refactoring, heh
+	- one more sweep for variables that should be declared local? yuck. showGlobals should help with that...
+	- disable debug mode, remove shirt giveaway line from own pc
 ! change text on block inspection
 - swap out all those EXIT doors for regular doors
 - ...and put in an actual exit door, lol
@@ -102,12 +103,15 @@ TODO in order of importance
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
 	- or just leave a note in the credits :)
 - zoom that works with Windows? :/
-- evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
-  * call it "branch"? i still think this will be a valuable script tool!
 > postgame fun: all black backgrounds turn into twinkly stars
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
+? ending/credits music? ehh
 ? "white warp" for room resets?
 ? shirt color -> text color? :P
+? make basement with final cutscenes? ...nope, make a copy of your office (with blocks!), that's where final shirt is given if you have all the stuff
+  - or not? just computer bank in lobby, instead?
+? top floor with endgame cutscenes, also
+  - maybe a person in a locked room? need final shirt to reach him? bleh
 	
 at this point, no:
 > better story/cutscenes & effects (like a quake or a siren or a red flash)
@@ -129,6 +133,11 @@ credits:
 
 
 done TODOs
+- shirt progress pc
+! a row of computers in the lobby that each give a different control hint. screw the notes thing.
+  - "There's a document open on this computer. It says..."
+  * one comp standing apart that tracks your progress. "floor 1... all notes collected" "floor 2... 2/4 notes collected" "special material Y... missing"
+	  - wait, is this hard? lol. #lazy
 ! finish blowing up assets
 ! redo pause screen: - alphabet + shirt controls + new PAUSED graphic?
 - clean up elevator UI
