@@ -1333,7 +1333,7 @@ eventDataRaw[906] = {
 		collect_, "shirt 1",
 		say, "Found a cyan shirt!",
 		say, "Press 5 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"Whew. I feel like I'm stuck in a puzzle\ngame or something.\"" --TODO
+		say, "\"Whew. I feel like I'm stuck in a puzzle game\nor something.\""
 	}
 }--cyan
 eventDataRaw[907] = {

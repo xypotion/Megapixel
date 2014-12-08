@@ -68,7 +68,6 @@ Z zoological interaction survey? zipping/zippers?
 
 ------------------------------------------------------------------------------------------------------------
 FIXME
-- blow up block assets
 - save player settings (zoom, music, shirt)
 - remote should show on continue
 - pressing number keys or P or M crashes title screen, lol
@@ -78,10 +77,12 @@ revised endgame plan because you got too ambitious ~
   1. need more notes: "i can't leave yet! gotta collect the stuff!"
 	2. got notes, missing shirts: "did i get everything? whatever, i guess i should get out of here. (player confirms)" -> credits
 	3. got everything: "whew, that was a mental workout. time to finally go home!" -> credits with permanent starry background!
+- final shirt is invisible and sitting next to own computer. 
+  - "what did i pick up? it feels like a shirt, but how am i supposed to put it on? if only there were a way to check..."
 
 TODO in order of importance
 - it's probably easy, so: save player's zoom level, music muteness, and selected shirt. just do it.
-! redo pause screen: - alphabet + shirt controls + new PAUSED graphic?
+- if final shirt lets you walk through walls, adjust collision with actors
 ! a row of computers in the lobby that each give a different control hint. screw the notes thing.
   - "There's a document open on this computer. It says..."
   * one comp standing apart that tracks your progress. "floor 1... all notes collected" "floor 2... 2/4 notes collected" "special material Y... missing"
@@ -91,9 +92,9 @@ TODO in order of importance
 - top floor with endgame cutscenes, also
   - maybe a person in a locked room? need final shirt to reach him? bleh
 - giant cleanup of comments and stuff
-  - all TODO, "hack"s, comments
+  - all TODO, anything i myself called a "hack", comments
+	- maybe some refactoring
 ! change text on block inspection
-! finish blowing up assets
 - swap out all those EXIT doors for regular doors
 - ...and put in an actual exit door, lol
 ! credits/ending somehow. heh :/
@@ -128,6 +129,8 @@ credits:
 
 
 done TODOs
+! finish blowing up assets
+! redo pause screen: - alphabet + shirt controls + new PAUSED graphic?
 - clean up elevator UI
 - find a higher-res version of default font
 ! actually label rooms/doors...? OR remove the prompt, it's kind of unneeded
