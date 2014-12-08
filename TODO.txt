@@ -69,8 +69,9 @@ Z zoological interaction survey? zipping/zippers?
 ------------------------------------------------------------------------------------------------------------
 FIXME
 - blow up block assets
-- save player settings (zoom, music)
-- add 100* notes to 200* notes
+- save player settings (zoom, music, shirt)
+- remote should show on continue
+- pressing number keys or P or M crashes title screen, lol
 
 revised endgame plan because you got too ambitious ~
 - exit door has 3 possible behaviors:
@@ -90,6 +91,7 @@ TODO in order of importance
 - top floor with endgame cutscenes, also
   - maybe a person in a locked room? need final shirt to reach him? bleh
 - giant cleanup of comments and stuff
+  - all TODO, "hack"s, comments
 ! change text on block inspection
 ! finish blowing up assets
 - swap out all those EXIT doors for regular doors
@@ -104,6 +106,7 @@ TODO in order of importance
 > postgame fun: all black backgrounds turn into twinkly stars
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
 ? "white warp" for room resets?
+? shirt color -> text color? :P
 	
 at this point, no:
 > better story/cutscenes & effects (like a quake or a siren or a red flash)

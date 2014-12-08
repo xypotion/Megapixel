@@ -10,7 +10,7 @@ images = {
 		love.graphics.newImage("img/chipset.png"),
 		-- love.graphics.newImage("img/chipset2castles??.png"),
 	},
-	stillActors = {love.graphics.newImage("img/sprites2.png")},
+	stillActors = {love.graphics.newImage("img/sprites2.png")}, --TODO why is this a table?
 	blocks = {
 		green = love.graphics.newImage("img/blockG.png"),
 		blue = love.graphics.newImage("img/blockB.png"),
@@ -59,7 +59,6 @@ images = {
 		},
 		shirts = {
 			love.graphics.newImage("img/char-shirt-grey.png"),
-			love.graphics.newImage("img/char-shirt-black.png"), --#2
 			love.graphics.newImage("img/char-shirt-red.png"),
 			love.graphics.newImage("img/char-shirt-green.png"),
 			love.graphics.newImage("img/char-shirt-blue.png"),
@@ -67,6 +66,7 @@ images = {
 			love.graphics.newImage("img/char-shirt-magenta.png"),
 			love.graphics.newImage("img/char-shirt-yellow.png"),
 			love.graphics.newImage("img/char-shirt-white.png"), --#9
+			love.graphics.newImage("img/char-shirt-black.png"), --#2
 			love.graphics.newImage("img/char-shirt-clear.png"),
 		}	
 		-- elf = love.graphics.newImage("img/directional-elf-1.png"),
@@ -175,7 +175,7 @@ function makeQuads()
 		{quadAt(0,1,qs)}, --7:remote
 		{quadAt(2,1,qs)}, --8:computer back
 		--shirts:
-		{quadAt(3,3,qs)}, --9:black
+		{quadAt(3,4,qs)}, --9:grey
 		{quadAt(1,2,qs)}, --10:red
 		{quadAt(2,2,qs)}, --11:green
 		{quadAt(3,2,qs)}, --12:blue
@@ -183,11 +183,15 @@ function makeQuads()
 		{quadAt(1,3,qs)}, --14:magenta
 		{quadAt(2,3,qs)}, --15:yellow
 		{quadAt(0,2,qs)}, --16:white
+		{quadAt(3,3,qs)}, --17:black
+		{quadAt(2,4,qs)}, --18:clear
 		--other:
-		{quadAt(1,4,qs)}, --17:elevator
-		{quadAt(0,5,qs)}, --18:computer front
-		
+		{quadAt(1,4,qs)}, --19:elevator
+		{quadAt(0,5,qs)}, --20:computer front
 	}
+
+	quadSets.paused = quadAt(0,6,{4,2,4,8})
+	
 	qs = {1,1,2,1}
 	quadSets.block = {quadAt(0,0,qs),quadAt(1,0,qs)}
 	

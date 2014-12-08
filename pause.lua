@@ -35,17 +35,28 @@ function drawPauseOverlay()
 		
 	else]]
 		love.graphics.setColor(255,255,255,255)
-		love.graphics.print("PAUSED", screenWidth/3, screenHeight/6)
+		-- love.graphics.print("PAUSED", screenWidth/3, screenHeight/6)
 
-		love.graphics.setColor(207,207,207,255)
-		love.graphics.print("ABCDEFGHIJKLMNOPQRSTUVWXYZ\n\n\n\n\n\n\nControls:", screenWidth/6, 10)
+		-- love.graphics.setColor(207,207,207,255)
+		love.graphics.print("Controls:", tileSize*6, tileSize*3)
 		--TODO un-hack (separate alphabet, actually derive letters from progress table, darken further). kinda just testing placement of alphabet
 	
 		love.graphics.setColor(255,255,255,255)
-		love.graphics.print("\nWASD/Arrow Keys: walk, move blocks\nSpace: inspect/interact\n\nReturn: activate pixel control"
+		love.graphics.print("\nWASD/Arrows: walk, move blocks\nSpace: inspect/interact"
+			.."\n\nReturn: activate pixel control\nTab[+Shift]: cycle through colors\nK: toggle color key"
+			.."\n\nR: reset room\nM: mute background music\nZ: change window size"
+			.."\n\nEsc: exit game",
 			-- .."\n[Shift]-Tab: cycle through colors\nR: reset room\nM: mute background music\nZ: toggle zoom\nEsc: exit game",
-			.."\nTab[+Shift]: cycle through colors\n\nR: reset room\nM: mute background music\nZ: change window size\n\nEsc: exit game",
-			screenWidth/5, screenHeight/3)
+			screenWidth/5, screenHeight/4)
+			
+			for i = 1, 10, 1 do
+				if progress["shirt "..i] then
+					love.graphics.print(i%10, tileSize*-0.875 + tileSize*i*1.5, tileSize*14)
+					love.graphics.draw(images.stillActors[1], quadSets.stillActors[i+8][1], tileSize*-1.25 + tileSize*i*1.5, tileSize*13)
+				end
+			end
+			
+			love.graphics.draw(images.stillActors[1], quadSets.paused, tileSize*5.5, tileSize*0.5)
 		
 		--TODO shirt controls
 	end

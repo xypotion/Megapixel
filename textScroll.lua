@@ -79,6 +79,10 @@ end
 
 ------------------------------------------------------------------------------------------------------
 
+function setTextColor()
+	--TODO... maybe. polish, absolutely.
+end
+
 -- called from cutscene manager
 function startTextScroll(lines, showBox)	
 	textScrolling = true --probably the best place for this. hope it doesn't blow stuff up later.

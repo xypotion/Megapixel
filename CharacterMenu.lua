@@ -20,7 +20,7 @@ end
 
 function CharacterMenu:draw()
 	love.graphics.setColor(255,255,255,255)
-	--hackity hack	
+	--hackity hack
 	love.graphics.print("      What do you look like?\n\n      Press TAB to generate.\nTurn with WASD or arrow keys.\n Confirm with SPACE or ENTER.", 
 		self.pos.x * zoom, self.pos.y * zoom)
 		

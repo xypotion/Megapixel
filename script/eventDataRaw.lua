@@ -209,7 +209,7 @@ eventDataRaw = {
 	},
 	{
 		name = "elevator",
-		sc = {category="stillActors", image=1, quadId=17},
+		sc = {category="stillActors", image=1, quadId=19},
 		collide = true,
 		interactionBehavior = {
 				textMenu, {
@@ -298,7 +298,17 @@ eventDataRaw = {
 		appearsUntilAllCollected = {"notes 1","notes 2","notes 3","notes 4","notes 5","notes 6","notes 7","notes 8"},
 		collide = true,
 		interactionBehavior = {
-			say, "\"Fatal results\". Yikes."
+			say, "\"Fatal results\". Yikes.",
+			collect_, "shirt 1",
+			collect_, "shirt 2",
+			collect_, "shirt 3",
+			collect_, "shirt 4",
+			collect_, "shirt 5",
+			collect_, "shirt 6",
+			collect_, "shirt 7",
+			collect_, "shirt 8",
+			collect_, "shirt 9",
+			collect_, "shirt 10",
 			-- saveData, nil,
 			-- warp,{wid=1,mx=11,my=8,facing="n"}
 		}
@@ -319,7 +329,7 @@ eventDataRaw = {
 	--8: lobby comp without remote front
 	{
 		name = "lobby PC w/o remote",
-		sc = {category="stillActors", image=1, quadId=18},
+		sc = {category="stillActors", image=1, quadId=20},
 		appearsUntilAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
@@ -371,7 +381,7 @@ eventDataRaw = {
 	--13: instructions comp
 	{
 		name = "lobby PC 4",
-		sc = {category="stillActors", image=1, quadId=18},
+		sc = {category="stillActors", image=1, quadId=20},
 		appearsIfAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
@@ -384,7 +394,7 @@ eventDataRaw = {
 	--14: progress comp
 	{
 		name = "lobby PC 5",
-		sc = {category="stillActors", image=1, quadId=18},
+		sc = {category="stillActors", image=1, quadId=20},
 		appearsIfAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
@@ -481,7 +491,7 @@ eventDataRaw[243] = {
 --elevators
 eventDataRaw[201] = {
 	name = "elevator",
-	sc = {category="stillActors", image=1, quadId=17},
+	sc = {category="stillActors", image=1, quadId=19},
 	collide = true,
 	interactionBehavior = {
 		textMenu, {
@@ -505,7 +515,7 @@ eventDataRaw[201] = {
 }
 eventDataRaw[202] = {
 	name = "elevator",
-	sc = {category="stillActors", image=1, quadId=17},
+	sc = {category="stillActors", image=1, quadId=19},
 	collide = true,
 	interactionBehavior = {
 		textMenu, {
@@ -529,7 +539,7 @@ eventDataRaw[202] = {
 }
 eventDataRaw[203] = {
 	name = "elevator",
-	sc = {category="stillActors", image=1, quadId=17},
+	sc = {category="stillActors", image=1, quadId=19},
 	collide = true,
 	interactionBehavior = {
 		textMenu, {
@@ -553,7 +563,7 @@ eventDataRaw[203] = {
 }
 eventDataRaw[204] = {
 	name = "elevator",
-	sc = {category="stillActors", image=1, quadId=17},
+	sc = {category="stillActors", image=1, quadId=19},
 	collide = true,
 	interactionBehavior = {
 		textMenu, {
@@ -1274,102 +1284,123 @@ eventDataRaw[2016] = {
 
 
 --shirts
-eventDataRaw[902] = {
+eventDataRaw[903] = {
 	name = "shirt 2",
-	sc = {category="stillActors",image=1,quadId=9},
+	sc = {category="stillActors",image=1,quadId=10},
 	collide = true,
 	appearsUntilAllCollected = {"shirt 2"},
 	interactionBehavior = {
 		collect_, "shirt 2",
-		say, "Found a black shirt!",
-		say, "Press 2 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"Black does go with everything.\""
-	}
-	}--black, bound for room 12
-eventDataRaw[903] = {
-	name = "shirt 3",
-	sc = {category="stillActors",image=1,quadId=10},
-	collide = true,
-	appearsUntilAllCollected = {"shirt 3"},
-	interactionBehavior = {
-		collect_, "shirt 3",
+		collect_, "shirt 1",
 		say, "Found a red shirt!",
-		say, "Press 3 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "Press 2 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Red. Hot.\""
 	}
 }--red
 eventDataRaw[904] = {
-	name = "shirt 4",
+	name = "shirt 3",
 	sc = {category="stillActors",image=1,quadId=11},
 	collide = true,
-	appearsUntilAllCollected = {"shirt 4"},
+	appearsUntilAllCollected = {"shirt 3"},
 	interactionBehavior = {
-		collect_, "shirt 4",
+		collect_, "shirt 3",
+		collect_, "shirt 1",
 		say, "Found a green shirt!",
-		say, "Press 4 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "Press 3 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Huh, it feels kinda springy.\""
 	}
 }--green
 eventDataRaw[905] = {
-	name = "shirt 5",
+	name = "shirt 4",
 	sc = {category="stillActors",image=1,quadId=12},
 	collide = true,
-	appearsUntilAllCollected = {"shirt 5"},
+	appearsUntilAllCollected = {"shirt 4"},
 	interactionBehavior = {
-		collect_, "shirt 5",
+		collect_, "shirt 4",
+		collect_, "shirt 1",
 		say, "Found a blue shirt!",
-		say, "Press 5 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "Press 4 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Hm, cool.\""
 	}
 }--blue
 eventDataRaw[906] = {
-	name = "shirt 6",
+	name = "shirt 5",
 	sc = {category="stillActors",image=1,quadId=13},
 	collide = true,
-	appearsUntilAllCollected = {"shirt 6"},
+	appearsUntilAllCollected = {"shirt 5"},
 	interactionBehavior = {
-		collect_, "shirt 6",
+		collect_, "shirt 5",
+		collect_, "shirt 1",
 		say, "Found a cyan shirt!",
-		say, "Press 6 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "Press 5 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Whew. I feel like I'm stuck in a puzzle\ngame or something.\"" --TODO
 	}
 }--cyan
 eventDataRaw[907] = {
-	name = "shirt 7",
+	name = "shirt 6",
 	sc = {category="stillActors",image=1,quadId=14},
 	collide = true,
-	appearsUntilAllCollected = {"shirt 7"},
+	appearsUntilAllCollected = {"shirt 6"},
 	interactionBehavior = {
-		collect_, "shirt 7",
+		collect_, "shirt 6",
+		collect_, "shirt 1",
 		say, "Found a red shirt!",
-		say, "Press 7 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "Press 6 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Cute.\""
 	}
 }--magenta
 eventDataRaw[908] = {
-	name = "shirt 8",
+	name = "shirt 7",
 	sc = {category="stillActors",image=1,quadId=15},
 	collide = true,
-	appearsUntilAllCollected = {"shirt 8"}, --TODO
+	appearsUntilAllCollected = {"shirt 7"}, --TODO
 	interactionBehavior = {
-		collect_, "shirt 8",
+		collect_, "shirt 7",
+		collect_, "shirt 1",
 		say, "Found a yellow shirt!",
-		say, "Press 8 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "Press 7 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Wow, so bright.\"",
 		say, "\"I'm honestly impressed.\""
 	}
 	}--yellow, in room 11
 eventDataRaw[909] = {
-	name = "shirt 9",
+	name = "shirt 8",
 	sc = {category="stillActors",image=1,quadId=16},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 8"},
+	interactionBehavior = {
+		collect_, "shirt 8",
+		collect_, "shirt 1",
+		say, "Found a white shirt!",
+		say, "Press 8 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"Is this cotton?\""
+	}
+}--white, bound for room 7?
+eventDataRaw[902] = {
+	name = "shirt 9",
+	sc = {category="stillActors",image=1,quadId=9},
 	collide = true,
 	appearsUntilAllCollected = {"shirt 9"},
 	interactionBehavior = {
 		collect_, "shirt 9",
-		say, "Found a white shirt!",
+		collect_, "shirt 1",
+		say, "Found a black shirt!",
 		say, "Press 9 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"Is this cotton?\""
+		say, "\"Black does go with everything.\""
 	}
-}--white, bound for room 7?
+}--black, bound for room 12
+eventDataRaw[910] = {
+	name = "shirt 10",
+	sc = {category="stillActors",image=1,quadId=16},
+	collide = true,
+	appearsUntilAllCollected = {"shirt 10"},
+	interactionBehavior = {
+		collect_, "shirt 10",
+		collect_, "shirt 1",
+		say, "Found a clear shirt!?",
+		say, "Press 0 to wear it. You can change back to\nyour grey shirt by pressing 1.",
+		say, "\"whoa????\""
+	}
+}--clear/ultimate
 
 -- TODO other shirts, including clear from a computer PLUS its dead version?
