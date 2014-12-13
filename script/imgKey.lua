@@ -1,7 +1,7 @@
 function loadImages()
 	makeQuads()
 	
-	-- meh.
+	-- meh. TODO
 end
 
 --
@@ -91,7 +91,9 @@ anikeys.map = {
 }
 anikeys.stillActors = {
 	frame = 1,
-	count = 1,
+	count = 2,
+	interval = .1,
+	time = 0
 }
 anikeys.characters = {
 	frame = 1,
@@ -99,31 +101,32 @@ anikeys.characters = {
 	interval = .32,
 	time = 0
 }
-anikeys.swirl = {
-	frame = 1,
-	count = 8,
-	interval = .06,
-	time = 0
-}
-anikeys.marble = {
-	frame = 1,
-	count = 8,
-	interval = .06,
-	time = 0
-}
-anikeys.event = {
-	frame = 1,
-	count = 4,
-	interval = .1,
-	time = 0
-}
-anikeys.minimap = {
-	frame = 1,
-	count = 2,
-	interval = .2,
-	time = 0
-}
+-- anikeys.swirl = {
+-- 	frame = 1,
+-- 	count = 8,
+-- 	interval = .06,
+-- 	time = 0
+-- }
+-- anikeys.marble = {
+-- 	frame = 1,
+-- 	count = 8,
+-- 	interval = .06,
+-- 	time = 0
+-- }
+-- anikeys.event = {
+-- 	frame = 1,
+-- 	count = 2,
+-- 	interval = .1,
+-- 	time = 0
+-- }
+-- anikeys.minimap = {
+-- 	frame = 1,
+-- 	count = 2,
+-- 	interval = .2,
+-- 	time = 0
+-- }
 
+--TODO still want to find a better place for this...
 function tickAniKey(ak, dt)
 	if ak.interval then --if it's nil, then it's still!
 		ak.time = ak.time + dt
@@ -167,8 +170,8 @@ function makeQuads()
 	qs = {1,1,4,8}
 	quadSets.stillActors = {
 		{quadAt(0,0,qs)}, --quad=1:notes
-		{quadAt(1,0,qs)}, --2:door
-		{quadAt(2,0,qs)}, --3:exit door
+		{quadAt(2,0,qs)}, --2:exit door
+		{quadAt(1,0,qs)}, --3:door
 		{quadAt(3,1,qs)}, --4:door top
 		{quadAt(1,1,qs)}, --5:grey shirt, only used in pause menu
 		{quadAt(3,0,qs)}, --6:key
@@ -187,7 +190,7 @@ function makeQuads()
 		{quadAt(2,4,qs)}, --18:clear
 		--other:
 		{quadAt(1,4,qs)}, --19:elevator
-		{quadAt(0,5,qs)}, --20:computer front
+		{quadAt(0,5,qs), quadAt(1,5,qs)}, --20:computer front
 	}
 
 	quadSets.paused = quadAt(0,6,{4,2,4,8})

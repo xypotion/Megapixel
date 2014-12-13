@@ -35,7 +35,7 @@ end
 
 function drawActor(actor)
 	love.graphics.setColor(255,255,255,255)
-	love.graphics.draw(actor.image, actor.quads[actor.anikey.frame], actor.screenX, actor.screenY, 0, 1, 1)
+	love.graphics.draw(actor.image, actor.quads[actor.anikey.frame] or actor.quads[1], actor.screenX, actor.screenY, 0, 1, 1)
 end
 
 function drawComplexActor(actor)

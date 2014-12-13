@@ -20,8 +20,6 @@ math.randomseed(os.time())
 	--that's it!
 ]] --TODO update this? lol
 
-progressMsg = "bar"
-
 behaviorsRaw = {
 	title = {
 		addMenu, TitleMenu
@@ -414,9 +412,27 @@ eventDataRaw = {
 }
 
 --special doors
+eventDataRaw[100] = {
+	name = "exit 100",
+	sc = {category="stillActors", image=1, quadId=2},
+	collide = true,
+	-- appearsUntilAllCollected = {
+	-- 	"notes 1","notes 2","notes 3","notes 4","notes 5","notes 6","notes 7","notes 8",
+	-- 	"notes 9","notes 10","notes 11","notes 12","notes 13","notes 14","notes 15","notes 16",
+	-- 	},
+	interactionBehavior = {
+		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
+		-- playSFX, "door",
+		-- warp,{wid=1,mx=2,my=8,facing="n"},
+		say,"I probably shouldn't just leave. My job is\non the line, not to mention the company!"
+	}
+} --exit before endgame
+-- eventDataRaw[101] = {} --exit once all notes found
+-- eventDataRaw[102] = {} --exit once all notes and shirts found
+
 eventDataRaw[171] = {
 	name = "door from room 21",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	-- appearsUntilAllCollected = {"notes 1","notes 4"},
 	interactionBehavior = {
@@ -609,7 +625,7 @@ eventDataRaw[306] = {
 }
 eventDataRaw[356] = {
 	name = "doorFrom6",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -647,7 +663,7 @@ eventDataRaw[316] = {
 }
 eventDataRaw[366] = {
 	name = "doorFrom16",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -689,7 +705,7 @@ eventDataRaw[305] = {
 }
 eventDataRaw[355] = {
 	name = "doorFrom5",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -728,7 +744,7 @@ eventDataRaw[314] = {
 }
 eventDataRaw[364] = {
 	name = "doorFrom14",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -769,7 +785,7 @@ eventDataRaw[308] = {
 }
 eventDataRaw[358] = {
 	name = "doorFrom8",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -828,7 +844,7 @@ eventDataRaw[318] = {
 }
 eventDataRaw[368] = {
 	name = "doorFrom18",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -870,7 +886,7 @@ eventDataRaw[312] = {
 }
 eventDataRaw[362] = {
 	name = "doorFrom12",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},
@@ -908,7 +924,7 @@ eventDataRaw[319] = {
 }
 eventDataRaw[369] = {
 	name = "doorFrom19",
-	sc = {category="stillActors", image=1, quadId=3},
+	sc = {category="stillActors", image=1, quadId=2},
 	collide = true,
 	interactionBehavior = {
 		choose, {"Leave room?", {"No", 3}, {"Yes",0}},

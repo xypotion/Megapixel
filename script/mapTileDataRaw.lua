@@ -72,13 +72,19 @@ mapDataRaw = {
 			{x=6,y=12,id=306},
 			{x=11,y=12,id=316},
 			
+			--elevators:
 			{x=2,y=9,id=121}, --to office
-			-- {x=2,y=5,id=212}, --to floor 2
 			{x=2,y=5,id=201}, --to floor 2
+			
+			--exits:
+			{x=2,y=2,id=100}, --without notes
+			-- {x=3,y=2,id=171}, --without notes
 			
 			--other
 			{x=7,y=7,id=1}, --remote!
 			-- {x=10,y=5,id=5}, --victory key
+			
+			--pre-remote PCs:
 			{x=8,y=6,id=9}, --pc a
 			{x=9,y=6,id=9}, --pc b
 			{x=10,y=6,id=9}, --pc c
@@ -86,6 +92,7 @@ mapDataRaw = {
 			{x=9,y=7,id=8}, --pc e
 			{x=10,y=7,id=8}, --pc f
 			
+			--post-remote PCs:
 			{x=8,y=6,id=10}, --pc a
 			{x=9,y=6,id=11}, --pc b
 			{x=10,y=6,id=12}, --pc c

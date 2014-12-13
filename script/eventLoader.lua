@@ -8,23 +8,23 @@ require "script/eventDataRaw"
 
 -- ...or maybe this is the big one where logic goes? looks at raw table for more data?? woof
 function loadLocalActor(pointer) --contains x, y, and id
-	if pointer.id == 99 then
-		e = newActor(eventDataRaw[3])
-	elseif pointer.id == 100 then
-		if score < 300 then
-			e = newActor(eventDataRaw[1]) -- LIKE THIS?
-		else
-			e = newActor(eventDataRaw[2])
-		end
-	elseif pointer.id == 101 then
-		e = newActor(eventDataRaw[4])
-	else
+	-- if pointer.id == 99 then
+	-- 	e = newActor(eventDataRaw[3])
+	-- elseif pointer.id == 100 then
+	-- 	if score < 300 then
+	-- 		e = newActor(eventDataRaw[1]) -- LIKE THIS?
+	-- 	else
+	-- 		e = newActor(eventDataRaw[2])
+	-- 	end
+	-- elseif pointer.id == 101 then
+	-- 	e = newActor(eventDataRaw[4])
+	-- else
 		-- print("loading generic event "..pointer.id..".")
 		-- print(eventDataRaw[pointer.id].name)
-		e = newActor(eventDataRaw[pointer.id])
-		if not e then print ("no generic event for ID "..pointer.id.."found.") end
+	e = newActor(eventDataRaw[pointer.id])
+	if not e then print ("no generic event for ID "..pointer.id.."found.") end
 		-- TODO so the logically complicated ones above can start with 1000? sounds good, just have to explicitly add them to raw data table.
-	end
+	-- end
 	
 	e.currentPos = {x=pointer.x, y=pointer.y}
 		
