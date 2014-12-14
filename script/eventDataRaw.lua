@@ -973,18 +973,7 @@ eventDataRaw[1001] = {
 		think, "Did you know you can pause the game with P?",
 		think, "The pause screen has some useful info on it!",
 	}
-} -- notes 1 pickup
-
-eventDataRaw[2001] = {
-	name = "notes 1",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 1"},
-	interactionBehavior = {
-		say, "Research Notes 1, got 'em.",
-	}
-} -- notes 1 displayed at base
-
+}
 eventDataRaw[1002] = {
 	name = "notes 2",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -996,17 +985,6 @@ eventDataRaw[1002] = {
 		think, "You can press R to reset any room."
 	}
 }
-eventDataRaw[2002] = {
-	name = "notes 2",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 2"},
-	interactionBehavior = {
-		-- say, "Research Notes 2, got 'em.",
-		choose, {"Research Notes #2, got 'em.", {"Don't read.", 1}, {"Read", 0}},
-		say, "You can press R to reset any room."
-	}
-}
 eventDataRaw[1003] = {
 	name = "notes 3",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1015,23 +993,14 @@ eventDataRaw[1003] = {
 	interactionBehavior = {
 		collect_, "notes 3",
 		say, "Got Research Notes 3! Let's take a look...",
-		think, "Blue and yellow are opposites.",
-		think, "Red and cyan are opposites.",
-		think, "Green and magenta are opposites.",
-		think, "White and black are opposites, but white also\nfuses with ANY color, while black only fuses\nwith white."
+		-- think, "insert message here. autosave?" --TODO
+		think,"Did you know that the game auto-saves\nevery time you collect an item?"
+		-- think, "Blue and yellow are opposites.",
+		-- think, "Red and cyan are opposites.",
+		-- think, "Green and magenta are opposites.",
+		-- think, "White and black are opposites, but white also\nfuses with ANY color, while black only fuses\nwith white."
 	}
 }
-
-eventDataRaw[2003] = {
-	name = "notes 3",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 3"},
-	interactionBehavior = {
-		say, "Research Notes 3, got 'em.",
-	}
-}
-
 eventDataRaw[1004] = {
 	name = "notes 4",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1040,19 +1009,9 @@ eventDataRaw[1004] = {
 	interactionBehavior = {
 		collect_, "notes 4",
 		say, "Got Research Notes 4! Let's take a look...",
-		think, "Try pressing Z to change the screen size."
+		think, "Have you tried pressing Z or M?"
 	}
 }
-eventDataRaw[2004] = {
-	name = "notes 4",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 4"},
-	interactionBehavior = {
-		say, "Research Notes 4, got 'em.",
-	}
-}
-
 eventDataRaw[1005] = {
 	name = "notes 5",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1060,20 +1019,9 @@ eventDataRaw[1005] = {
 	collide = true,
 	interactionBehavior = {
 		collect_, "notes 5",
-		say, "Got Research Notes 5! Let's take a look:...",
-		think,"Did you know that the game auto-saves\nevery time you collect an item?"
+		say, "Got Research Notes 5!",--" Let's take a look:...",
 	}
 }
-eventDataRaw[2005] = {
-	name = "notes 5",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 5"},
-	interactionBehavior = {
-		say, "Research Notes 5, got 'em.",
-	}
-}
-
 eventDataRaw[1006] = {
 	name = "notes 6",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1081,20 +1029,10 @@ eventDataRaw[1006] = {
 	appearsUntilAllCollected = {"notes 6"},
 	interactionBehavior = {
 		collect_, "notes 6",
-		say, "Got Research Notes 6! Let's take a look...",
-		think,"You can mute the music with M."
+		say, "Got Research Notes 6!",--" Let's take a look...",
+		-- think,"You can mute the music with M."
 	}
 }
-eventDataRaw[2006] = {
-	name = "notes 6",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 6"},
-	interactionBehavior = {
-		say, "Research Notes 6, got 'em.",
-	}
-}
-
 eventDataRaw[1007] = {
 	name = "notes 7",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1105,16 +1043,6 @@ eventDataRaw[1007] = {
 		say, "Got Research Notes 7!",
 	}
 }
-eventDataRaw[2007] = {
-	name = "notes 7",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 7"},
-	interactionBehavior = {
-		say, "Research Notes 7, got 'em.",
-	}
-}
-
 eventDataRaw[1008] = {
 	name = "notes 8",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1125,16 +1053,6 @@ eventDataRaw[1008] = {
 		say, "Got Research Notes 8!"
 	}
 }
-eventDataRaw[2008] = {
-	name = "notes 8",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 8"},
-	interactionBehavior = {
-		say, "Research Notes 8, got 'em.",
-	}
-}
-
 eventDataRaw[1009] = {
 	name = "notes 9",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1142,23 +1060,13 @@ eventDataRaw[1009] = {
 	collide = true,
 	interactionBehavior = {
 		collect_, "notes 9",
-		say, "Got Research Notes 9! Let's take a look...",
-		think, "You can press P to go to the Pause screen."
+		say, "Got Research Notes 9!",--" Let's take a look...",
+		-- think, "You can press P to go to the Pause screen."
 		-- say, "Did you know you can pause the game with P?\nThe pause screen has some useful info on it!",
 		--think, "Did you know you can pause the game with P?",
 		--think, "The pause screen has some useful info on it!",
 	}
-} -- notes 9 pickup
-eventDataRaw[2009] = {
-	name = "notes 9",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 9"},
-	interactionBehavior = {
-		choose, {"Research Notes #9, got 'em.", {"Don't read.", 1}, {"Read", 0}},
-		think, "You can press P to go to the Pause screen."
-	}
-} -- notes 9 displayed at base
+}
 eventDataRaw[1010] = {
 	name = "notes 10",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1170,17 +1078,6 @@ eventDataRaw[1010] = {
 		--think, "You can press R to reset any room."
 	}
 }
-
-eventDataRaw[2010] = {
-	name = "notes 10",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 10"},
-	interactionBehavior = {
-		say, "Research Notes 10, got 'em.",
-	}
-}
-
 eventDataRaw[1011] = {
 	name = "notes 11",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1195,16 +1092,6 @@ eventDataRaw[1011] = {
 		--think, "White and black are opposites, but white also\nfuses with ANY color, while black only fuses\nwith white."
 	}
 }
-eventDataRaw[2011] = {
-	name = "notes 11",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 11"},
-	interactionBehavior = {
-		say, "Research Notes 11, got 'em.",
-	}
-}
-
 eventDataRaw[1012] = {
 	name = "notes 12",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1216,15 +1103,6 @@ eventDataRaw[1012] = {
 		--think, "Try pressing Z to change the screen size."
 	}
 }
-eventDataRaw[2012] = {
-	name = "notes 12",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 12"},
-	interactionBehavior = {
-		say, "Research Notes 12, got 'em.",
-	}
-}
 eventDataRaw[1013] = {
 	name = "notes 13",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1232,21 +1110,10 @@ eventDataRaw[1013] = {
 	collide = true,
 	interactionBehavior = {
 		collect_, "notes 13",
-		say, "Got Research Notes 13! Let's take a look:...",
+		say, "Got Research Notes 13!",--" Let's take a look:...",
 		--think,"Did you know that the game auto-saves\nevery time you collect an item?"
 	}
 }
-
-eventDataRaw[2013] = {
-	name = "notes 13",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 13"},
-	interactionBehavior = {
-		say, "Research Notes 13, got 'em.",
-	}
-}
-
 eventDataRaw[1014] = {
 	name = "notes 14",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1254,20 +1121,10 @@ eventDataRaw[1014] = {
 	appearsUntilAllCollected = {"notes 14"},
 	interactionBehavior = {
 		collect_, "notes 14",
-		say, "Got Research Notes 14! Let's take a look...",
+		say, "Got Research Notes 14!",--" Let's take a look...",
 		--think,"You can mute the music with M."
 	}
 }
-eventDataRaw[2014] = {
-	name = "notes 14",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 14"},
-	interactionBehavior = {
-		say, "Research Notes 14, got 'em.",
-	}
-}
-
 eventDataRaw[1015] = {
 	name = "notes 15",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1278,16 +1135,6 @@ eventDataRaw[1015] = {
 		say, "Got Research Notes 15!",
 	}
 }
-eventDataRaw[2015] = {
-	name = "notes 15",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 15"},
-	interactionBehavior = {
-		say, "Research Notes 15, got 'em.",
-	}
-}
-
 eventDataRaw[1016] = {
 	name = "notes 16",
 	sc = {category="stillActors", image=1, quadId=1},
@@ -1296,15 +1143,6 @@ eventDataRaw[1016] = {
 	interactionBehavior = {
 		collect_, "notes 16",
 		say, "Got Research Notes 16!"
-	}
-}
-eventDataRaw[2016] = {
-	name = "notes 16",
-	sc = {category="stillActors", image=1, quadId=1},
-	collide = true,
-	appearsIfAllCollected = {"notes 16"},
-	interactionBehavior = {
-		say, "Research Notes 16, got 'em.",
 	}
 }
 
@@ -1425,8 +1263,6 @@ eventDataRaw[910] = {
 		collect_, "shirt 1",
 		say, "Found a clear shirt!?",
 		say, "Press 0 to wear it. You can change back to\nyour grey shirt by pressing 1.",
-		say, "\"whoa????\""
+		say, "\"whoa????\"" --TODO
 	}
 }--clear/ultimate
-
--- TODO other shirts, including clear from a computer PLUS its dead version?
