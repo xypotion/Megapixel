@@ -83,21 +83,21 @@ revised endgame plan because you got too ambitious ~
 	- emails from boss "why are you taking so long? i left the prototype material on your desk"
 
 TODO in order of importance
+- refine "let's take a look" on notes. just first floor! little reminders! i guess.
+- just comment out all 20** notes? since you're not showing them in the lobby anymore :/
+- subtler hints about secret materials, like "red hides in the A" and stuff? eh
 - evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
   * call it "branch"? i still think this will be a valuable script tool!
-- rearrange notes to group by floor
 - actual instructions @ lobby pc
 - it's probably easy, so: save player's zoom level, music muteness, and selected shirt. just do it.
   * wait, zoom level would affect the title screen. might be harder.
 - if final shirt lets you walk through walls, adjust collision with actors
 - giant cleanup of comments and stuff
-  - all TODO, anything i myself called a "hack", comments, print statements (maybe keep some but comment out)
-	- maybe some refactoring, heh
+  - all TODO, anything i myself called a "hack" (lol), comments, print statements (maybe keep some but comment them out)
+	- maybe some refactoring... heh
 	- one more sweep for variables that should be declared local? yuck. showGlobals should help with that...
 	- disable debug mode, remove shirt giveaway line from own pc
 ! change text on block inspection
-- swap out all those EXIT doors for regular doors
-- ...and put in an actual exit door, lol
 ! credits/ending somehow. heh :/
 - change debug keys (123) to something else. maybe: ,./
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
@@ -133,6 +133,9 @@ credits:
 
 
 done TODOs
+- rearrange notes to group by floor
+- swap out all those EXIT doors for regular doors
+- ...and put in an actual exit door, lol
 - shirt progress pc
 ! a row of computers in the lobby that each give a different control hint. screw the notes thing.
   - "There's a document open on this computer. It says..."

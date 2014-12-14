@@ -244,7 +244,7 @@ mapDataRaw = {
 		blocksAt = {x=5,y=8},
 		localActorPointers = {
 			{x=3,y=6,id=355}, -- exit
-			{x=12,y=7,id=1001},
+			{x=12,y=7,id=1005},
 			-- {x=2,y=9,id=903}
 		}
 	},--5: silly first puzzle (doors 305, 355, notes 1001) **
@@ -273,7 +273,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=4},
 		localActorPointers = {
 			{x=5,y=2,id=356}, -- exit
-			{x=5,y=10,id=1002},
+			{x=5,y=10,id=1001},
 		}
 	},--6: narrow puzzle, pretty easy * oldest baby puzzle, kinda
 	{
@@ -300,7 +300,7 @@ mapDataRaw = {
 		blocksAt = {x=4,y=4},
 		localActorPointers = {
 			{x=6,y=10,id=357}, -- exit
-			{x=4,y=4,id=1003},
+			{x=4,y=4,id=1006},
 			{x=10,y=4,id=909}
 		}
 	},--7: white puzzle *** shirt candidate: white, hidden under a white block! maybe upper right corner. IF you put white shirt here, move to level 2 or 3
@@ -328,7 +328,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=5},
 		localActorPointers = {
 			{x=10,y=5,id=358}, -- exit
-			{x=4,y=6,id=1004},
+			{x=4,y=6,id=1009},
 		}
 	},--8: black grate puzzle **** shirt candidate: black? hmm. kinda no place for it...
 	{
@@ -355,7 +355,7 @@ mapDataRaw = {
 		localActorPointers = {
 			{x=9,y=12,id=359}, -- exit
 			{x=9,y=5,id=907},
-			{x=2,y=10,id=1005},
+			{x=2,y=10,id=1010},
 		}
 	},--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta
 	{
@@ -386,7 +386,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=5},
 		localActorPointers = {
 			{x=5,y=14,id=360}, -- exit
-			{x=5,y=4,id=1006},
+			{x=5,y=4,id=1011},
 			-- {x=5,y=8,id=6},
 		}
 	},--10: plant rows puzzle ***
@@ -418,7 +418,7 @@ mapDataRaw = {
 		blocksAt = {x=4,y=4},
 		localActorPointers = {
 			{x=3,y=13,id=361}, -- exit
-			{x=8,y=8,id=1007},
+			{x=8,y=8,id=1013},
 			{x=9,y=5,id=908},
 		}
 	},--11: painting puzzle *** shirt candidate: yellow = sun! :D and WOW that shirt took me a long time to get. jesus. hardest puzzle yet? *****
@@ -450,7 +450,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=6},
 		localActorPointers = {
 			{x=2,y=4,id=362}, -- exit
-			{x=11,y=6,id=1008},
+			{x=11,y=6,id=1014},
 			{x=14,y=5,id=902},
 			-- {x=5,y=8,id=6},
 		}
@@ -477,7 +477,7 @@ mapDataRaw = {
 		blocksAt = {x=7,y=3},
 		localActorPointers = {
 			{x=5,y=9,id=363},
-			{x=5,y=5,id=1009},
+			{x=5,y=5,id=1002},
 		}
 	},--13: baby puzzle "red shift" (needs stuff) * great place to offer R-for-reset hint!
 	{
@@ -508,7 +508,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=5},
 		localActorPointers = {
 			{x=6,y=4,id=364}, -- exit
-			{x=6,y=9,id=1010},
+			{x=6,y=9,id=1007},
 			-- {x=5,y=8,id=6},
 		}
 	},--14: + stripes puzzle *** shirt candidate, place behind black blocks in a side corridor (red?)
@@ -535,7 +535,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=8},
 		localActorPointers = {
 			{x=6,y=14,id=365}, -- exit
-			{x=6,y=5,id=1011},
+			{x=6,y=5,id=1008},
 			{x=13,y=9,id=904},
 		}
 	},--15: green X (needs stuff) **, shirt candidate (green), maybe a blacked-in side corridor
@@ -559,7 +559,7 @@ mapDataRaw = {
 		blocksAt = {x=6,y=6},
 		localActorPointers = {
 			{x=6,y=5,id=366}, -- exit
-			{x=10,y=10,id=1012},
+			{x=10,y=10,id=1003},
 			-- {x=5,y=8,id=6},
 		}
 	},--16: baby white-vs-black (NEEDS STUFF) *
@@ -597,7 +597,7 @@ mapDataRaw = {
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
 			{x=2,y=12,id=367}, -- exit
-			{x=8,y=10,id=1013},
+			{x=8,y=10,id=1015},
 			-- {x=5,y=8,id=6},
 		}
 	},--17: donut in the gas pump (needs door) ***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
@@ -630,7 +630,7 @@ mapDataRaw = {
 		blocksAt = {x=4,y=3},
 		localActorPointers = {
 			{x=14,y=5,id=368}, -- exit
-			{x=8,y=7,id=1014},
+			{x=8,y=7,id=1012},
 			{x=4,y=11,id=905},
 		}
 	},--18: rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
@@ -668,7 +668,7 @@ mapDataRaw = {
 		blocksAt = {x=2,y=3},
 		localActorPointers = {
 			{x=14,y=2,id=369}, -- exit
-			{x=14,y=13,id=1015},
+			{x=14,y=13,id=1016},
 			{x=13,y=11,id=906},
 		}
 	},--19: tetris blocks (needs door) **** cyan shirt where notes are, move notes down, may need to cycle colors to get cyan in there nicely :/
@@ -702,7 +702,7 @@ mapDataRaw = {
 		
 		localActorPointers = {
 			{x=6,y=12,id=370}, -- exit
-			{x=6,y=5,id=1016},
+			{x=6,y=5,id=1004},
 			{x=6,y=3,id=903},
 		}
 	},--20: baby puzzle: line collapse * shirt in corner (cyan? green?)
