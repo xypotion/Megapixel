@@ -66,7 +66,7 @@ Z zoological interaction survey? zipping/zippers?
 -- 9 right 1, up 1
 - did i already do this? ugh, can't remember. haha
 
-------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------ above this line = unimportant ----
 FIXME
 - save player settings (zoom, music, shirt)
 - remote should show on continue
@@ -99,6 +99,7 @@ TODO in order of importance
 	- maybe some refactoring... heh
 	- one more sweep for variables that should be declared local? yuck. showGlobals should help with that...
 	- disable debug mode, remove shirt giveaway line from own pc
+	- remove mentions of chroma crisis? hmm
 - change debug keys (123) to something else. maybe: ,./
   - and show to player on their computer in endgame! "you're so thorough, here's debug mode" maybe with a "did i turn everything off?" hint at the exit
 	- or just leave a note in the credits :)
@@ -107,6 +108,7 @@ TODO in order of importance
 > postgame fun: all black backgrounds turn into twinkly stars
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
 - if final shirt lets you walk through walls, adjust collision with actors so you still bump into them
+? remote-using sprite for character? (unlikely at this point, but it would look nice)
 ? ending/credits music? ehh
 ? "white warp" for room resets?
 ? shirt color -> text color? :P

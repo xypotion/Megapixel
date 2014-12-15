@@ -91,6 +91,7 @@ mapDataRaw = {
 			-- {x=8,y=7,id=8}, --pc d
 			{x=9,y=7,id=8}, --pc e
 			{x=10,y=7,id=8}, --pc f
+			{x=8,y=7,id=8}, --save pc
 			
 			--post-remote PCs:
 			{x=8,y=6,id=10}, --pc a
@@ -99,6 +100,7 @@ mapDataRaw = {
 			-- {x=8,y=7,id=11}, --pc d
 			{x=9,y=7,id=13}, --pc e
 			{x=10,y=7,id=14}, --pc f
+			{x=8,y=7,id=16}, --save pc
 		},
 		warpDrop = {wid=1,mx=10,my=5,facing="s"}
 	},
