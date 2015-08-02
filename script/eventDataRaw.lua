@@ -124,41 +124,61 @@ behaviorsRaw = {
 	},
 	blocks = {
 		green = {--TODO update these a little
-			say, "A green megapixel. I think this can be fused with\nblue or red digital matter to make cyan or yellow."
-			.."\nIt also mixes with magenta, resulting in white\ndigital matter."
+			-- say, "A green megapixel. I think this can be mixed with\na blue or red one to make cyan or yellow."
+			-- .."\nIt also mixes with magenta, resulting in white\ndigital matter."
+			say, "If I remember correctly...\n GREEN + RED = YELLOW\n GREEN + BLUE = CYAN\n GREEN + MAGENTA = WHITE",
+			say, "Making a WHITE block is usually helpful\nbecause it cancels BLACK blocks."
+				.."\nIn that case, I should find a MAGENTA block\nto match with this GREEN one."
 		},
 		blue = {
-			say, "A blue megapixel. I think this can be fused with\ngreen or red matter to make cyan or magenta."
-			.."\nIt also fuses with yellow, resulting in white\ndigital matter."
+			-- say, "Hm... I think a blue megapixel can fuse with a\ngreen or red one to make cyan or magenta."
+			-- .."\nIt can also mix with yellow to make white."
+			say, "I'm pretty sure it's...\n BLUE + RED = MAGENTA\n BLUE + GREEN = CYAN\n BLUE + YELLOW = WHITE",
+			say, "Making a WHITE block is usually helpful\nbecause it fuses with any color."
+				.."\nIn that case, I should find a YELLOW block\nto match with this BLUE one."
 		},
 		red = {
-			say, "A red megapixel. I think this can be fused with\nblue or green matter to make magenta or yellow."
-			.."\nIt also fuses with cyan, resulting in white\ndigital matter."
+			-- say, "Pretty sure red plus green is yellow, and red\nplus blue is magenta."--A red megapixel. I think this can be fused with\nblue or green matter to make magenta or yellow."
+-- 			.."\nRed also fuses with cyan, resulting in white\ndigital matter.",
+-- 			think, "or...",
+			say, "I think it goes...\n RED + GREEN = YELLOW\n RED + BLUE = MAGENTA\n RED + CYAN = WHITE",
+			say, "Making a WHITE block is usually helpful\nbecause it can be disposed of easily."
+				.."\nIn that case, I should find a CYAN block\nto match with this RED one."
 		},
 		cyan = {
-			say, "A cyan megapixel. Hm, I think this can only be fused\nwith red, which makes white digital matter."
+			-- say, "A cyan megapixel. Hm, I think this can only be fused\nwith red, which makes white digital matter."
+			say, "Pretty sure that CYAN + RED = WHITE, and that's\nall I can do with this block.",
+			say, "I guess the secondary colors (CMY) are harder\nto use than the primary colors (RGB).",
+			-- say, "Making a WHITE block is usually helpful\nbecause it can be disposed of easily."
+				-- .."\nIn that case, I should find a CYAN block\nto match with this RED one."
 		},
 		magenta = {
-			say, "A magenta megapixel. Hm, I think this can only be fused\nwith green, which makes white digital matter."
+			say, "I know that MAGENTA + GREEN = WHITE, but that's\nall I can do with this.",
+			say, "The secondary colors (CMY) are definitely harder\nto use than the primary colors (RGB)!"
+			-- say, "A magenta megapixel. Hm, I think this can only be fused\nwith green, which makes white digital matter."
 		},
 		yellow = {
-			say, "A yellow megapixel. Hm, I think this can only be fused\nwith blue, which makes white digital matter."
+			say, "So YELLOW + BLUE = WHITE, but is there anything\nelse I can do with this block? I don't think so.",
+			say, "I guess YELLOW is actually a secondary color (CMY),\nwhich makes it harder to use than the primary\ncolors (RGB)."
+			-- say, "A yellow megapixel. Hm, I think this can only be fused\nwith blue, which makes white digital matter."
 		},
 		white = {
-			say, "Oh, a white megapixel! This is the only kind of\ndigital matter that can fuse with black. White"
-			.."\ncan actually fuse with any color, which is useful,\nbut it's still just as dangerous as any other kind.",
+			say, "Ah, a WHITE megapixel. This is kind of special\nsince it's the only color that can fuse with BLACK.\n WHITE + BLACK = NOTHING",
+			say, "If I fuse it with any other color, it'll just\nget absorbed, though. Gotta be careful."
+			-- .."\ncan actually fuse with any color, which is useful,\nbut it's still just as dangerous as any other kind.",
 		},
 		black = {
-			say, "Hm, black digital matter... not only can I not control\nit with my remote, but there's only one kind of"
-			.."\ndigital matter that will fuse with it.",
-			say, "This anomaly will require more research."
+			say, "BLACK digital matter... this is the weird kind\nthat I can't move or mix with any colors.",
+			-- .."\ndigital matter that will fuse with it.",
+			say, "I'm pretty sure the only way to get rid of it\nis with a WHITE block. Kind of a pain."
+			-- say, "This anomaly will require more research."
 		},
 		greenStart = {
 			say,"An especially deadly shade of green. Yuck."
 		},
 		blueStart = {
 			say,"A gelatinous cube! I cast Magic Missile!",
-			say,"...if only."
+			say,"...I wish."
 		},
 		redStart = {
 			say,"Not sure why, but this one seems the most\ndangerous."

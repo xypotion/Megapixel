@@ -291,13 +291,13 @@ mapDataRaw = {
 		}, 
 		startAt = {x=4,y=3,default=1},
 		blocks = {
-			{X,X,C,W,W,W,W},
-			{X,C,W,W,W,W,W},
-			{C,W,W,W,W,W,W},
+			{X,X,R,W,W,W,W},
+			{X,R,W,W,W,W,W},
+			{R,W,W,W,W,W,W},
 			{W,W,W,W,W,W,W},
-			{W,W,W,W,W,W,C},
-			{W,W,X,W,W,C,R},
-			{X,X,X,X,C,R,R}
+			{W,W,W,W,W,W,R},
+			{W,W,X,W,W,R,C},
+			{X,X,X,X,R,C,C}
 		},
 		blocksAt = {x=4,y=4},
 		localActorPointers = {
