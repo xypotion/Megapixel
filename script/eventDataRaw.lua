@@ -405,10 +405,22 @@ eventDataRaw = {
 		appearsIfAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
-			choose, {"Select manual page (X to cancel):", {"Basic puzzle controls", 0}, {"Color mixing guide", 2}},
-			say, "controls!!",
-			skip, 1,
-			say, "colors!!"
+			choose, {"Select manual page (X to cancel):", {"Basic puzzle controls", 0}, {"Color mixing guide", 7}},
+			-- say, "controls!!",
+			say, "Your character can be moved with W,A,S,D or\nthe arrow keys. When using the remote control,\nthese same keys control megapixels.",
+			say, "To turn the remote on or off, press RETURN\n(ENTER). The color in the window indicates the\ncurrently controlled color.",
+			say, "For example, when the window shows a RED block,\nRED megapixels may be moved with your\ndirectional controls.",
+			say, "All visible blocks of the same color move at\nthe same time. They cannot pass through\nwalls or obstacles.",
+			say, "To cycle through the colors you can control,\npress TAB repeatedly.",
+			say, "Tip: Hold SHIFT to cycle backwards with TAB!",
+			skip, 999,
+			say, "Normally, digital matter (megapixels) cannot\npass through other objects. However, different\ntypes interact with each other according\nto their colors.",
+			say, "In most cases, this interaction results in the\ncreation of different colors of digital matter.\nTo combine two megapixels, simply move\none into the other.",
+			say, "The three primary colors are RED, GREEN, and\nBLUE (R,G,B), which can always combine with\neach other.",
+			say, "The secondary colors are CYAN, MAGENTA, and\nYELLOW (C,M,Y), which only combine with their\nopposites.",
+			say, "Opposite colors are:\n  RED - CYAN\n  GREEN - MAGENTA\n  BLUE - YELLOW",
+			say, "WHITE digital matter is absorbed by all other\ncolors, but when WHITE and BLACK touch, both\nmegapixels will vanish.",
+			say, "Tip: Press K when the remote is on for a color key!"
 		}
 	},
 	--14: progress comp
@@ -1278,7 +1290,7 @@ eventDataRaw[909] = {
 }--white, bound for room 7?
 eventDataRaw[902] = {
 	name = "shirt 9",
-	sc = {category="stillActors",image=1,quadId=9},
+	sc = {category="stillActors",image=1,quadId=17},
 	collide = true,
 	appearsUntilAllCollected = {"shirt 9"},
 	interactionBehavior = {
