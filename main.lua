@@ -228,14 +228,14 @@ end
 function love.keypressed(key)
 	if key == "escape" then --TODO stop from exiting if currently in a textmenu. maybe even make a quit prompt? heh
 		love.quit()
-	elseif key == "p" then
+	elseif key == "p" and #menuStack == 0 then
 		togglePause(key)
-	elseif key == "m" then
-		toggleBGM()
 	elseif not paused then
 		-- keyDelayTimer = 0 TODO just not quite this simple. think it needs a boolean
 		if(#menuStack > 0) then
 			takeMenuStackInput(key)
+		elseif key == "m" then
+			toggleBGM()
 		elseif blocksShifting == 0 and actorsShifting == 0 and not warping and not dewarping and not textScrolling and not runningScript and #menuStack == 0 then
 		--if notBusy then --TODO this. maybe notBusy() or not busy()?
 			--pause
@@ -292,40 +292,33 @@ function love.keypressed(key)
 			if key == "r" and not controllingBlocks then
 				Menu.add(ResetMenu)
 			end
+		
+			if key == "1" then
+				hp.shirt = 1
+			elseif key == "2" and progress["shirt 2"] then
+				hp.shirt = 2
+			elseif key == "3" and progress["shirt 3"] then
+				hp.shirt = 3
+			elseif key == "4" and progress["shirt 4"] then
+				hp.shirt = 4
+			elseif key == "5" and progress["shirt 5"] then
+				hp.shirt = 5
+			elseif key == "6" and progress["shirt 6"] then
+				hp.shirt = 6
+			elseif key == "7" and progress["shirt 7"] then
+				hp.shirt = 7
+			elseif key == "8" and progress["shirt 8"] then
+				hp.shirt = 8
+			elseif key == "9" and progress["shirt 9"] then
+				hp.shirt = 9
+			elseif key == "0" and progress["shirt 10"] then
+				hp.shirt = 10
+			end
 			
+		--TODO figure out if this really needs to be here and why if so
 		elseif textScrolling then --if not else'd off the above, bad things happen. i don't love this here, but it works for now
 			-- advance to end of line and halt
 			keyPressedDuringText(key)
-		end
-	
-		-- --shh! TODO remove
-		-- if key == "0" and love.keyboard.isDown("3") then
-		-- 	-- score = score + 1
-		-- 	-- return
-		-- 	progress["notes 1"] = true
-		-- 	progress["notes 2"] = true
-		-- 	progress["notes 3"] = true
-		-- end
-		if key == "1" then
-			hp.shirt = 1
-		elseif key == "2" and progress["shirt 2"] then
-			hp.shirt = 2
-		elseif key == "3" and progress["shirt 3"] then
-			hp.shirt = 3
-		elseif key == "4" and progress["shirt 4"] then
-			hp.shirt = 4
-		elseif key == "5" and progress["shirt 5"] then
-			hp.shirt = 5
-		elseif key == "6" and progress["shirt 6"] then
-			hp.shirt = 6
-		elseif key == "7" and progress["shirt 7"] then
-			hp.shirt = 7
-		elseif key == "8" and progress["shirt 8"] then
-			hp.shirt = 8
-		elseif key == "9" and progress["shirt 9"] then
-			hp.shirt = 9
-		elseif key == "0" and progress["shirt 10"] then
-			hp.shirt = 10
 		end
 	end
 end

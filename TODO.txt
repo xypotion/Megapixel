@@ -68,9 +68,9 @@ Z zoological interaction survey? zipping/zippers?
 
 ------------------------------------------------------------------------------------------------------------ above this line = unimportant ----
 FIXME
-- save player settings (zoom, music, shirt)
+√ save player settings (zoom, music, shirt)
 - remote should show on continue
-- pressing number keys or P or M crashes title screen, lol
+√ pressing number keys or P or M crashes title screen, lol
 - mouse cord to back of pc
 
 revised endgame plan because you got too ambitious ~
