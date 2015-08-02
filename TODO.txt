@@ -72,6 +72,8 @@ FIXME
 - remote should show on continue
 √ pressing number keys or P or M crashes title screen, lol
 - mouse cord to back of pc
+- grey shirt is in black shirt's place
+- no instructions @ remote pickup
 
 revised endgame plan because you got too ambitious ~
 - exit door has 3 possible behaviors:
@@ -84,9 +86,8 @@ revised endgame plan because you got too ambitious ~
 
 TODO in order of importance
 - actual instructions @ lobby pc
-- it's probably easy, so: save player's zoom level, music muteness, and selected shirt. just do it.
-  * wait, zoom level would affect the title screen, where save file is not loaded... might be harder.
-! change text on block inspection
+- remove debug dump from office pc
+- make remote glowier? or don't show all of those blocks when room first entered? ehhh. not intro-y enough, kinda
 ! credits/ending somehow. heh :/
 - refine cutscene text, obvs
   - clean up use of quotes. shirt pickup text, for instance
@@ -194,3 +195,6 @@ done TODOs
 		* ability to pause music for cutscenes
 	- ending/title music?
 x save other stuff in save files (zoom and stuff)
+- it's probably easy, so: save player's zoom level, music muteness, and selected shirt. just do it.
+  * wait, zoom level would affect the title screen, where save file is not loaded... might be harder.
+! change text on block inspection

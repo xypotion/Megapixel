@@ -194,31 +194,32 @@ eventDataRaw = {
 		appearsUntilAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
-			-- say, "What is this? A remote control?",
-		-- 	think, "Instructions to Operator:",
-		-- 	think, "In the event of a digital matter containment breach,\ncollect vital research materials from all rooms\nand evacuate the premises.",
-		-- 	say,"They need me to find their notes?\nMust be pretty important stuff.",
-		-- 	say,"Is the building going to self-destruct or something?",
-		-- 	think,"In case you need to manipulate digital matter to\nobtain materials, this remote control will allow you"
-		-- 	.."\nto move and fuse digital matter in your path.",
-		-- 	think, "Blocks of digital matter are known as \n\"mega-pixels\".",
-		-- 	say,"Why name them? Does this happen often?",
-		-- 	think, "The RETURN key will activate this remote control,\nand the TAB key will let you select the color you\nwish to control.",
-		-- 	think,"Mega-pixels of the same color move as one.\n",
-		-- 	say,"Oh, right. You can only control one color at\na time. Control with use RETURN and TAB.",
-		-- 	-- say,"And stuff that's the same color moves as one.",
-		-- 	-- say,"Whatever that means.",
-		-- 	think, "Digital matter is a well-understood phenomenon;\ncertain colors can and cannot be manipulated,\nand certain colors fuse with others.",
-		-- 	think,"For example, as any schoolchild knows, red digital\nmatter fuses with green digital matter to create\nyellow.",
-		-- 	-- think,"That yellow mega-pixel can then be fused with a\nblue mega-pixel to create a white mega-pixel.\nYellow and blue are opposing colors.",
-		-- 	-- think,"Different colors of digital matter behave in\ndifferent ways. Experiment as needed and refer to\nthe key provided.",
-		-- 	say, "Yeah, we didn't have this stuff when I was a kid.",
-		-- 	say, "Cheeky manual.",
-		-- 	think,"In case the operator in unfamiliar with the basic\nprinciples, a color key is provided.",
-		-- 	think,"As always, use extreme caution.",
-		-- 	say, "All right, then. Not sure if I get this.",
-		-- 	say,"But I'm definitely fired if I don't collect their\nresearch materials before... the office blows up?",
-		-- 	say,"I actually have no idea what will happen. Better get\ncracking, though.",
+			say, "What is this? A remote control?",
+			think, "Instructions to Operator:",
+			think, "In the event of a digital matter containment breach,\ncollect vital research materials from all rooms\nand evacuate the premises.",
+			say,"They need me to find their notes?\nMust be pretty important stuff.",
+			say,"Is the building going to self-destruct or something?",
+			think,"In case you need to manipulate digital matter to\nobtain materials, this remote control will allow you"
+			.."\nto move and fuse digital matter in your path.",
+			think, "Blocks of digital matter are known as \n\"mega-pixels\".",
+			say,"Why name them? Does this happen often?",
+			think, "The RETURN key will activate this remote control,\nand the TAB key will let you select the color you\nwish to control.",
+			think,"Mega-pixels of the same color move as one.\n",
+			say,"Oh, right. You can only control one color at\na time. Gotta use RETURN and TAB.",
+			-- say,"And stuff that's the same color moves as one.",
+			-- say,"Whatever that means.",
+			think, "Digital matter is a well-understood phenomenon;\ncertain colors can and cannot be manipulated,\nand certain colors fuse with others.",
+			think,"For example, as any schoolchild knows, red digital\nmatter fuses with green digital matter to create\nyellow.",
+			-- think,"That yellow mega-pixel can then be fused with a\nblue mega-pixel to create a white mega-pixel.\nYellow and blue are opposing colors.",
+			-- think,"Different colors of digital matter behave in\ndifferent ways. Experiment as needed and refer to\nthe key provided.",
+			-- say, "Yeah, we didn't hav e this stuff when I was a kid.",
+   		-- say, "Cheeky manual.",
+    	say, "Yeah, we didn't have this stuff when I was a kid.\nCheeky manual.",
+			think,"In case the operator is unfamiliar with the basic\nprinciples, a color key is provided.",
+			think,"As always, use extreme caution.",
+			say, "All right, then. Not sure if I get this.",
+			say,"But I'm definitely fired if I don't collect their\nresearch materials before... the office blows up?",
+			say,"I actually have no idea what will happen. Better get\ncracking, though.",
 			collect_, "remote",
 			wait, 1,
 			warp, {wid=1,mx=6,my=7,facing="s"},
@@ -317,6 +318,7 @@ eventDataRaw = {
 		collide = true,
 		interactionBehavior = {
 			say, "\"Fatal results\". Yikes.",
+			--TODO remove all this stuff! vvv
 			collect_, "shirt 1",
 			collect_, "shirt 2",
 			collect_, "shirt 3",
@@ -340,7 +342,7 @@ eventDataRaw = {
 		interactionBehavior = {
 			say, {"You're so thorough! Thanks for playing!"},
 			-- saveData, nil,
-			-- TODO give last shirt? eh
+			-- TODO give last shirt? eh. hm.
 			-- warp,{wid=1,mx=11,my=8,facing="n"}
 		}
 	},
@@ -426,7 +428,8 @@ eventDataRaw = {
 		-- appearsIfAllCollected = {"remote"},
 		collide = true,
 		interactionBehavior = {
-			sayShirtProgressMessage, 0,
+			sayShirtProgressMessage, 0, --hack :|
+			say, "Note: see Secret Material collection on Pause menu."
 		}
 	},
 	--16: shirt progress comp
