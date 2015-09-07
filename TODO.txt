@@ -116,6 +116,7 @@ TODO in order of importance
   - or not? just computer bank in lobby, instead?
 ? top floor with endgame cutscenes, also
   - maybe a person in a locked room? need final shirt to reach him? bleh
+- change shirt color system to just be based on color filters, not a series of sprites... would be so much cleaner
 	
 at this point, no:
 > better story/cutscenes & effects (like a quake or a siren or a red flash)

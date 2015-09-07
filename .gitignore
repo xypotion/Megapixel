@@ -1,2 +1,5 @@
 *.pxi
+*.exe
+*.love
+*.zip
 .DS_Store

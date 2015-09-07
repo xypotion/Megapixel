@@ -176,6 +176,67 @@ function vanish_(name)
 	return true
 end
 
+-- obvs for testing, but who knows? might morph into incrementProgress() or something in final game. :)
+function scorePlus_(amt)
+	score = score + amt
+	print( "score up'd by "..amt)
+	return true
+end
+
+function darkenOverlay_(color)
+	blackOverlayOpacity = 255
+	
+	return true
+end
+
+function fadeIn(sec)
+	-- local sec = sec or 0.5
+	
+	-- blackOverlayOpacity = 255
+	globalActors.fader.translatorFunction = fadeInTranslator
+	globalActors.fader.finishFunction = stopActor
+	globalActors.fader.distanceFromTarget = sec
+	
+	actorsShifting = actorsShifting + 1
+	
+	return false
+end
+
+function fadeOut(sec)
+	-- local sec = sec or 0.5
+	
+	-- blackOverlayOpacity = 255
+	globalActors.fader.translatorFunction = fadeOutTranslator
+	globalActors.fader.finishFunction = stopActor
+	globalActors.fader.distanceFromTarget = sec
+	
+	actorsShifting = actorsShifting + 1
+	
+	return false
+end
+
+------------------------------------------------------------------------------------------------------
+
+--hacko jacko vvv
+
+function makeBlock1_(color)
+	blocks[#blocks+1] = Block(color,{x=9,y=7})
+end
+function makeBlock2_(color)
+	blocks[#blocks+1] = Block(color,{x=11,y=8})
+end
+function makeBlock3_(color)
+	blocks[#blocks+1] = Block(color,{x=8,y=9})
+end
+
+function darken(opacity)
+	blackOverlayOpacity = opacity
+end
+
+function faceHero(direction)
+	globalActors.hero.facing = direction
+end
+
 function collect_(name)
 	progress[name] = true
 	saveData()
@@ -183,7 +244,7 @@ function collect_(name)
 	
 	if name == "remote" then 
 		HUDOpacity = 63 
-	end --you are terrible.
+	end --you are terrible. TODO
 
 	return vanish_(name)
 end
@@ -242,65 +303,4 @@ function acquiredOrMissing(item)
 	else
 		return "MISSING"
 	end
-end
-
--- obvs for testing, but who knows? might morph into incrementProgress() or something in final game. :)
-function scorePlus_(amt)
-	score = score + amt
-	print( "score up'd by "..amt)
-	return true
-end
-
-function darkenOverlay_(color)
-	blackOverlayOpacity = 255
-	
-	return true
-end
-
-function fadeIn(sec)
-	-- local sec = sec or 0.5
-	
-	-- blackOverlayOpacity = 255
-	globalActors.fader.translatorFunction = fadeInTranslator
-	globalActors.fader.finishFunction = stopActor
-	globalActors.fader.distanceFromTarget = sec
-	
-	actorsShifting = actorsShifting + 1
-	
-	return false
-end
-
-function fadeOut(sec)
-	-- local sec = sec or 0.5
-	
-	-- blackOverlayOpacity = 255
-	globalActors.fader.translatorFunction = fadeOutTranslator
-	globalActors.fader.finishFunction = stopActor
-	globalActors.fader.distanceFromTarget = sec
-	
-	actorsShifting = actorsShifting + 1
-	
-	return false
-end
-
-------------------------------------------------------------------------------------------------------
-
---hacko jacko
-
-function makeBlock1_(color)
-	blocks[#blocks+1] = Block(color,{x=9,y=7})
-end
-function makeBlock2_(color)
-	blocks[#blocks+1] = Block(color,{x=11,y=8})
-end
-function makeBlock3_(color)
-	blocks[#blocks+1] = Block(color,{x=8,y=9})
-end
-
-function darken(opacity)
-	blackOverlayOpacity = opacity
-end
-
-function faceHero(direction)
-	globalActors.hero.facing = direction
 end

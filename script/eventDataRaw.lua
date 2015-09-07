@@ -318,6 +318,7 @@ eventDataRaw = {
 		collide = true,
 		interactionBehavior = {
 			say, "\"Fatal results\". Yikes.",
+			-- skip, 99,
 			--TODO remove all this stuff! vvv
 			collect_, "shirt 1",
 			collect_, "shirt 2",
