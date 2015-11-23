@@ -371,7 +371,7 @@ mapDataRaw = {
 			{x=9,y=5,id=907},
 			{x=2,y=10,id=1010},
 		}
-	},--9: 3 CMY rows w/ no fusion puzzle (needs notes) **** shirt candidate: magenta
+	},--9: 3 CMY rows w/ no fusion puzzle **** shirt candidate: magenta
 	{
 		tileData = {
 			{1,1,3,3,3,1,1},
@@ -403,7 +403,7 @@ mapDataRaw = {
 			{x=5,y=4,id=1011},
 			-- {x=5,y=8,id=6},
 		}
-	},--10: plant rows puzzle ***
+	},--10: plant rows, or "battery", or "barrier" puzzle ***
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3,3,3},
@@ -435,7 +435,7 @@ mapDataRaw = {
 			{x=8,y=8,id=1013},
 			{x=9,y=5,id=908},
 		}
-	},--11: painting puzzle *** shirt candidate: yellow = sun! :D and WOW that shirt took me a long time to get. jesus. hardest puzzle yet? *****
+	},--11: painting puzzle *** shirt candidate: yellow = sun! :D and WOW that shirt took me a long time to get. jesus. hardest puzzle in the game? *****
 	-- steps for shirt: red right 1, magenta left 1, blue down 1, up 1, green left 1, down 1, all the way right, yellow out of the way
 	-- blue down 1, right all the way, down 1 again, red left 2, right 2, yellow to top right, green to top and 3 from right (making a second yellow),
 	-- move character into middle left area, move yellow down and left, finally chunk red left 2 and down 1 onto cyan (gap must be where shirt sits). whew.
@@ -552,7 +552,7 @@ mapDataRaw = {
 			{x=6,y=5,id=1008},
 			{x=13,y=9,id=904},
 		}
-	},--15: green X (needs stuff) **, shirt candidate (green), maybe a blacked-in side corridor
+	},--15: green X **, shirt candidate (green), maybe a blacked-in side corridor
 	{
 		tileData = {
 			{3,3,3,3,3},
@@ -576,7 +576,7 @@ mapDataRaw = {
 			{x=10,y=10,id=1003},
 			-- {x=5,y=8,id=6},
 		}
-	},--16: baby white-vs-black (NEEDS STUFF) *
+	},--16: baby white-vs-black *
 	{
 		tileData = {
 			{1,1,3,3,3,3,3,3,3,3,3},
@@ -614,7 +614,7 @@ mapDataRaw = {
 			{x=8,y=10,id=1015},
 			-- {x=5,y=8,id=6},
 		}
-	},--17: donut in the gas pump (needs door) ***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
+	},--17: donut in the gas pump***** MAYBE shirt candidate, but i looked at it for a while and couldn't see how
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3},
@@ -647,7 +647,7 @@ mapDataRaw = {
 			{x=8,y=7,id=1012},
 			{x=4,y=11,id=905},
 		}
-	},--18: rainbow ring *** (needs stuff, also reverse map?) possible shirt candidate in lower corner
+	},--18: rainbow ring *** possible shirt candidate in lower corner
 	{
 		tileData = {
 			{3,3,3,3,3,3,3,3,3,3,1,3,3},
@@ -685,7 +685,7 @@ mapDataRaw = {
 			{x=14,y=13,id=1016},
 			{x=13,y=11,id=906},
 		}
-	},--19: tetris blocks (needs door) **** cyan shirt where notes are, move notes down, may need to cycle colors to get cyan in there nicely :/
+	},--19: tetris blocks **** cyan shirt where notes are, move notes down, may need to cycle colors to get cyan in there nicely :/
 	{
 		tileData = {
 			{1,1,3,3,3,3,3},

@@ -215,6 +215,19 @@ function fadeOut(sec)
 	return false
 end
 
+-- checks named flags, then skips 1 if all true
+function branch(flags)
+	local allTrue = true
+	for f in flags do
+		allTrue = f and allTrue
+	end
+	
+	if allTrue then
+		skip(1) 
+	end
+end
+-- TODO: MAKE THIS WORK :(
+
 ------------------------------------------------------------------------------------------------------
 
 --hacko jacko vvv

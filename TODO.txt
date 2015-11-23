@@ -85,7 +85,12 @@ revised endgame plan because you got too ambitious ~
 	- emails from boss "why are you taking so long? i left the prototype material on your desk" (?)
 
 TODO in order of importance
-- remove debug dump from office pc
+* remove debug dump from office pc
+- save/quit/just quit menu when window is closed? (dustin's #1 feedback = no-warning quit on Esc sucks)
+* new control scheme
+  - 1-7 for colors? always a HUD for that on bottom row?
+	- then rgbcmykwxz for shirts? or hold shift + a number? ehh
+* add an ending :|
 - make remote glowier? or don't show all of those blocks when room first entered? ehhh. not intro-y enough, kinda
 ! credits/ending somehow. heh :/
 - refine cutscene text, obvs
@@ -95,6 +100,7 @@ TODO in order of importance
   - maybe a "tip" or something at the 4f pc? ehhh
 - evaluateAndSkip1IfTrue for more dynamic scripts? still so hacky, there's got to be a simple, good way to do it :/
   * call it "branch"? i still think this will be a valuable script tool!
+	- ...left unfinished in cutscene.lua, it's just not important enough right now :'(
 ! giant cleanup of comments and stuff
   - all TODO, anything i myself called a "hack" (lol), comments, print statements (maybe keep some but comment them out)
 	- maybe some refactoring... heh
@@ -108,15 +114,17 @@ TODO in order of importance
 > postgame fun: all black backgrounds turn into twinkly stars
   = an anikey, a big graphic, sprite batches (i guess) & draw logic in main, some collectible flag?
 - if final shirt lets you walk through walls, adjust collision with actors so you still bump into them
-? remote-using sprite for character? (unlikely at this point, but it would look nice)
-? ending/credits music? ehh
-? "white warp" for room resets?
+- remote-using sprite for character? :)
+- ending/credits music? ehh
+- "white warp" for room resets?
 ? shirt color -> text color? :P
 ? make basement with final cutscenes? ...nope, make a copy of your office (with blocks!), that's where final shirt is given if you have all the stuff
   - or not? just computer bank in lobby, instead?
-? top floor with endgame cutscenes, also
-  - maybe a person in a locked room? need final shirt to reach him? bleh
-- change shirt color system to just be based on color filters, not a series of sprites... would be so much cleaner
+	- probably keep it simple, either way
+	? top floor with endgame cutscenes?
+	  - maybe a person in a locked room? need final shirt to reach him? bleh
+- change shirt color system to just be based on color filters, not a series of sprites... would be so much cleaner and save some memory
+- "continue from last save", not "from last autosave"
 	
 at this point, no:
 > better story/cutscenes & effects (like a quake or a siren or a red flash)

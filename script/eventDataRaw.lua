@@ -473,7 +473,12 @@ eventDataRaw[100] = {
 		-- choose, {"Leave room?", {"No", 3}, {"Yes",0}},
 		-- playSFX, "door",
 		-- warp,{wid=1,mx=2,my=8,facing="n"},
-		say,"I probably shouldn't just leave. My job is\non the line, not to mention the company!"
+		branch, {"notes 1", "notes 2"},
+		skip, 1,
+		skip, 2,
+		say, "got 1 and 2",
+		skip, 99,
+		say, "I probably shouldn't just leave. My job is\non the line, not to mention the company!"
 	}
 } --exit before endgame
 -- eventDataRaw[101] = {} --exit once all notes found
