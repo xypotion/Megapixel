@@ -71,7 +71,8 @@ function love.load()
 	blocks = {}
 	blocksShifting = 0
 	
-	controllingBlocks = false
+	-- controllingBlocks = false
+	colorControlled = nil
 	
 	HUDOpacity = 0
 	
@@ -132,8 +133,8 @@ function love.update(dt)
 					runningScriptLine = false
 				end
 			else
-				if controllingBlocks then
-					local going = blocksTakeInput()
+				if colorControlled then
+					local going = blocksTakeInput() --TODO any way to move this from update to keypressed? this feels SO hacky :(
 					if going then
 						-- print("barthello, we're leaving.")
 						blocksGo()
@@ -180,23 +181,30 @@ function love.draw()
 		drawMenuStack()
 	end
 
-	if controllingBlocks then
+	if colorControlled then
 		love.graphics.setColor(255, 255, 255, HUDOpacity)
-		love.graphics.draw(images.blocks[controllableColors[colorControlled]], quadSets.block[1], screenWidth - tileSize * 2, screenHeight - tileSize * 3)
+		-- love.graphics.draw(images.blocks[controllableColors[colorControlled]], quadSets.block[1], screenWidth - tileSize * 2, screenHeight - tileSize * 3)
+		love.graphics.draw(images.blocks[colorControlled], quadSets.block[1], screenWidth - tileSize * 2, screenHeight - tileSize * 3)
 		-- love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
 		
-		if showKey then
-			love.graphics.setColor(255, 255, 255, 255)
-			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
-		else
-			love.graphics.draw(images.colorKey2off, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
-		end
+		
+		
 		-- --ping("remote")
 	-- else
 	-- 	love.graphics.setColor(255, 255, 255, HUDOpacity)
 	-- 	love.graphics.draw(images.remote, quadSets.remote, screenWidth - tileSize * 2.5, screenHeight - tileSize * 4)
 	-- 	love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
 	end 
+	
+	if showKey then
+-- 			love.graphics.setColor(255, 255, 255, 255)
+-- 			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
+-- 		else
+-- 			love.graphics.draw(images.colorKey2off, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
+		love.graphics.setColor(255, 255, 255, 255)
+		love.graphics.draw(images.colorKey3, quadSets.colorKey3, tileSize, screenHeight - tileSize * 1)
+	end
+		
 	love.graphics.setColor(255, 255, 255, HUDOpacity)
 	love.graphics.draw(images.remote, quadSets.remote, screenWidth - tileSize * 2.5, screenHeight - tileSize * 4)
 	
@@ -247,17 +255,42 @@ function love.keypressed(key)
 			-- end
 	
 			--cycle through zoom settings TODO eventually make a player option of this, but this is fine for dev
-			if key == "z" and not controllingBlocks then
+			if key == "z" and not colorControlled then
 				windowState = (windowState) % #windowStates + 1
 				updateWindowStateSettings()
 				updateZoomRelativeStuff()
 			end
 		
-			if key == " " and not controllingBlocks then 
+			if (key == " " or key == "return") and not colorControlled then 
 				startFacingInteraction()
 			end	
 			
-			if key == "return" and progress["remote"] then
+			--toggle color controls
+			if key == "1" or key == "2" or key == "3" or key == "4" or key == "5" or key == "6" or key == "7" then
+				--something for shirts here? eh TODO
+				key = tonumber(key)
+				if progress["remote"] then
+					ping()
+					-- tablePrint(controllableColors)
+					if colorControlled then
+						if controllableColors[key] == colorControlled then
+							ping ("stop controlling " .. colorControlled)
+							colorControlled = nil
+						else
+							colorControlled = controllableColors[key]
+							ping ("switch to " .. colorControlled)
+						end
+					else
+						colorControlled = controllableColors[key]
+						ping ("now controlling " .. colorControlled)
+					end
+				end
+			end
+			
+			--TODO control canceller. esc, backtick, backspace?
+			
+			--the way the remote used to work!
+			--[[if key == "return" and progress["remote"] then
 				if controllingBlocks then 
 					controllingBlocks = false
 					HUDOpacity = 63 
@@ -283,16 +316,22 @@ function love.keypressed(key)
 					HUDOpacity = 191 
 					playSFX("highblip")
 				end
-			end
+			end]]
 			
-			if key == "k" and controllingBlocks then
+			
+				--the old "color key", hopefully not necessary anymore
+			if key == "k" then
 				showKey = not showKey
+				ping()
 			end
 			
-			if key == "r" and not controllingBlocks then
+			
+			if key == "r" and not colorControlled then
 				Menu.add(ResetMenu)
 			end
 		
+			--the way shirts used to work!
+			--[[
 			if key == "1" then
 				hp.shirt = 1
 			elseif key == "2" and progress["shirt 2"] then
@@ -313,7 +352,7 @@ function love.keypressed(key)
 				hp.shirt = 9
 			elseif key == "0" and progress["shirt 10"] then
 				hp.shirt = 10
-			end
+				end--]]
 			
 		--TODO figure out if this really needs to be here and why if so
 		elseif textScrolling then --if not else'd off the above, bad things happen. i don't love this here, but it works for now
@@ -342,5 +381,5 @@ function tickAnimationKeys(dt)
 end
 
 function debugKeysHeld()
-	return love.keyboard.isDown('1') and love.keyboard.isDown('2') and love.keyboard.isDown('3')
+	return love.keyboard.isDown(',') and love.keyboard.isDown('.') and love.keyboard.isDown('/')
 end

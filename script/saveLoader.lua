@@ -78,8 +78,10 @@ function finishLoadingGame()
 	playerSettings.textSpeed = 60
 	playerSettings.anyKeyAdvancesText = true
 	
-	colorControlled = 1
+	colorControlled = nil
 	controllableColors = {R,G,B,C,M,Y,W}
+	
+	showKey = true
 	
 	windowState = 1
 	

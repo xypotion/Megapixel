@@ -1262,7 +1262,7 @@ eventDataRaw[907] = {
 	interactionBehavior = {
 		collect_, "shirt 6",
 		collect_, "shirt 1",
-		say, "Found a red shirt!",
+		say, "Found a magenta shirt!",
 		say, "Press 6 to wear it. You can change back to\nyour grey shirt by pressing 1.",
 		say, "\"Cute.\""
 	}

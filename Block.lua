@@ -94,7 +94,8 @@ end
 function Block:shift(dt)
 		-- print(" HELLO "..colorControlled)
 		-- --tablePrint(self)
-	if self.targetPos and self.color == controllableColors[colorControlled] then
+	-- if self.targetPos and self.color == controllableColors[colorControlled] then
+	if self.targetPos and self.color == colorControlled then
 		local xDelta = (self.targetPos.x - self.currentPos.x) * self.speed * dt / 1
 		local yDelta = (self.targetPos.y - self.currentPos.y) * self.speed * dt / 1
 
@@ -238,7 +239,9 @@ function blocksTakeInput()
 		
 	if direction and love.keyboard.isDown('d','a','w','s','right','left','up','down') then
 		for i=1,#blocks do
-			if blocks[i].color == controllableColors[colorControlled] then
+			if blocks[i].color == colorControlled then
+				ping(blocks[i].color)
+			-- if blocks[i].color == controllableColors[colorControlled] then
 				-- print("taking input"..os.time())
 				blocks[i].facing = direction
 				-- if not love.keyboard.isDown('d','a','w','s','right','left','up','down') then

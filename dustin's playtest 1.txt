@@ -48,7 +48,7 @@ bugs + things I noticed:
 - zoom works on windows!! whew. looks good on his screen, even.
 * bug: picking up shirts beeps twice?
 - shift-tab ability still not clear enough. won't matter if you change the control scheme though....
-* bug: magenta shirt calls itself red shirt when found
+x bug: magenta shirt calls itself red shirt when found
 - do you reset to wearing a grey shirt after loading game?
 - maybe save K (color key) state
 * 3f has office gap on left side still
@@ -57,3 +57,5 @@ bugs + things I noticed:
 - he studied the diamond-faucet puzzle for a long time. 
 - was surprised that floor 1 had a secret ;) (good) and looked in "A" room (also good)
 - getting yellow shirt in painting room just as challenging as i thought
+
+x = fixed/addressed

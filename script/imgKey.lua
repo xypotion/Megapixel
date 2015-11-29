@@ -30,6 +30,7 @@ images = {
 	-- colorKey = love.graphics.newImage("img/colorKey.png"),
 	colorKey2 = love.graphics.newImage("img/key2.png"),
 	colorKey2off = love.graphics.newImage("img/key2off.png"),
+	colorKey3 = love.graphics.newImage("img/key3b.png"),
 	-- marble = {
 	-- 	love.graphics.newImage("img/marble1.png"),
 	-- 	love.graphics.newImage("img/marble2.png"),
@@ -216,6 +217,8 @@ function makeQuads()
 	-- quadSets.colorKey = quadAt(0,0,{2,4,2,4})
 	quadSets.colorKey2 = quadAt(0,0,{4,3,4,3})
 	quadSets.colorKey0 = quadAt(0,0,{4,3,4,3})
+
+	quadSets.colorKey3 = quadAt(0,0,{8,1,8,1})
 end
 
 -- makes a quad with provided args. just saves space above ~
