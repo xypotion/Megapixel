@@ -143,8 +143,8 @@ function updateMapSpriteBatchFrames(chipset, _tiles)
 	for frame = 1, anikeys.map.count do 
 		-- i used to only call newSpriteBatch at init, but it turns out it's not that slow!
 		t[frame] = love.graphics.newSpriteBatch(images.chipsets[chipset], xLen * yLen) 
-		
-	  t[frame]:bind()
+		 
+	  -- t[frame]:bind() --deprecated! happens automatically, i guess
 	  t[frame]:clear()
 	  for y=1, yLen do
 	    for x=1, xLen do
@@ -155,7 +155,7 @@ function updateMapSpriteBatchFrames(chipset, _tiles)
 				end
 	    end
 	  end
-	  t[frame]:unbind()
+	  -- t[frame]:unbind() --deprecated!
 	end
 	
 	return t

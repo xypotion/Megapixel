@@ -189,10 +189,10 @@ function love.draw()
 		
 		
 		
-		-- --ping("remote")
+		-- ping("remote")
 	-- else
 	-- 	love.graphics.setColor(255, 255, 255, HUDOpacity)
-	-- 	love.graphics.draw(images.remote, quadSets.remote, screenWidth - tileSize * 2.5, screenHeight - tileSize * 4)
+		love.graphics.draw(images.remote, quadSets.remote, screenWidth - tileSize * 2.5, screenHeight - tileSize * 4)
 	-- 	love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
 	end 
 	
