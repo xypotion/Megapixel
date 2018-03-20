@@ -196,7 +196,7 @@ function love.draw()
 	-- 	love.graphics.draw(images.colorKey, quadSets.colorKey, screenWidth - tileSize * 2.5, screenHeight - tileSize * 7)
 	end 
 	
-	if showKey then
+	if showKey then --TODO what's "showkey"?
 -- 			love.graphics.setColor(255, 255, 255, 255)
 -- 			love.graphics.draw(images.colorKey2, quadSets.colorKey2, screenWidth - tileSize * 7, screenHeight - tileSize * 3)
 -- 		else

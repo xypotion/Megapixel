@@ -31,6 +31,13 @@ images = {
 	colorKey2 = love.graphics.newImage("img/key2.png"),
 	colorKey2off = love.graphics.newImage("img/key2off.png"),
 	colorKey3 = love.graphics.newImage("img/key3b.png"),
+	colorHint1 = love.graphics.newImage("img/key3b1.png"),
+	colorHint2 = love.graphics.newImage("img/key3b2.png"),
+	colorHint3 = love.graphics.newImage("img/key3b3.png"),
+	colorHint4 = love.graphics.newImage("img/key3b4.png"),
+	colorHint5 = love.graphics.newImage("img/key3b5.png"),
+	colorHint6 = love.graphics.newImage("img/key3b6.png"),
+	colorHint7 = love.graphics.newImage("img/key3b7.png"),
 	-- marble = {
 	-- 	love.graphics.newImage("img/marble1.png"),
 	-- 	love.graphics.newImage("img/marble2.png"),
